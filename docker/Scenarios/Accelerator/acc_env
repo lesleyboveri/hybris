@@ -1,0 +1,12 @@
+
+y_db_url=jdbc:mysql://mysql/hybris?useConfigs=maxPerformance&characterEncoding=utf8
+y_db_driver=com.mysql.jdbc.Driver
+y_db_username=hybris
+y_db_password=hybris
+y_db_customsessionsql=SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+y_mysql_optional_tabledefs=CHARSET=utf8 COLLATE=utf8_bin
+y_mysql_allow_fractional_seconds=true
+y_mysql_tabletype=InnoDB
+y_db_tableprefix=
+y_storefront_staticResourceFilter_response_header_Cache-Control=public,max-age=600
+y_solrserver_instances_default_autostart=false
