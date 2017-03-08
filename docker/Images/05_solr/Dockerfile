@@ -1,4 +1,4 @@
-FROM y.i.base
+FROM sprcom.hybris.base
 MAINTAINER axel.grossmann@hybris.de
 
 RUN export DEBIAN_FRONTEND=noninteractive && \

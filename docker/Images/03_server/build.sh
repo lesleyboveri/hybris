@@ -3,7 +3,7 @@ set -e
 
 NAME_PARAM=$1
 
-IMAGE_NAME="${NAME_PARAM:-y.i.hybrisserver}"
+IMAGE_NAME="${NAME_PARAM:-sprcom.hybris.hybrisserver}"
 
 echo "Building ${IMAGE_NAME}"
 

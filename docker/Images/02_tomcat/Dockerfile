@@ -1,4 +1,4 @@
-FROM y.i.base
+FROM sprcom.hybris.base
 MAINTAINER axel.grossmann@hybris.de
 
 # Note: adding a *.tar.gz automatically unzips the archive

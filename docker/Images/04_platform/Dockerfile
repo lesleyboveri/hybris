@@ -1,4 +1,4 @@
-FROM y.i.hybrisserver
+FROM sprcom.hybris.hybrisserver
 MAINTAINER axel.grossmann@hybris.de
 
 ADD hybrisServer/hybrisServer-*.zip /tmp/

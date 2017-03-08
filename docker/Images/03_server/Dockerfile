@@ -1,4 +1,4 @@
-FROM y.i.tomcat
+FROM sprcom.hybris.tomcat
 MAINTAINER axel.grossmann@hybris.de
 
 # admin files
