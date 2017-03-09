@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 RUN mkdir -p /opt/solr
 ENV SOLR=/opt/solr
 
-ADD solrFromPlatform/solr/ ${SOLR}/
+ADD solrserver/resources/solr/ ${SOLR}/
 
 RUN chmod +x /opt/solr/bin/solr
   
