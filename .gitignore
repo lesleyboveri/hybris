@@ -56,3 +56,9 @@ hybris/bin/*
 **/.lastupdate
 **/dummy.txt
 /hybris/roles/local/tklostermann
+/hybris/bin/custom/springer/springercockpits/gensrc
+/hybris/bin/custom/springer/springercore/gensrc
+/hybris/bin/custom/springer/springerfacades/gensrc
+/hybris/bin/custom/springer/springerinitialdata/gensrc
+/hybris/bin/custom/springer/springertest/gensrc
+/hybris/bin/custom/springer/springersaporderfulfilment/gensrc

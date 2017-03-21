@@ -373,7 +373,7 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 # Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;SiteLogoComponent;/images/theme/logo_hybris_responsive.svg
+;;SiteLogoComponent;/images/theme/logo-macmillan.svg
 
 ##### DSLR Category Page ######
 

@@ -20,7 +20,7 @@ springerlinkcheckoutaddon.key=value
 # Specifies the location of the spring context file added automatically to the global platform application context.
 springerlinkcheckoutaddon.application-context=springerlinkcheckoutaddon-spring.xml
 
-yacceleratorstorefront.additionalWebSpringConfigs.springerlinkcheckoutaddon=classpath:/springerlinkcheckoutaddon/web/spring/springerlinkcheckoutaddon-web-spring.xml
+yacceleratorstorefront.additionalWebSpringConfigs.springerlinkcheckoutaddon=classpath:/springerlinkcheckoutaddon/web/spring/springerlinkcheckoutaddon-web-spring.xml,classpath:/springerlinkcheckoutaddon/web/spring/multi-step-checkout-config.xml
 
 
 
