@@ -55,3 +55,4 @@ hybris/bin/*
 **/*.jcoDestination
 **/.lastupdate
 **/dummy.txt
+/hybris/roles/local/tklostermann
