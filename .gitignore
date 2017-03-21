@@ -24,8 +24,8 @@ out/
 /hybris/bin/ext-supportability
 /hybris/bin/ext-template
 /hybris/bin/platform
-.gensrc
-.classes
+gensrc/
+classes/
 platformhome.properties
 build.xml
 extensioninfo.xsd
