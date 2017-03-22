@@ -1,4 +1,4 @@
-FROM sprcom.hybris.tomcat
+FROM docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.tomcat
 MAINTAINER axel.grossmann@hybris.de
 
 # admin files
