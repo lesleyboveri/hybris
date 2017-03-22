@@ -18,29 +18,29 @@
     <!-- hybris core/needed -->
     <extension name='mcc' />
     <extension name='solrserver' />
-    <extension name='droolsruleengineservices' />
-    <extension name='couponfacades' />
-    <extension name='cmswebservices' />
-    <extension name='smarteditwebservices' />
-    <extension name='permissionswebservices' />
-    <extension name='cmssmartedit' />
-    <extension name='previewwebservices' />
-    <extension name='cmssmarteditwebservices' />
+    <!--<extension name='droolsruleengineservices' />-->
+    <!--<extension name='couponfacades' />-->
+    <!--<extension name='cmswebservices' />-->
+    <!--<extension name='smarteditwebservices' />-->
+    <!--<extension name='permissionswebservices' />-->
+    <!--<extension name='cmssmartedit' />-->
+    <!--<extension name='previewwebservices' />-->
+    <!--<extension name='cmssmarteditwebservices' />-->
 
     <!-- test -->
-    <extension name='assistedserviceatddtests' />
-    <extension name='promotionengineatddtests' />
+    <!--<extension name='assistedserviceatddtests' />-->
+    <!--<extension name='promotionengineatddtests' />-->
     <extension name='commercesearchatddtests' />
-    <extension name='textfieldconfiguratortemplateatddtests' />
+    <!--<extension name='textfieldconfiguratortemplateatddtests' />-->
     <extension name='sapcoretest' />
 
     <!-- backoffice -->
     <extension name='commercesearchbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
-    <extension name='textfieldconfiguratortemplatebackoffice' />
-    <extension name='customersupportbackoffice' />
-    <extension name='rulebuilderbackoffice' />
-    <extension name='couponbackoffice' />
+    <!--<extension name='textfieldconfiguratortemplatebackoffice' />-->
+    <!--<extension name='customersupportbackoffice' />-->
+    <!--<extension name='rulebuilderbackoffice' />-->
+    <!--<extension name='couponbackoffice' />-->
     <extension name='datahubbackoffice' />
     <extension name='sapcoreconfigurationbackoffice' />
     <extension name='sapmodelbackoffice' />
@@ -58,15 +58,16 @@
 
     <!-- storefront addons
          ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon,sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
+         ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
     -->
-    <extension name='commerceorgsamplesaddon' />
-    <extension name='orderselfserviceaddon' />
-    <extension name='assistedservicestorefront' />
-    <extension name='customerticketingaddon' />
-    <extension name='promotionenginesamplesaddon' />
-    <extension name='textfieldconfiguratortemplateaddon' />
-    <extension name='liveeditaddon' />
-    <extension name='smarteditaddon' />
+    <!--<extension name='commerceorgsamplesaddon' />-->
+    <!--<extension name='orderselfserviceaddon' />-->
+    <!--<extension name='assistedservicestorefront' />-->
+    <!--<extension name='customerticketingaddon' />-->
+    <!--<extension name='promotionenginesamplesaddon' />-->
+    <!--<extension name='textfieldconfiguratortemplateaddon' />-->
+    <!--<extension name='liveeditaddon' />-->
+    <!--<extension name='smarteditaddon' />-->
     <extension name='sapcoreaddon' />
     <extension name="springerlinkcheckoutaddon"/>
 

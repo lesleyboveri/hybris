@@ -26,6 +26,7 @@ UPDATE Currency;isocode[unique=true];name[lang=$lang]
  ;GBP;"Pound"
  ;JPY;"Japanese Yen"
  ;USD;"US Dollar"
+ ;CHF;"Schweizer Franken"
 
 # Titles
 UPDATE Title;code[unique=true];name[lang=$lang]

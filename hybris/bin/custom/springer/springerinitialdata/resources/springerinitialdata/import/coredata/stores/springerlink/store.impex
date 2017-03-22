@@ -14,7 +14,7 @@
 
 $productCatalog=springerlinkProductCatalog
 $classificationCatalog=SpringerlinkClassification
-$currencies=JPY,USD
+$currencies=JPY,USD,EUR,GBP,CHF
 $net=false
 $storeUid=springerlink
 $defaultCurrency=USD
