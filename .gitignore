@@ -30,6 +30,7 @@ hybris/bin/*
 !hybris/bin/custom/
 !hybris/config/
 !hybris/roles/
+!hybris/bin/platform/resources/advanced.properties
 
 # ----------------------------------------#
 #                   Files:                #
