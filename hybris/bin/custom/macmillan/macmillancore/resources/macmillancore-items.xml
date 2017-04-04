@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="items.xsd">
+	
+	<collectiontypes>
+		<collectiontype code="AuthorsList" elementtype="java.lang.String" type="list"/>
+	</collectiontypes>
+	<enumtypes>
+		<enumtype code="Bindings" autocreate="true" generate="true" dynamic="true">
+			<value code="HardCover"/>
+			<value code="SoftCover"/>
+		</enumtype>
+		<enumtype code="Formats" autocreate="true" generate="true" dynamic="true">
+			<value code="Print"/>
+			<value code="ePub"/>
+			<value code="PrintDigital"/>
+		</enumtype>
+	</enumtypes>
+	<itemtypes>
+		<typegroup name="MacmillanProduct">
+			<itemtype code="Product" autocreate="false" generate="false">
+				<description>Extending the Hybris product for Macmillan</description>
+				<attributes>
+					<attribute qualifier="component" type="java.lang.String">
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="authors" type="AuthorsList">
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="inspectionCopyAllowed" type="java.lang.Boolean">
+						<defaultvalue>false</defaultvalue>
+						<modifiers optional="false"/>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="publicationDate" type="java.util.Date">
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="binding" type="Bindings">
+						<persistence type="property"/>
+						<defaultvalue>em().getEnumerationValue("Bindings","HardCover")</defaultvalue>
+						<modifiers optional="false"/>
+					</attribute>
+					<attribute qualifier="format" type="Formats">
+						<persistence type="property"/>
+						<defaultvalue>em().getEnumerationValue("Formats","Print")</defaultvalue>
+					</attribute>
+				</attributes>
+			</itemtype>
+			
+		</typegroup>
+<!--
+		<itemtype generate="true"
+		   code="MyProduct"
+		   jaloclass="com.mea.hybris.macmillancore.jalo.MyProduct"
+		   extends="Product"
+		   autocreate="true"
+	   >
+			<attributes>
+				<attribute qualifier="myExampleInitialStringField" type="java.lang.String">
+					<description>My Example Initial String Value</description>
+					<modifiers initial="true"/>
+					<persistence type="property"/>
+				</attribute>
+
+				<attribute qualifier="myExampleBooleanField" type="java.lang.Boolean">
+					<description>Example Initial Boolean Field</description>
+               <persistence type="property"/>
+				</attribute>
+
+				<attribute qualifier="media" type="Media">
+					<persistence type="property"/>
+				</attribute>
+
+			</attributes>
+		</itemtype>
+-->
+	</itemtypes>
+</items>

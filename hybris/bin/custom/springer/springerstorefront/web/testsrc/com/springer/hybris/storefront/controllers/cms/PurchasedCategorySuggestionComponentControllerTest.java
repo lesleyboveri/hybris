@@ -22,7 +22,7 @@ import de.hybris.platform.category.model.CategoryModel;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.servicelayer.services.impl.DefaultCMSComponentService;
 import de.hybris.platform.commercefacades.product.data.ProductData;
-import com.springer.hybris.facades.suggestion.SimpleSuggestionFacade;
+import de.hybris.platform.yacceleratorfacades.suggestion.SimpleSuggestionFacade;
 import com.springer.hybris.storefront.controllers.ControllerConstants;
 
 import java.util.Arrays;

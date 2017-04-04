@@ -295,9 +295,6 @@
 		<js minimize="false">/_ui/mobile/common/js/jquery.ui.touch-punch.min.0.2.2.js</js>
     </group>
 
-<group name="macmillan_responsive">
-							<css>/_ui/responsive/theme-macmillan/css/style.css</css>
-						</group>
 <group name="springerlink_responsive">
 							<css>/_ui/responsive/theme-springerlink/css/style.css</css>
 						</group>

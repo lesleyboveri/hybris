@@ -25,7 +25,7 @@ import de.hybris.platform.commercefacades.order.data.CartData;
 import de.hybris.platform.commercefacades.order.data.OrderEntryData;
 import de.hybris.platform.commercefacades.order.impl.DefaultCartFacade;
 import de.hybris.platform.commercefacades.product.data.ProductData;
-import com.springer.hybris.facades.suggestion.SimpleSuggestionFacade;
+import de.hybris.platform.yacceleratorfacades.suggestion.SimpleSuggestionFacade;
 import com.springer.hybris.storefront.controllers.ControllerConstants;
 
 import java.util.ArrayList;

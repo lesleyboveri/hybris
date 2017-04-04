@@ -14,7 +14,7 @@ import de.hybris.platform.acceleratorcms.model.components.CartSuggestionComponen
 import de.hybris.platform.acceleratorcms.model.components.SimpleSuggestionComponentModel;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.cms.AbstractCMSComponentController;
 import de.hybris.platform.commercefacades.order.CartFacade;
-import com.springer.hybris.facades.suggestion.SimpleSuggestionFacade;
+import de.hybris.platform.yacceleratorfacades.suggestion.SimpleSuggestionFacade;
 import com.springer.hybris.storefront.controllers.ControllerConstants;
 
 import javax.annotation.Resource;

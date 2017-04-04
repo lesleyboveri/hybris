@@ -10,45 +10,44 @@
     <!--<extension name='yacceleratorstorefront' />-->
     <extension name='ycommercewebservices' />
     <extension name='ycommercewebservicestest' />
-    <!--<extension name='apparelstore' />-->
-    <!--<extension name='electronicsstore' />-->
-    <!--<extension name='powertoolsstore' />-->
-    <!--<extension name='ysaporderfulfillment' />-->
 
     <!-- hybris core/needed -->
     <extension name='mcc' />
     <extension name='solrserver' />
-    <!--<extension name='droolsruleengineservices' />-->
-    <!--<extension name='couponfacades' />-->
-    <!--<extension name='cmswebservices' />-->
-    <!--<extension name='smarteditwebservices' />-->
-    <!--<extension name='permissionswebservices' />-->
-    <!--<extension name='cmssmartedit' />-->
-    <!--<extension name='previewwebservices' />-->
-    <!--<extension name='cmssmarteditwebservices' />-->
+    <extension name='droolsruleengineservices' />
+    <extension name='couponfacades' />
+    <extension name='cmswebservices' />
+    <extension name='smarteditwebservices' />
+    <extension name='permissionswebservices' />
+    <extension name='cmssmartedit' />
+    <extension name='previewwebservices' />
+    <extension name='cmssmarteditwebservices' />
 
     <!-- test -->
-    <!--<extension name='assistedserviceatddtests' />-->
-    <!--<extension name='promotionengineatddtests' />-->
+	<!-- common -->
+    <extension name='assistedserviceatddtests' />
+    <extension name='promotionengineatddtests' />
     <extension name='commercesearchatddtests' />
-    <!--<extension name='textfieldconfiguratortemplateatddtests' />-->
-    <extension name='sapcoretest' />
+    <extension name='textfieldconfiguratortemplateatddtests' />
+	<!-- springer -->
+	<extension name='sapcoretest' />
 
     <!-- backoffice -->
+	<!-- common -->
     <extension name='commercesearchbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
-    <!--<extension name='textfieldconfiguratortemplatebackoffice' />-->
-    <!--<extension name='customersupportbackoffice' />-->
-    <!--<extension name='rulebuilderbackoffice' />-->
-    <!--<extension name='couponbackoffice' />-->
+    <extension name='textfieldconfiguratortemplatebackoffice' />
+    <extension name='customersupportbackoffice' />
+    <extension name='rulebuilderbackoffice' />
+    <extension name='couponbackoffice' />
+	<!-- springer -->
     <extension name='datahubbackoffice' />
-    <extension name='sapcoreconfigurationbackoffice' />
+	<extension name='sapcoreconfigurationbackoffice' />
     <extension name='sapmodelbackoffice' />
     <extension name='sappricingbackoffice' />
     <extension name='saporderexchangebackoffice' />
     <extension name='sapordermgmtbackoffice' />
     <extension name='sapproductavailabilitybackoffice' />
-    <extension name='sapcreditcheckbackoffice' />
 
     <!-- addons, install -->
     <!-- webservice addons
@@ -57,46 +56,33 @@
     <extension name='acceleratorwebservicesaddon' />
 
     <!-- storefront addons
-         ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon,sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
+         ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springerstorefront"
          ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
     -->
-    <!--<extension name='commerceorgsamplesaddon' />-->
-    <!--<extension name='orderselfserviceaddon' />-->
-    <!--<extension name='assistedservicestorefront' />-->
-    <!--<extension name='customerticketingaddon' />-->
-    <!--<extension name='promotionenginesamplesaddon' />-->
-    <!--<extension name='textfieldconfiguratortemplateaddon' />-->
-    <!--<extension name='liveeditaddon' />-->
-    <!--<extension name='smarteditaddon' />-->
-    <extension name='sapcoreaddon' />
-    <extension name="springerlinkcheckoutaddon"/>
+	<!-- common -->
+    <extension name='commerceorgsamplesaddon' />
+    <extension name='orderselfserviceaddon' />
+    <extension name='assistedservicestorefront' />
+    <extension name='customerticketingaddon' />
+    <extension name='promotionenginesamplesaddon' />
+    <extension name='textfieldconfiguratortemplateaddon' />
+    <extension name='liveeditaddon' />
+    <extension name='smarteditaddon' />
+	<!-- springerstorefront -->
+	<extension name='sapcoreaddon' />
+	<extension name='springerlinkcheckoutaddon'/>
 
-    <!-- springer -->
-    <extension name="springercore"/>
-    <extension name="springerfacades"/>
-    <extension name="springertest"/>
-    <extension name="springerstorefront"/>
-    <extension name="springerinitialdata"/>
-    <extension name="springercockpits"/>
-    <!--<extension name="springerfulfilmentprocess"/>-->
-    <extension name="springersaporderfulfilment"/>
-
-    <!-- b2b only -->
-    <!--<extension name='b2badmincockpit' />-->
-    <!--<extension name='b2bsappricing' />-->
-    <!--<extension name='saporderexchangeb2b' />-->
-    <!--<extension name='b2bsapproductavailability' />-->
-    <!--<extension name='yb2bacceleratorstorefront' />-->
-
-    <!-- b2b backoffice -->
-    <!--<extension name='b2bcommercebackoffice' />-->
-    <!--<extension name='sapcustomerb2bbackoffice' />-->
-
-    <!-- b2b addons -->
-    <!--<extension name='b2bacceleratoraddon' />-->
-    <!--<extension name='commerceorgaddon' />-->
-    <!--<extension name='secureportaladdon' />-->
-    <!--<extension name='ysapordermgmtb2baddon' />-->
+	
+	<!-- springer common -->
+	<extension name="springerstorefront"/>
+	<extension name="springersaporderfulfilment"/>
+	<!-- springerlink -->
+	<extension name="springerlinkstore"/>
+    <!-- macmillan -->
+    <extension name="macmillanstorefront"/>
+    <extension name="macmillanstore"/>
+    <extension name="macmillanfulfilmentprocess"/>
+    <extension name="macmillancore"/>
 
   </extensions>
 </hybrisconfig>

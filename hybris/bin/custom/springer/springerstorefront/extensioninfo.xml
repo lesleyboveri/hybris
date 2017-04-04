@@ -10,7 +10,7 @@
  license agreement you entered into with SAP.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-	<extension abstractclassprefix="Generated" classprefix="SpringerStorefront" name="springerstorefront" usemaven="false">		
+	<extension abstractclassprefix="Generated" classprefix="Springerstorefront" name="springerstorefront" usemaven="false">		
         <requires-extension name="springerlinkcheckoutaddon"/>
 <requires-extension name="sapcoreaddon"/>
 <requires-extension name="smarteditaddon"/>
@@ -21,42 +21,13 @@
 <requires-extension name="assistedservicestorefront"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="commerceorgsamplesaddon"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <requires-extension name="acceleratorstorefrontcommons"/>
-		<requires-extension name="springerfacades"/>
+		<requires-extension name="yacceleratorfacades"/>
 
 		<webmodule jspcompile="false" webroot="/springerstorefront"/>
 
+		<meta key="modulegen-name" value="accelerator"/>
 		
-		<meta key="extgen-template-extension" value="true"/>
 
 	</extension>
 
