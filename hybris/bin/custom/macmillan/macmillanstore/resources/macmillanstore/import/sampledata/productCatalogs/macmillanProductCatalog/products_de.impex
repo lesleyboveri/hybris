@@ -20,7 +20,7 @@ $lang=de
 
 
 # Update allProducts with localisations
-UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+UPDATE MEAProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
  ;107701;;GS-Netzteil;GS-Netzteil;<br/><br/>Geeignet zur Stromversorgung der Kamera im Auto oder Boot (über den Zigarettenanzünder).<br/><br/>
  ;1099285;;Monopod 100 - Einbeinstativ Monopod;Monopod 100 - Einbeinstativ Monopod, 164 cm Höhe, 2,0 kg;<br/><br/>Geeignet zur Stromversorgung der Kamera im Auto oder Boot (über den Zigarettenanzünder).<br/><br/>
  ;1099413;;Macro Ring Lite MR-14EX;;

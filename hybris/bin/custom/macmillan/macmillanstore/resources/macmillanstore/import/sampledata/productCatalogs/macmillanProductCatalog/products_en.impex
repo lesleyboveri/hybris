@@ -20,7 +20,7 @@ $lang=en
 
 
 # Update allProducts with localisations
-UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+UPDATE MEAProduct;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
  ;107701;;DC Car Battery Adapter;DC Car Battery Adapter;It's time to take a road trip and you want to capture the whole event with your HandyCam® camcorder but you know the battery isn't going to last the whole trip. Not a problem with the DCC-L50B Car Battery Adaptor. You can power your HandyCam® camcorder directly from your car's cigarette lighter socket and record your adventure non-stop!<br/>Includes the DK215 and DK235 connecting cords
  ;1099285;;Monopod 100 - Floor Standing Monopod;Monopod 100 - Floor Standing Monopod, 64.5"" Height, 4.4 lb;Canon Monopod 100 for SLR Cameras & Lenses
  ;1099413;;Macro Ring Lite MR-14EX;;

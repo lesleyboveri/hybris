@@ -4,6 +4,7 @@
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
 <div class="product-details page-title">
@@ -31,7 +32,10 @@
 							<product:productPricePanel product="${product}" />
 						</ycommerce:testId>
 
-						<div class="description">${fn:escapeXml(product.summary)}</div>
+						<div class="description">
+							${fn:escapeXml(product.summary)}
+							<%--Publication date: <fmt:formatDate value="${product.publicationDate}" type="BOTH" dateStyle="SHORT" timeStyle="SHORT"/>--%>
+						</div>
 					</div>
 				</div>
 

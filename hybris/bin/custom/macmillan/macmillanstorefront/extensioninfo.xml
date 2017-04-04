@@ -86,7 +86,8 @@
 
 
 <requires-extension name="acceleratorstorefrontcommons"/>
-		<requires-extension name="yacceleratorfacades"/>
+		<requires-extension name="acceleratorfacades"/>
+		<requires-extension name="macmillanfacades"/>
 
 		<webmodule jspcompile="false" webroot="/macmillanstorefront"/>
 

@@ -83,6 +83,7 @@
     <extension name="macmillanstore"/>
     <extension name="macmillanfulfilmentprocess"/>
     <extension name="macmillancore"/>
+    <extension name="macmillanfacades"/>
 
   </extensions>
 </hybrisconfig>

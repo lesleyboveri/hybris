@@ -17,14 +17,14 @@
 			xsi:noNamespaceSchemaLocation="items.xsd">
 	
 	<collectiontypes>
-		<collectiontype code="AuthorsList" elementtype="java.lang.String" type="list"/>
+		<collectiontype code="MEAAuthorsList" elementtype="java.lang.String" type="list"/>
 	</collectiontypes>
 	<enumtypes>
-		<enumtype code="Bindings" autocreate="true" generate="true" dynamic="true">
+		<enumtype code="MEABindings" autocreate="true" generate="true" dynamic="true">
 			<value code="HardCover"/>
 			<value code="SoftCover"/>
 		</enumtype>
-		<enumtype code="Formats" autocreate="true" generate="true" dynamic="true">
+		<enumtype code="MEAFormats" autocreate="true" generate="true" dynamic="true">
 			<value code="Print"/>
 			<value code="ePub"/>
 			<value code="PrintDigital"/>
@@ -32,13 +32,14 @@
 	</enumtypes>
 	<itemtypes>
 		<typegroup name="MacmillanProduct">
-			<itemtype code="Product" autocreate="false" generate="false">
+			<itemtype code="MEAProduct" autocreate="true" generate="true" extends="Product"
+					  jaloclass="com.mea.hybris.macmillancore.jalo.MEAProduct">
 				<description>Extending the Hybris product for Macmillan</description>
 				<attributes>
 					<attribute qualifier="component" type="java.lang.String">
 						<persistence type="property"/>
 					</attribute>
-					<attribute qualifier="authors" type="AuthorsList">
+					<attribute qualifier="authors" type="MEAAuthorsList">
 						<persistence type="property"/>
 					</attribute>
 					<attribute qualifier="inspectionCopyAllowed" type="java.lang.Boolean">
@@ -49,12 +50,12 @@
 					<attribute qualifier="publicationDate" type="java.util.Date">
 						<persistence type="property"/>
 					</attribute>
-					<attribute qualifier="binding" type="Bindings">
+					<attribute qualifier="binding" type="MEABindings">
 						<persistence type="property"/>
 						<defaultvalue>em().getEnumerationValue("Bindings","HardCover")</defaultvalue>
 						<modifiers optional="false"/>
 					</attribute>
-					<attribute qualifier="format" type="Formats">
+					<attribute qualifier="format" type="MEAFormats">
 						<persistence type="property"/>
 						<defaultvalue>em().getEnumerationValue("Formats","Print")</defaultvalue>
 					</attribute>

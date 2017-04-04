@@ -10,6 +10,10 @@
  */
 package com.mea.hybris.storefront.controllers.pages;
 
+import com.mea.hybris.facades.data.MEAProductData;
+import com.mea.hybris.facades.product.MEAProductFacade;
+import com.mea.hybris.macmillancore.model.MEAProductModel;
+import com.mea.hybris.macmillancore.service.product.MEAProductService;
 import de.hybris.platform.acceleratorfacades.futurestock.FutureStockFacade;
 import de.hybris.platform.acceleratorservices.controllers.page.PageType;
 import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.ProductBreadcrumbBuilder;
@@ -100,8 +104,14 @@ public class ProductPageController extends AbstractPageController
 	@Resource(name = "accProductFacade")
 	private ProductFacade productFacade;
 
+	@Resource(name = "meaProductFacade")
+	private MEAProductFacade meaProductFacade;
+
 	@Resource(name = "productService")
 	private ProductService productService;
+
+	@Resource(name = "meaProductService")
+	private MEAProductService meaProductService;
 
 	@Resource(name = "productBreadcrumbBuilder")
 	private ProductBreadcrumbBuilder productBreadcrumbBuilder;
@@ -126,7 +136,7 @@ public class ProductPageController extends AbstractPageController
 		final List<ProductOption> extraOptions = Arrays.asList(ProductOption.VARIANT_MATRIX_BASE, ProductOption.VARIANT_MATRIX_URL,
 				ProductOption.VARIANT_MATRIX_MEDIA);
 
-		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, extraOptions);
+		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode, extraOptions);
 
 		final String redirection = checkRequestUrl(request, response, productDataUrlResolver.resolve(productData));
 		if (StringUtils.isNotEmpty(redirection))
@@ -174,7 +184,7 @@ public class ProductPageController extends AbstractPageController
 	public String showZoomImages(@PathVariable("productCode") final String productCode,
 			@RequestParam(value = "galleryPosition", required = false) final String galleryPosition, final Model model)
 	{
-		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode,
+		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode,
 				Collections.singleton(ProductOption.GALLERY));
 		final List<Map<String, ImageData>> images = getGalleryImages(productData);
 		populateProductData(productData, model);
@@ -200,8 +210,8 @@ public class ProductPageController extends AbstractPageController
 	public String showQuickView(@PathVariable("productCode") final String productCode, final Model model,
 			final HttpServletRequest request)
 	{
-		final ProductModel productModel = productService.getProductForCode(productCode);
-		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode,
+		final MEAProductModel productModel = meaProductService.getProductForCode(productCode);
+		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode,
 				Arrays.asList(ProductOption.BASIC, ProductOption.PRICE, ProductOption.SUMMARY, ProductOption.DESCRIPTION,
 						ProductOption.CATEGORIES, ProductOption.PROMOTIONS, ProductOption.STOCK, ProductOption.REVIEW,
 						ProductOption.VARIANT_FULL, ProductOption.DELIVERY_MODE_AVAILABILITY));
@@ -396,7 +406,7 @@ public class ProductPageController extends AbstractPageController
 	protected void populateProductDetailForDisplay(final String productCode, final Model model, final HttpServletRequest request,
 			final List<ProductOption> extraOptions) throws CMSItemNotFoundException
 	{
-		final ProductModel productModel = productService.getProductForCode(productCode);
+		final MEAProductModel productModel = meaProductService.getProductForCode(productCode);
 
 		getRequestContextData(request).setProduct(productModel);
 
@@ -408,7 +418,7 @@ public class ProductPageController extends AbstractPageController
 
 		options.addAll(extraOptions);
 
-		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, options);
+		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode, options);
 
 		sortVariantOptionData(productData);
 		storeCmsPageInModel(model, getPageForProduct(productCode));
@@ -422,7 +432,7 @@ public class ProductPageController extends AbstractPageController
 		}
 	}
 
-	protected void populateProductData(final ProductData productData, final Model model)
+	protected void populateProductData(final MEAProductData productData, final Model model)
 	{
 		model.addAttribute("galleryImages", getGalleryImages(productData));
 		model.addAttribute("product", productData);
