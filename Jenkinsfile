@@ -7,7 +7,7 @@ pipeline {
       steps {
           echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
           checkout scm
-          sh 'cd docker/Images/01_base && ./build'
+          sh 'cd docker/Images/01_base && ./build.sh'
       }
     }
     stage('build tomcat'){
