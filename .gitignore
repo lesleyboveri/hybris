@@ -62,3 +62,4 @@ hybris/bin/*
 /hybris/bin/custom/springer/springerinitialdata/gensrc
 /hybris/bin/custom/springer/springertest/gensrc
 /hybris/bin/custom/springer/springersaporderfulfilment/gensrc
+/hybris/config/solr/instances/default/hsperfdata_tklostermann
