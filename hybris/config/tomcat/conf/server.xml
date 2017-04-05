@@ -89,7 +89,7 @@
      --> 
 	${tomcat.connectors.ajp.plain}	
 
-    <Engine name="Catalina" defaultHost="localhost" startStopThreads="0">
+    <Engine name="Catalina" defaultHost="localhost">
 
 			<Valve 	className="org.apache.catalina.valves.AccessLogValve"
              		directory="${HYBRIS_LOG_DIR}/tomcat"
@@ -101,8 +101,7 @@
       <Host 	name="localhost"
       			appBase="webapps"
 		       	unpackWARs="false"
-		       	autoDeploy="false"
-				starStopThreads="0">
+		       	autoDeploy="false">
 
 
 			${tomcat.webapps}
