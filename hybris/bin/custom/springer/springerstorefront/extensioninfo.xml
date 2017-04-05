@@ -11,7 +11,7 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
 	<extension abstractclassprefix="Generated" classprefix="Springerstorefront" name="springerstorefront" usemaven="false">		
-        <requires-extension name="springerlinkcheckoutaddon"/>
+<requires-extension name="springerlinkcheckoutaddon"/>
 <requires-extension name="sapcoreaddon"/>
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>

@@ -11,7 +11,9 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
 	<extension abstractclassprefix="Generated" classprefix="Macmillanstorefront" name="macmillanstorefront" usemaven="false">		
-        <requires-extension name="smarteditaddon"/>
+
+
+<requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>
 <requires-extension name="promotionenginesamplesaddon"/>
@@ -19,72 +21,6 @@
 <requires-extension name="assistedservicestorefront"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="commerceorgsamplesaddon"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<requires-extension name="stocknotificationaddon"/>
-<requires-extension name="customerinterestsaddon"/>
-<requires-extension name="notificationaddon"/>
-<requires-extension name="consignmenttrackingmockaddon"/>
-<requires-extension name="consignmenttrackingaddon"/>
-
-
-<requires-extension name="privacyoverlayeraddon"/>
-
-<requires-extension name="assistedservicecustomerinterestsaddon"/>
-
-<requires-extension name="eventtrackingwsaddon"/>
-<requires-extension name="hybrisanalyticsaddon"/>
-
-
-
-<requires-extension name="captchaaddon"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <requires-extension name="acceleratorstorefrontcommons"/>
 		<requires-extension name="yacceleratorfacades"/>
 		<requires-extension name="macmillanfacades"/>
