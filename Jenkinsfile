@@ -22,5 +22,8 @@ pipeline {
           sh 'cd $WORKSPACE/docker/Images/03_server && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
       }
     }
+    stage('download hybris platform'){
+      echo "Downloading hybris.zip"
+      }
   }
 }
