@@ -30,6 +30,14 @@ hybris/bin/*
 !hybris/bin/custom/
 !hybris/config/
 !hybris/roles/
+hybris/roles/local/tklostermann
+hybris/bin/custom/springer/springercockpits/gensrc
+hybris/bin/custom/springer/springercore/gensrc
+hybris/bin/custom/springer/springerfacades/gensrc
+hybris/bin/custom/springer/springerinitialdata/gensrc
+hybris/bin/custom/springer/springertest/gensrc
+hybris/bin/custom/springer/springersaporderfulfilment/gensrc
+hybris/config/solr/instances/default/hsperfdata_*
 
 # ----------------------------------------#
 #                   Files:                #
@@ -55,11 +63,4 @@ hybris/bin/*
 **/*.jcoDestination
 **/.lastupdate
 **/dummy.txt
-/hybris/roles/local/tklostermann
-/hybris/bin/custom/springer/springercockpits/gensrc
-/hybris/bin/custom/springer/springercore/gensrc
-/hybris/bin/custom/springer/springerfacades/gensrc
-/hybris/bin/custom/springer/springerinitialdata/gensrc
-/hybris/bin/custom/springer/springertest/gensrc
-/hybris/bin/custom/springer/springersaporderfulfilment/gensrc
-/hybris/config/solr/instances/default/hsperfdata_tklostermann
+**/wro_addons.xml
