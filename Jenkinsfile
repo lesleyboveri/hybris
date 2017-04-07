@@ -23,7 +23,18 @@ pipeline {
       }
     }
     stage('download hybris platform'){
-      echo "Downloading hybris.zip"
+      steps{
+        echo "Downloading hybris.zip"
+        sh './download.sh'
+        echo "Extracting hybris.zip"
+        sh './extract.sh'
       }
+    }
+    stage('build hybris platform'){
+      steps{
+        echo "Downloading hybris.zip"
+        sh './build.sh'
+      }
+    }
   }
 }
