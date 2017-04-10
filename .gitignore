@@ -1,7 +1,13 @@
 .idea/
 tmp/
 out/
-
+hybris/*
+!hybris/bin/
+hybris/bin/*
+!hybris/bin/custom/
+!hybris/config/
+!hybris/roles/
+hybris/roles/local/tklostermann
 **/classes/
 **/testclasses/
 **/gensrc/
@@ -24,20 +30,8 @@ out/
 **/.settings
 **/idea-module-files
 **/node_modules
-hybris/*
-!hybris/bin/
-hybris/bin/*
-!hybris/bin/custom/
-!hybris/config/
-!hybris/roles/
-hybris/roles/local/tklostermann
-hybris/bin/custom/springer/springercockpits/gensrc
-hybris/bin/custom/springer/springercore/gensrc
-hybris/bin/custom/springer/springerfacades/gensrc
-hybris/bin/custom/springer/springerinitialdata/gensrc
-hybris/bin/custom/springer/springertest/gensrc
-hybris/bin/custom/springer/springersaporderfulfilment/gensrc
-hybris/config/solr/instances/default/hsperfdata_*
+**/_ui-src/addons/
+**/hsperfdata_*
 
 # ----------------------------------------#
 #                   Files:                #
@@ -49,6 +43,9 @@ hybris/config/solr/instances/default/hsperfdata_*
 **/hmc.xsd
 **/extensioninfo.xsd
 **/build.xml
+**/dummy.txt
+**/wro_addons.xml
+**/css/style.css
 **/*-testclasses.xml
 **/*-webtestclasses.xml
 **/generated-*-spring.xml
@@ -62,5 +59,3 @@ hybris/config/solr/instances/default/hsperfdata_*
 **/*.lo
 **/*.jcoDestination
 **/.lastupdate
-**/dummy.txt
-**/wro_addons.xml
