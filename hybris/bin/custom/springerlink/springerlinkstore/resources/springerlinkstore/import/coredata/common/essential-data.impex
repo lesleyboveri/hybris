@@ -125,3 +125,6 @@ INSERT_UPDATE Tax;code[unique=true];value;currency(isocode)
 INSERT_UPDATE ServicelayerJob;code[unique=true];springId[unique=true]
 ;cartRemovalJob;cartRemovalJob
 ;siteMapMediaJob;siteMapMediaJob
+
+INSERT_UPDATE OAuthClientDetails;clientId[unique=true];resourceIds;scope;authorizedGrantTypes;authorities;clientSecret;registeredRedirectUri
+;springer;hybris;basic;implicit,client_credentials,password;ROLE_CLIENT;!F9sySa5v/4c.;Mv;http://localhost:9001/oauth2_implicit_callback;
