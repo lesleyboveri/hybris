@@ -4,7 +4,7 @@
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
 
     <!-- templates -->
-    <!--<extension name='yacceleratorcockpits' />-->
+    <extension name='yacceleratorcockpits' />
     <!--<extension name='yacceleratorinitialdata' />-->
     <!--<extension name='yacceleratorfulfilmentprocess' />-->
     <!--<extension name='yacceleratorstorefront' />-->
