@@ -29,10 +29,12 @@
     <extension name='promotionengineatddtests' />
     <extension name='commercesearchatddtests' />
     <extension name='textfieldconfiguratortemplateatddtests' />
+
 	<!-- springer -->
 	<extension name='sapcoretest' />
 
     <!-- backoffice -->
+
 	<!-- common -->
     <extension name='commercesearchbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
@@ -40,6 +42,7 @@
     <extension name='customersupportbackoffice' />
     <extension name='rulebuilderbackoffice' />
     <extension name='couponbackoffice' />
+
 	<!-- springer -->
     <extension name='datahubbackoffice' />
 	<extension name='sapcoreconfigurationbackoffice' />
@@ -59,6 +62,7 @@
          ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springerstorefront"
          ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
     -->
+
 	<!-- common -->
     <extension name='commerceorgsamplesaddon' />
     <extension name='orderselfserviceaddon' />
@@ -68,21 +72,23 @@
     <extension name='textfieldconfiguratortemplateaddon' />
     <extension name='liveeditaddon' />
     <extension name='smarteditaddon' />
+
 	<!-- springerstorefront -->
 	<extension name='sapcoreaddon' />
 	<extension name='springerlinkcheckoutaddon'/>
 
-	
-	<!-- springer common -->
-	<extension name="springerstorefront"/>
-	<extension name="springersaporderfulfilment"/>
+	<!-- springernature common -->
+    <extension name="springernaturecore"/>
+	<extension name="springernaturestorefront"/>
+	<extension name="springernaturesaporderfulfillment"/>
+
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>
+
     <!-- macmillan -->
     <extension name="macmillanstorefront"/>
     <extension name="macmillanstore"/>
     <extension name="macmillanfulfilmentprocess"/>
-    <extension name="macmillancore"/>
     <extension name="macmillanfacades"/>
 
   </extensions>

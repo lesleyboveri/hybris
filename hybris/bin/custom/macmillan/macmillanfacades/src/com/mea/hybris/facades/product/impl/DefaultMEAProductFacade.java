@@ -2,14 +2,10 @@ package com.mea.hybris.facades.product.impl;
 
 import com.mea.hybris.facades.data.MEAProductData;
 import com.mea.hybris.facades.product.MEAProductFacade;
-import com.mea.hybris.macmillancore.model.MEAProductModel;
-import com.mea.hybris.macmillancore.service.product.MEAProductService;
+import com.springernature.hybris.springernaturecore.model.MEAProductModel;
+import com.springernature.hybris.springernaturecore.service.product.MEAProductService;
 import de.hybris.platform.commercefacades.product.ProductOption;
-import de.hybris.platform.commercefacades.product.data.ProductData;
-import de.hybris.platform.commercefacades.product.data.ReviewData;
 import de.hybris.platform.converters.ConfigurablePopulator;
-import de.hybris.platform.core.model.product.ProductModel;
-import de.hybris.platform.customerreview.model.CustomerReviewModel;
 import de.hybris.platform.servicelayer.dto.converter.Converter;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import org.springframework.beans.factory.annotation.Required;

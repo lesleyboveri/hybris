@@ -1,7 +1,7 @@
 package com.mea.hybris.facades.product;
 
 import com.mea.hybris.facades.data.MEAProductData;
-import com.mea.hybris.macmillancore.model.MEAProductModel;
+import com.springernature.hybris.springernaturecore.model.MEAProductModel;
 import de.hybris.platform.commercefacades.product.ProductOption;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 

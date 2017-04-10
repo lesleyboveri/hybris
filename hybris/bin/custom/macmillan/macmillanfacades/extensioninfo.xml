@@ -16,7 +16,7 @@
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
       <!-- <requires-extension name="cms"/> -->         
 	  <requires-extension name="acceleratorfacades"/>
-	  <requires-extension name="macmillancore"/>
+	  <requires-extension name="springernaturecore"/>
       
 
       <coremodule generated="true" manager="com.mea.hybris.facades.jalo.MacmillanfacadesManager" packageroot="com.mea.hybris.facades"/>
