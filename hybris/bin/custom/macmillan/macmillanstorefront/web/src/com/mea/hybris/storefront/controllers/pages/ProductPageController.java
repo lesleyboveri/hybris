@@ -107,9 +107,6 @@ public class ProductPageController extends AbstractPageController
 	@Resource(name = "productService")
 	private ProductService productService;
 
-	@Resource(name = "meaProductService")
-	private MEAProductService meaProductService;
-
 	@Resource(name = "productBreadcrumbBuilder")
 	private ProductBreadcrumbBuilder productBreadcrumbBuilder;
 
@@ -133,7 +130,7 @@ public class ProductPageController extends AbstractPageController
 		final List<ProductOption> extraOptions = Arrays.asList(ProductOption.VARIANT_MATRIX_BASE, ProductOption.VARIANT_MATRIX_URL,
 				ProductOption.VARIANT_MATRIX_MEDIA);
 
-		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode, extraOptions);
+		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, extraOptions);
 
 		final String redirection = checkRequestUrl(request, response, productDataUrlResolver.resolve(productData));
 		if (StringUtils.isNotEmpty(redirection))
@@ -207,8 +204,8 @@ public class ProductPageController extends AbstractPageController
 	public String showQuickView(@PathVariable("productCode") final String productCode, final Model model,
 			final HttpServletRequest request)
 	{
-		final MEAProductModel productModel = meaProductService.getProductForCode(productCode);
-		final MEAProductData productData = meaProductFacade.getProductForCodeAndOptions(productCode,
+		final ProductModel productModel = productService.getProductForCode(productCode);
+		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode,
 				Arrays.asList(ProductOption.BASIC, ProductOption.PRICE, ProductOption.SUMMARY, ProductOption.DESCRIPTION,
 						ProductOption.CATEGORIES, ProductOption.PROMOTIONS, ProductOption.STOCK, ProductOption.REVIEW,
 						ProductOption.VARIANT_FULL, ProductOption.DELIVERY_MODE_AVAILABILITY));
@@ -429,7 +426,7 @@ public class ProductPageController extends AbstractPageController
 		}
 	}
 
-	protected void populateProductData(final MEAProductData productData, final Model model)
+	protected void populateProductData(final ProductData productData, final Model model)
 	{
 		model.addAttribute("galleryImages", getGalleryImages(productData));
 		model.addAttribute("product", productData);

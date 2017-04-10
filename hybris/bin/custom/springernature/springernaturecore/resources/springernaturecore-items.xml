@@ -34,8 +34,7 @@
 
     <itemtypes>
         <typegroup name="MacMillanItems">
-            <itemtype code="MEAProduct" autocreate="true" generate="true" extends="Product"
-                      jaloclass="com.springernature.hybris.springernaturecore.jalo.MEAProduct">
+            <itemtype code="Product" autocreate="false" generate="false">
                 <description>Extending the Hybris product for Macmillan</description>
                 <attributes>
                     <attribute qualifier="component" type="java.lang.String">

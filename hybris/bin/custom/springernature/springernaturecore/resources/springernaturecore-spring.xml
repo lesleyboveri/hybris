@@ -89,14 +89,5 @@
         <property name="mediaService" ref="mediaService"/>
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
-
-    <alias name="meaDefaultProductService" alias="meaProductService"/>
-    <bean id="meaDefaultProductService" class="com.mea.hybris.macmillancore.service.product.impl.DefaultMEAProductService">
-        <property name="meaProductDao" ref="meaProductDao"/>
-    </bean>
-
-    <bean id="meaProductDao" class="com.mea.hybris.macmillancore.daos.product.impl.DefaultMEAProductDao">
-        <constructor-arg value="MEAProduct"/>
-    </bean>
 			
 </beans>
