@@ -16,6 +16,7 @@
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="items.xsd">
 
+    <!-- MACMILLAN SECTION -->
     <collectiontypes>
         <collectiontype code="MEAAuthorsList" elementtype="java.lang.String" type="list"/>
     </collectiontypes>
@@ -31,8 +32,14 @@
             <value code="PrintDigital"/>
         </enumtype>
     </enumtypes>
+    <!-- END MACMILLAN SECTION -->
+
+    <!-- SPRINGERLINK SECTION -->
+
+    <!-- END SPRINGERLINK SECTION -->
 
     <itemtypes>
+        <!-- HERE ONLY MACMILLAN ITEMS !!! -->
         <typegroup name="MacMillanItems">
             <itemtype code="Product" autocreate="false" generate="false">
                 <description>Extending the Hybris product for Macmillan</description>
@@ -59,6 +66,20 @@
                     <attribute qualifier="format" type="MEAFormats">
                         <persistence type="property"/>
                         <defaultvalue>em().getEnumerationValue("Formats","Print")</defaultvalue>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
+        <!-- HERE ONLY SPRINGERLINK ITEMS !!! -->
+        <typegroup name="SpringerLinkItems">
+            <itemtype code="OrderEntry" autocreate="false" generate="false">
+                <attributes>
+                    <attribute qualifier="isxn" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="doi" type="java.lang.String">
+                        <persistence type="property"/>
                     </attribute>
                 </attributes>
             </itemtype>
