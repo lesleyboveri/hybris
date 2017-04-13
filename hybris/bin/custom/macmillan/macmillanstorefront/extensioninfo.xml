@@ -13,6 +13,10 @@
 	<extension abstractclassprefix="Generated" classprefix="Macmillanstorefront" name="macmillanstorefront" usemaven="false">		
 
 
+
+<requires-extension name="worldpaysampledataaddon"/>
+<requires-extension name="worldpaynotificationaddon"/>
+<requires-extension name="worldpayaddon"/>
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>

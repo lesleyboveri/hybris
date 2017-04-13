@@ -11,7 +11,11 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
 	<extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">		
-        <requires-extension name="acceleratorstorefrontcommons"/>
+        
+<requires-extension name="worldpaysampledataaddon"/>
+<requires-extension name="worldpaynotificationaddon"/>
+<requires-extension name="worldpayaddon"/>
+<requires-extension name="acceleratorstorefrontcommons"/>
 		<requires-extension name="yacceleratorfacades"/>
 
 		<webmodule jspcompile="false" webroot="/springernaturestorefront"/>
