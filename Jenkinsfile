@@ -30,10 +30,14 @@ pipeline {
         sh './extract.sh'
       }
     }
-    stage('build hybris platform'){
+  stage('create production artifacts'){
       steps{
-        echo "Downloading hybris.zip"
-        sh './build.sh'
+        sh './build_test.sh'
+      }
+    }
+    stage('create production artifacts'){
+      steps{
+        sh './production.sh'
       }
     }
   }
