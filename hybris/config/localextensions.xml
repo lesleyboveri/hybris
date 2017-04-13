@@ -3,11 +3,12 @@
     <path dir='${HYBRIS_BIN_DIR}/ext-integration/sap' autoload='false' />
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
 
+    <!-- worldpay -->
+    <path dir="${HYBRIS_BIN_DIR}/custom/worldpay/ext-worldpay" autoload="true"/>
+    <path dir="${HYBRIS_BIN_DIR}/custom/worldpay/ext-worldpayfulfilment" autoload="true"/>
+
     <!-- templates -->
     <extension name='yacceleratorcockpits' />
-    <!--<extension name='yacceleratorinitialdata' />-->
-    <!--<extension name='yacceleratorfulfilmentprocess' />-->
-    <!--<extension name='yacceleratorstorefront' />-->
     <extension name='ycommercewebservices' />
     <extension name='ycommercewebservicestest' />
 
@@ -60,7 +61,8 @@
 
     <!-- storefront addons
          ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springerstorefront"
-         ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springerstorefront"
+         ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"
+         ant addoninstall -Daddonnames="worldpayaddon,worldpaynotificationaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"
     -->
 
 	<!-- common -->
