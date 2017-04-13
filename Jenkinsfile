@@ -2,6 +2,7 @@
 
 pipeline {
   agent { node { label 'hybris' } }
+  tools { jdk 'jdk8' }
   stages {
     stage('build base docker image') {
       steps {
@@ -32,6 +33,10 @@ pipeline {
     }
   stage('build and test platform'){
       steps{
+        sh '''
+              echo "PATH = ${PATH}"
+              echo "JAVA_HOME = ${JAVA_HOME}"
+           '''
         sh './build_test.sh'
       }
     }
