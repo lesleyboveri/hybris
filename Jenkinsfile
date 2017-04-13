@@ -38,7 +38,7 @@ pipeline {
               echo "JAVA_HOME = ${JAVA_HOME}"
            '''
         sh './build_test.sh'
-        junit '$WORKSPACE/hybris/log/junit/**/xml'
+        junit '$WORKSPACE/hybris/temp/hybris/junit/**/*.xml'
       }
     }
     stage('create production artifacts'){
