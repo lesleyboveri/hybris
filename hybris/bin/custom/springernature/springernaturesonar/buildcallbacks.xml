@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="springernaturesonar_buildcallbacks">
+
+	<import file="${ext.springernaturesonar.path}/resources/springernaturesonar/ant/ant-jacoco.xml"/>
+	<import file="${ext.springernaturesonar.path}/resources/springernaturesonar/ant/ant-sonar.xml"/>
+
+	<macrodef name="springernaturesonar_before_ear">
+		<sequential>
+
+		</sequential>
+	</macrodef>
+
+</project>

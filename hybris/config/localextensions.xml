@@ -91,5 +91,8 @@
     <extension name="macmillanfulfilmentprocess"/>
     <extension name="macmillanfacades"/>
 
+    <!-- sonar -->
+    <extension name="springernaturesonar"/>
+
   </extensions>
 </hybrisconfig>
