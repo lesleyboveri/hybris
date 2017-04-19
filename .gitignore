@@ -59,3 +59,4 @@ hybris/roles/local/tklostermann
 **/*.lo
 **/*.jcoDestination
 **/.lastupdate
+**/worldpayaddonbackoffice_bof.jar

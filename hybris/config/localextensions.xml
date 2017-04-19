@@ -81,6 +81,7 @@
 
 	<!-- springernature common -->
     <extension name="springernaturecore"/>
+    <extension name="springernaturefacades"/>
 	<extension name="springernaturestorefront"/>
 	<extension name="springernaturesaporderfulfillment"/>
 
