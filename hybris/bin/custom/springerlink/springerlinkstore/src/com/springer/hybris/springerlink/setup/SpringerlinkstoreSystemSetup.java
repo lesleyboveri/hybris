@@ -10,34 +10,92 @@
  */
 package com.springer.hybris.springerlink.setup;
 
-import static com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants.PLATFORM_LOGO_CODE;
-
-import de.hybris.platform.core.initialization.SystemSetup;
-
-import java.io.InputStream;
-
 import com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants;
-import com.springer.hybris.springerlink.service.SpringerlinkstoreService;
+import de.hybris.platform.commerceservices.dataimport.impl.CoreDataImportService;
+import de.hybris.platform.commerceservices.dataimport.impl.SampleDataImportService;
+import de.hybris.platform.commerceservices.setup.AbstractSystemSetup;
+import de.hybris.platform.commerceservices.setup.data.ImportData;
+import de.hybris.platform.commerceservices.setup.events.CoreDataImportedEvent;
+import de.hybris.platform.commerceservices.setup.events.SampleDataImportedEvent;
+import de.hybris.platform.core.initialization.SystemSetup;
+import de.hybris.platform.core.initialization.SystemSetupContext;
+import de.hybris.platform.core.initialization.SystemSetupParameter;
+import de.hybris.platform.core.initialization.SystemSetupParameterMethod;
+import org.springframework.beans.factory.annotation.Required;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 @SystemSetup(extension = SpringerlinkstoreConstants.EXTENSIONNAME)
-public class SpringerlinkstoreSystemSetup
+public class SpringerlinkstoreSystemSetup extends AbstractSystemSetup
 {
-	private final SpringerlinkstoreService springerlinkstoreService;
+	public static final String SPRINGERLINK = "springerlink";
 
-	public SpringerlinkstoreSystemSetup(final SpringerlinkstoreService springerlinkstoreService)
+	private static final String IMPORT_CORE_DATA = "importCoreData";
+	private static final String IMPORT_SAMPLE_DATA = "importSampleData";
+	private static final String ACTIVATE_SOLR_CRON_JOBS = "activateSolrCronJobs";
+
+	private CoreDataImportService coreDataImportService;
+	private SampleDataImportService sampleDataImportService;
+
+	@SystemSetupParameterMethod
+	@Override
+	public List<SystemSetupParameter> getInitializationOptions()
 	{
-		this.springerlinkstoreService = springerlinkstoreService;
+		final List<SystemSetupParameter> params = new ArrayList<SystemSetupParameter>();
+
+		params.add(createBooleanSystemSetupParameter(IMPORT_CORE_DATA, "Import Core Data", true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_SAMPLE_DATA, "Import Sample Data", true));
+		params.add(createBooleanSystemSetupParameter(ACTIVATE_SOLR_CRON_JOBS, "Activate Solr Cron Jobs", true));
+
+		return params;
 	}
 
-	@SystemSetup(process = SystemSetup.Process.INIT, type = SystemSetup.Type.ESSENTIAL)
-	public void createEssentialData()
+	/**
+	 * This method will be called during the system initialization.
+	 *
+	 * @param context
+	 *           the context provides the selected parameters and values
+	 */
+	@SystemSetup(type = SystemSetup.Type.PROJECT, process = SystemSetup.Process.ALL)
+	public void createProjectData(final SystemSetupContext context)
 	{
-		springerlinkstoreService.createLogo(PLATFORM_LOGO_CODE);
+		final List<ImportData> importData = new ArrayList<ImportData>();
+
+		final ImportData electronicsImportData = new ImportData();
+		electronicsImportData.setProductCatalogName(SPRINGERLINK);
+		electronicsImportData.setContentCatalogNames(Arrays.asList(SPRINGERLINK));
+		electronicsImportData.setStoreNames(Arrays.asList(SPRINGERLINK));
+		importData.add(electronicsImportData);
+
+		getCoreDataImportService().execute(this, context, importData);
+		getEventService().publishEvent(new CoreDataImportedEvent(context, importData));
+
+		getSampleDataImportService().execute(this, context, importData);
+		getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
 	}
 
-	private InputStream getImageStream()
+	public CoreDataImportService getCoreDataImportService()
 	{
-		return SpringerlinkstoreSystemSetup.class.getResourceAsStream("/springerlinkstore/sap-hybris-platform.png");
+		return coreDataImportService;
+	}
+
+	@Required
+	public void setCoreDataImportService(final CoreDataImportService coreDataImportService)
+	{
+		this.coreDataImportService = coreDataImportService;
+	}
+
+	public SampleDataImportService getSampleDataImportService()
+	{
+		return sampleDataImportService;
+	}
+
+	@Required
+	public void setSampleDataImportService(final SampleDataImportService sampleDataImportService)
+	{
+		this.sampleDataImportService = sampleDataImportService;
 	}
 }

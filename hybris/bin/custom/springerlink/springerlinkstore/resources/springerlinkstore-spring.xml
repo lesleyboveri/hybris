@@ -80,7 +80,9 @@
 	
     <bean id="springerlinkstoreSystemSetup" class="com.springer.hybris.springerlink.setup.SpringerlinkstoreSystemSetup">
         <!-- constructor arg injection example -->
-        <constructor-arg ref="springerlinkstoreService"/>
+        <!--<constructor-arg ref="springerlinkstoreService"/>-->
+        <property name="coreDataImportService" ref="coreDataImportService"/>
+        <property name="sampleDataImportService" ref="sampleDataImportService"/>
     </bean>
 
     <bean id="springerlinkstoreService" class="com.springer.hybris.springerlink.service.impl.DefaultSpringerlinkstoreService">
