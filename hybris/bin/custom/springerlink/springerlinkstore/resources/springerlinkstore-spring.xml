@@ -78,7 +78,7 @@
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />	
 	  -->
 	
-    <bean id="springerlinkstoreSystemSetup" class="com.springer.hybris.springerlink.setup.SpringerlinkstoreSystemSetup">
+    <bean id="springerlinkstoreSystemSetup" class="com.springer.hybris.springerlink.setup.SpringerlinkstoreSystemSetup" parent="abstractCoreSystemSetup">
         <!-- constructor arg injection example -->
         <!--<constructor-arg ref="springerlinkstoreService"/>-->
         <property name="coreDataImportService" ref="coreDataImportService"/>
