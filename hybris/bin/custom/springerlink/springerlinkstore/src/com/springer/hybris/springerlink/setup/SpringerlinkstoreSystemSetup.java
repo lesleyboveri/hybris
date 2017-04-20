@@ -64,11 +64,11 @@ public class SpringerlinkstoreSystemSetup extends AbstractSystemSetup
 	{
 		final List<ImportData> importData = new ArrayList<ImportData>();
 
-		final ImportData electronicsImportData = new ImportData();
-		electronicsImportData.setProductCatalogName(SPRINGERLINK);
-		electronicsImportData.setContentCatalogNames(Arrays.asList(SPRINGERLINK));
-		electronicsImportData.setStoreNames(Arrays.asList(SPRINGERLINK));
-		importData.add(electronicsImportData);
+		final ImportData springerlinkImportData = new ImportData();
+		springerlinkImportData.setProductCatalogName(SPRINGERLINK);
+		springerlinkImportData.setContentCatalogNames(Arrays.asList(SPRINGERLINK));
+		springerlinkImportData.setStoreNames(Arrays.asList(SPRINGERLINK));
+		importData.add(springerlinkImportData);
 
 		getCoreDataImportService().execute(this, context, importData);
 		getEventService().publishEvent(new CoreDataImportedEvent(context, importData));
