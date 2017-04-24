@@ -12,9 +12,11 @@
 
 	<extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">		
         
-<requires-extension name="worldpaysampledataaddon"/>
 <requires-extension name="worldpaynotificationaddon"/>
 <requires-extension name="worldpayaddon"/>
+<requires-extension name="worldpaysampledataaddon"/>
+
+
 <requires-extension name="acceleratorstorefrontcommons"/>
 		<requires-extension name="yacceleratorfacades"/>
 

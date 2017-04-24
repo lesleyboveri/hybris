@@ -14,9 +14,11 @@
 
 
 
-<requires-extension name="worldpaysampledataaddon"/>
 <requires-extension name="worldpaynotificationaddon"/>
 <requires-extension name="worldpayaddon"/>
+<requires-extension name="worldpaysampledataaddon"/>
+
+
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>
