@@ -22,3 +22,6 @@ UPDATE Product;code[unique=true];$approved;$catalogVersion;$taxGroup
 ;PPVJ
 ;PPVB
 ;PPVJ_ADIS
+
+INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
+;PPVJ;pieces;EUR;34,90;1;1;false

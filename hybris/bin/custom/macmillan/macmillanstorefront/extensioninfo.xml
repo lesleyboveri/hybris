@@ -16,9 +16,6 @@
 
 <requires-extension name="worldpaynotificationaddon"/>
 <requires-extension name="worldpayaddon"/>
-<requires-extension name="worldpaysampledataaddon"/>
-
-
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>
@@ -27,6 +24,19 @@
 <requires-extension name="assistedservicestorefront"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="commerceorgsamplesaddon"/>
+
+
+<requires-extension name="worldpaysampledataaddon"/>
+
+
+
+
+
+
+
+
+
+
 <requires-extension name="acceleratorstorefrontcommons"/>
 		<requires-extension name="yacceleratorfacades"/>
 		<requires-extension name="macmillanfacades"/>

@@ -60,8 +60,8 @@
     <extension name='acceleratorwebservicesaddon' />
 
     <!-- storefront addons
-         ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springerstorefront"
-         ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"
+         ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"
+         ant addoninstall -Daddonnames="sapcoreaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"
          ant addoninstall -Daddonnames="worldpayaddon,worldpaynotificationaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"
     -->
 
@@ -77,7 +77,6 @@
 
 	<!-- springerstorefront -->
 	<extension name='sapcoreaddon' />
-	<extension name='springerlinkcheckoutaddon'/>
 
 	<!-- springernature common -->
     <extension name="springernaturecore"/>
