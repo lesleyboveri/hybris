@@ -13,7 +13,7 @@
 #
 $productCatalog=springerlinkProductCatalog
 $classificationCatalog=SpringerlinkClassification
-$currencies=JPY,USD
+$currencies=EUR,USD
 $net=false
 $storeUid=springerlink
 $defaultCurrency=USD

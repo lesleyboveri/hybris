@@ -13,8 +13,8 @@
 #
 
 # Language
-$lang=de
+$lang = de
 
 # Create Content Catalog
-UPDATE ContentCatalog;id[unique=true];name[lang=$lang]
- ;springerlinkContentCatalog;"Springerlink-Katalog"
+UPDATE ContentCatalog; id[unique = true]; name[lang = $lang]
+; springerlinkContentCatalog ; "Springerlink-Katalog"
