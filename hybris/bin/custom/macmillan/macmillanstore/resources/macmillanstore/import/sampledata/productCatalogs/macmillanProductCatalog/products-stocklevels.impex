@@ -292,7 +292,7 @@ INSERT_UPDATE StockLevel;available;warehouse(code)[unique=true];inStockStatus(co
 ;29;warehouse_s;notSpecified;1;0;0;0;5897548;00
 
 
-UPDATE MEAProduct;code[unique=true];$catalogVersion;stockLevels(productCode,warehouse(code));vendors(code)
+UPDATE Product;code[unique=true];$catalogVersion;stockLevels(productCode,warehouse(code));vendors(code)
 ;23355;;23355:warehouse_s;
 ;29925;;29925:warehouse_e;
 ;65652;;65652:warehouse_w;

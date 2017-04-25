@@ -18,7 +18,7 @@ $taxGroup=Europe1PriceFactory_PTG(code)[default=jp-vat-full]
 # Set product approval status to Approved only for those products that have prices.
 $approved=approvalstatus(code)[default='approved']
 
-UPDATE MEAProduct;code[unique=true];$approved;$catalogVersion;$taxGroup
+UPDATE Product;code[unique=true];$approved;$catalogVersion;$taxGroup
 ;107701
 ;266899
 ;325234

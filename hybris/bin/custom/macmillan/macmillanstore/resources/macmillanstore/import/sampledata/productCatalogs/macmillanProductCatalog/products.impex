@@ -19,7 +19,7 @@ $baseProduct=baseProduct(code,$catalogVersion)
 $approved=approvalstatus(code)[default='check']
 
 # Insert Products
-INSERT_UPDATE MEAProduct;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
 ;23191;1288, brand_5;Sony;ACC-CSPW;pieces;
 ;23210;576, brand_5;Sony;DSC-P71;pieces;4901780755943
 ;23213;576, brand_5;Sony;MVC-CD400;pieces;
