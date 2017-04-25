@@ -66,5 +66,11 @@ pipeline {
                 echo 'not yet implemented'
             }
         }
+        stage('Deploy to Prod') {
+           when { branch 'master' }
+           steps {
+               echo 'not yet implemented'
+           }
+        }
     }
 }
