@@ -19,4 +19,4 @@ $lang=de
 UPDATE SiteTheme;code[unique=true];name[lang=$lang]
  ;black;"Schwarz"
  ;blue;"Blau"
- ;springerlink;"Macillan"
+ ;springerlink;"SpringerLink"

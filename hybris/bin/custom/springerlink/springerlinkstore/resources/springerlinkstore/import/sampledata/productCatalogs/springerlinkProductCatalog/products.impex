@@ -11,15 +11,15 @@
 # ImpEx for Importing Products into Springerlink Store
 
 # Macros / Replacement Parameter definitions
-$productCatalog=springerlinkProductCatalog
-$productCatalogName=Springerlink Product Catalog
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$supercategories=supercategories(code, $catalogVersion)
-$baseProduct=baseProduct(code,$catalogVersion)
-$approved=approvalstatus(code)[default='check']
+$productCatalog = springerlinkProductCatalog
+$productCatalogName = Springerlink Product Catalog
+$catalogVersion = catalogversion(catalog(id[default = $productCatalog]), version[default = 'Staged'])[unique = true, default = $productCatalog:Staged]
+$supercategories = supercategories(code, $catalogVersion)
+$baseProduct = baseProduct(code, $catalogVersion)
+$approved = approvalstatus(code)[default = 'check']
 
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
-;PPVJ;;;;pieces;;;
-;PPVB;;;;pieces;;;
-;PPVJ_ADIS;;;;pieces;;;
+INSERT_UPDATE Product; code[unique = true]; $supercategories; manufacturerName; manufacturerAID; unit(code); ean; variantType(code); $catalogVersion; $approved
+; PPVJ      ; ; ; ; pieces ; ; ;
+; PPVB      ; ; ; ; pieces ; ; ;
+; PPVJ_ADIS ; ; ; ; pieces ; ; ;
