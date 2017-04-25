@@ -29,7 +29,7 @@ $customerAllowedToIgnoreSuggestions=true
 $paymentProvider=Mockup
 $expressCheckoutEnabled=true
 $returnProcessCode=return-process
-$checkoutFlowGroup=responsiveCheckoutGroup
+$checkoutFlowGroup=worldpayB2CResponsiveCheckoutGroup
 
 INSERT_UPDATE PromotionGroup;Identifier[unique=true];
 ;macmillanPromoGrp;

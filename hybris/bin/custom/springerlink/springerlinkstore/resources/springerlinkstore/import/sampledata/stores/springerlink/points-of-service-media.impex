@@ -15,7 +15,7 @@ $productCatalog=springerlinkProductCatalog
 $productCatalogName=Springerlink Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
-$siteResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/stores/springerlink
+$siteResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/stores/springerlink
 $medias=medias(code, $catalogVersion)
 
 # Create medias
