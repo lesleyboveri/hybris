@@ -20,7 +20,7 @@ $others=others(code, $catalogVersion)
 $data_sheet=data_sheet(code, $catalogVersion)
 $medias=medias(code, $catalogVersion)
 $galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/productCatalogs/$productCatalog
+$siteResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/productCatalogs/$productCatalog
 
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
 ;1200Wx1200H;/1200Wx1200H/1978440-Sony-DSC-H20-114081.jpg;$siteResource/images/1200Wx1200H/1978440-Sony-DSC-H20-114081.jpg;;;images

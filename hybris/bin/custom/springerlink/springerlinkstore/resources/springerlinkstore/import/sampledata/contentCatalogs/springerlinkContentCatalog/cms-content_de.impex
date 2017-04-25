@@ -13,7 +13,7 @@
 $contentCatalog=springerlinkContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $picture=media(code, $contentCV);
-$siteResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
+$siteResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
 
 # Language
 $lang=de

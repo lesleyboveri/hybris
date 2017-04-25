@@ -14,8 +14,8 @@ $contentCatalog=springerlinkContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $picture=media(code, $contentCV);
 $wideContent=CMSImageComponent,BannerComponent
-$jarResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import
-$siteResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
+$jarResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import
+$siteResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
 
 # Language
 $lang=de

@@ -21,9 +21,9 @@ $page=page(uid, $contentCV);
 $contentPage=contentPage(uid, $contentCV);
 $product=product(code, $productCV)
 $category=category(code, $productCV)
-$siteResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
-$productResource=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/productCatalogs/$productCatalog
-$jarResourceCms=jar:com.springer.hybris.springerlink.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/cockpits/cmscockpit
+$siteResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/contentCatalogs/$contentCatalog
+$productResource=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/productCatalogs/$productCatalog
+$jarResourceCms=jar:com.springer.hybris.springerlink.constants.SpringerlinkstoreConstants&/springerlinkstore/import/sampledata/cockpits/cmscockpit
 
 # CMS Site Settings
 UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV)
