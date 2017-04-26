@@ -1,0 +1,30 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Products stock levels into Macmillan Store
+
+# Macros / Replacement Parameter definitions
+$productCatalog = macmillanProductCatalog
+$productCatalogName = Macmillan Product Catalog
+$catalogVersion = catalogversion(catalog(id[default = $productCatalog]), version[default = 'Staged'])[unique = true, default = $productCatalog:Staged]
+$vendor = default
+
+INSERT_UPDATE Warehouse; code[unique = true]; name[lang = en]; name[lang = de]; vendor(code)[default = $vendor]; default
+; default_springerlink_warehouse ; Default SpringerLink Warehouse ; Default SpringerLink Warehouse ; ; true
+
+INSERT_UPDATE StockLevel; available; warehouse(code)[unique = true]; inStockStatus(code); maxPreOrder; maxStockLevelHistoryCount; overSelling; preOrder; productCode[unique = true]; reserved
+; 0 ; default_springerlink_warehouse ; forceInStock ; 0 ; 0 ; 0 ; 0 ; PPVJ      ; 0
+; 0 ; default_springerlink_warehouse ; forceInStock ; 0 ; 0 ; 0 ; 0 ; PPVB      ; 0
+; 0 ; default_springerlink_warehouse ; forceInStock ; 0 ; 0 ; 0 ; 0 ; PPVJ_ADIS ; 0
+
+UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, warehouse(code)); vendors(code)
+; PPVJ      ; ; PPVJ:default_springerlink_warehouse ;
+; PPVB      ; ; PPVB:default_springerlink_warehouse ;
+; PPVJ_ADIS ; ; PPVB:default_springerlink_warehouse ;
