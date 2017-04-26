@@ -2,9 +2,13 @@
 
 pipeline {
     agent { node { label 'hybris' } }
-    tools { jdk 'jdk8' }
+    tools { jdk 'jdk8', ant 'apache-ant-1.9.1' }
+    environment {
+        PLATFORM_HOME = "$WORKSPACE/hybris/bin/platform"
+        ANT_OPTS="-Xmx512m -Dfile.encoding=UTF-8"
+    }
     stages {
-        stage('Build base Docker Image') {
+        stage('1) Build base Image') {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 checkout scm
@@ -12,19 +16,19 @@ pipeline {
                 sh 'cd $WORKSPACE/docker/Images/01_base && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
-        stage('Build Tomcat Docker Image') {
+        stage('2) Build Tomcat Image') {
             steps {
                 echo "Building Tomcat"
                 sh 'cd $WORKSPACE/docker/Images/02_tomcat && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
-        stage('Build Server Docker Image') {
+        stage('3) Build Server Image') {
             steps {
                 echo "Building Server"
                 sh 'cd $WORKSPACE/docker/Images/03_server && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
-        stage('Download Hybris Platform') {
+        stage('4) Download Hybris Archive') {
             steps {
                 echo "Downloading hybris.zip"
                 sh './download.sh'
@@ -32,15 +36,13 @@ pipeline {
                 sh './extract.sh'
             }
         }
-        stage('Install Addons') {
+        stage('5) Install Hybris Addons') {
             steps {
-                sh 'ant addoninstall -Daddonnames="acceleratorwebservicesaddon" -DaddonStorefront.ycommercewebservices="ycommercewebservices"'
-                sh 'ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"'
-                sh 'ant addoninstall -Daddonnames="sapcoreaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"'
-                sh 'ant addoninstall -Daddonnames="worldpayaddon,worldpaynotificationaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"'
+                dir '$PLATFORM_HOME'
+                sh './install_addons.sh'
             }
         }
-        stage('Build and Test') {
+        stage('6) Build and Test') {
             steps {
                 sh '''
                   echo "PATH = ${PATH}"
@@ -50,12 +52,17 @@ pipeline {
                 junit '**/junit/*.xml'
             }
         }
-        stage('Create Production Artifacts') {
+        stage('7) Create Production Artifacts') {
             steps {
                 sh './production.sh'
             }
         }
-        stage('Deploy to QA') {
+        stage('8) Create final Image') {
+          steps {
+              sh './docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+          }
+        }
+        stage('9) Deploy to QA') {
             when {
                 branch 'master'
             }
@@ -63,19 +70,25 @@ pipeline {
                 echo 'not yet implemented'
             }
         }
-        stage('Load Testing') {
+        stage('10) Load Testing') {
             when { branch 'master' }
             steps {
                 echo 'not yet implemented'
             }
         }
-        stage('UI Testing') {
+        stage('11) UI Testing') {
             when { branch 'master' }
             steps {
                 echo 'not yet implemented'
             }
         }
-        stage('Deploy to Prod') {
+        stage('12) Tag branch') {
+            when { branch 'master' }
+            steps {
+                echo 'not yet implemented'
+            }
+        }
+        stage('13) Deploy to Prod') {
             when { branch 'master' }
             steps {
                 echo 'not yet implemented'
