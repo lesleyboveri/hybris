@@ -12,38 +12,41 @@ pipeline {
     }
     stages {
         stage('1 Build base Image') {
-            dir '$WORKSPACE/docker/Images/01_base'
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "echo '$PLATFORM_HOME'"
                 checkout scm
                 sh 'git clean -dfx'
-                
-                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/01_base' {
+                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
             }
         }
         stage('2 Build Tomcat Image') {
             steps {
                 echo "Building Tomcat"
-                dir '$WORKSPACE/docker/Images/02_tomcat'
-                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/02_tomcat' {
+                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
             }
         }
         stage('3 Build Server Image') {
-            dir '$WORKSPACE/docker/Images/03_server'
+            
             steps {
                 echo "Building Server"
-                
-                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/03_server' {
+                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
             }
         }
         stage('4 Download Hybris Archive') {
-            dir '$WORKSPACE'
             steps {
+              dir '$WORKSPACE'{
                 echo "Downloading hybris.zip"
                 sh './download.sh'
                 echo "Extracting hybris.zip"
                 sh './extract.sh'
+              }
             }
         }
         stage('5 Install Hybris Addons') {
