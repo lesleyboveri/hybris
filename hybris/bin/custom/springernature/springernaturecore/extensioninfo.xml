@@ -21,9 +21,6 @@
 
       <coremodule generated="true" manager="com.springernature.hybris.springernaturecore.jalo.SpringernaturecoreManager" packageroot="com.springernature.hybris.springernaturecore"/>
 
-      <webmodule jspcompile="false" webroot="/springernaturecore"/>
-					
-	
 
    </extension>
       
