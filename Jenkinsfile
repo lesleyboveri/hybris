@@ -17,21 +17,21 @@ pipeline {
                 echo "echo '$PLATFORM_HOME'"
                 checkout scm
                 sh 'git clean -dfx'
-                sh 'cd $WORKSPACE/docker/Images/01_base'
+                dir '$WORKSPACE/docker/Images/01_base'
                 sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('2 Build Tomcat Image') {
             steps {
                 echo "Building Tomcat"
-                sh 'cd $WORKSPACE/docker/Images/02_tomcat'
+                dir '$WORKSPACE/docker/Images/02_tomcat'
                 sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('3 Build Server Image') {
             steps {
                 echo "Building Server"
-                sh 'cd $WORKSPACE/docker/Images/03_server'
+                dir '$WORKSPACE/docker/Images/03_server'
                 sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
