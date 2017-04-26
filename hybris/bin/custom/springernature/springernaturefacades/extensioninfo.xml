@@ -19,9 +19,6 @@
 
       <coremodule generated="true" manager="com.springernature.hybris.springernaturefacades.jalo.SpringernaturefacadesManager" packageroot="com.springernature.hybris.springernaturefacades"/>
 
-      <webmodule jspcompile="false" webroot="/springernaturefacades"/>
-					
-	
 
    </extension>
       
