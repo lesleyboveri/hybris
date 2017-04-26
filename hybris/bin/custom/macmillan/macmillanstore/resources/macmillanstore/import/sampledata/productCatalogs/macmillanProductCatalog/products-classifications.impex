@@ -28,7 +28,7 @@ $feature4=@Tripod head, 1869[$clAttrModifiers];  # Tripod head
 $feature6=@Special features, 86[$clAttrModifiers];  # Special features
 $feature7=@Material, 898[$clAttrModifiers];  # Material
 $feature8=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature6;$feature7;$feature8;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature6;$feature7;$feature8;$catalogVersion;
  ;1099285;<ignore>;<ignore>;Silver/Black;<ignore>;<ignore>;<ignore>;ICEcat.biz;
  ;1687508;3 leg(s);Floor-standing;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;
  ;23355;<ignore>;Quick-release Mounting Shoe;<ignore>;Oil Friction Head;Counter Balance Function;<ignore>;ICEcat.biz;
@@ -43,7 +43,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 $feature1=@Dimensions W x D x H, 49[$clAttrModifiers];  # Dimensions W x D x Hin millimeter (mm)
 $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature3=@Height  max , 6486[$clAttrModifiers];  # Height (max)in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1099285;<ignore>;2000;<ignore>;
  ;1687508;<ignore>;1700;<ignore>;
  ;23355;<ignore>;320;<ignore>;
@@ -70,7 +70,7 @@ $feature16=@35 mm camera lens equival, 1678[$clAttrModifiers];  # 35 mm camera l
 $feature17=@Focal length, 1522[$clAttrModifiers];  # Focal length in millimeter (mm)
 $feature19=@Viewing angle, 1684[$clAttrModifiers];  # Viewing angle in degrees (°)
 $feature21=@Lens type, 472[$clAttrModifiers];  # Lens type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature12;$feature14;$feature15;$feature16;$feature17;$feature19;$feature21;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature12;$feature14;$feature15;$feature16;$feature17;$feature19;$feature21;$catalogVersion;
  ;3595723;100;<ignore>;<ignore>;<ignore>;true;2.8;<ignore>;<ignore>;<ignore>;32;15 / 12;9;0.3;<ignore>;<ignore>;23.4;fixed;
  ;493683;<ignore>;<ignore>;<ignore>;55;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;fixed/wide-angle;
  ;65652;<ignore>;<ignore>;<ignore>;71.8;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;7/5;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -88,7 +88,7 @@ $feature2=@Filter size, 1615[$clAttrModifiers];  # Filter size in millimeter (mm
 $feature3=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature4=@Diameter, 2931[$clAttrModifiers];  # Diameter in millimeter (mm)
 $feature5=@Length, 2738[$clAttrModifiers];  # Length in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;3595723;<ignore>;<ignore>;625;<ignore>;<ignore>;
  ;65652;<ignore>;57.9;265;<ignore>;<ignore>;
  ;784343;<ignore>;72;765;83.2;136.2;
@@ -101,7 +101,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Colour (4350)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;3595723;Black;
  ;493683;Black;
  ;503392;Black;
@@ -119,7 +119,7 @@ $feature3=@AF actuator, 5611[$clAttrModifiers];  # AF actuator
 $feature4=@Material, 898[$clAttrModifiers];  # Material
 $feature5=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
 $feature6=@Compatible products, 2190[$clAttrModifiers];  # Compatible products
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;3595723;1.17 - 0.12;<ignore>;<ignore>;ICEcat.biz;<ignore>;
  ;493683;0.7;<ignore>;<ignore>;ICEcat.biz;<ignore>;
  ;503392;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;
@@ -138,7 +138,7 @@ $feature2=@Coercive force, 2150[$clAttrModifiers];  # Coercive force in kiloAmpe
 $feature3=@Tape type, 2217[$clAttrModifiers];  # Tape type
 $feature5=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
 $feature6=@Tape thickness, 2137[$clAttrModifiers];  # Tape thickness in micron (µm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
  ;137220;6.35;105;<ignore>;ICEcat.biz;7;
  ;149243;8;134;<ignore>;ICEcat.biz;10;
  ;2231913;<ignore>;<ignore>;MiniDV;ICEcat.biz;<ignore>;
@@ -154,7 +154,7 @@ $feature13=@Lamp power, 1170[$clAttrModifiers];  # Lamp power in Watt (W)
 $feature14=@Lens focal range, 744[$clAttrModifiers];  # Lens focal range
 $feature15=@Material, 898[$clAttrModifiers];  # Material
 $feature16=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature9;$feature11;$feature13;$feature14;$feature15;$feature16;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature9;$feature11;$feature13;$feature14;$feature15;$feature16;$catalogVersion;
  ;1099413;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;
  ;266685;<ignore>;<ignore>;<ignore>;20;<ignore>;<ignore>;ICEcat.biz;
  ;289540;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;
@@ -164,14 +164,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature9;$feature11;$featu
 # Classification: Weight & dimensions (1091)
 $feature1=@Dimensions W x D x H, 49[$clAttrModifiers];  # Dimensions W x D x Hin millimeter (mm)
 $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;266685;48 x 64 x 115;106;
  ;289540;48 x 115 x 64;100 ;
 
 
 # Classification: Colour (3469)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1099413;Black;
  ;266685;Black;
  ;289540;Black;
@@ -185,7 +185,7 @@ $feature8=@Video compression formats, 2225[$clAttrModifiers];  # Video compressi
 $feature10=@Frame rate, 3496[$clAttrModifiers];  # Frame rate in frames per second (fps)
 $feature11=@Resolution, 80[$clAttrModifiers];  # Resolution in pixels (pixels)
 $feature13=@Maximum resolution, 1659[$clAttrModifiers];  # Maximum resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature4;$feature8;$feature10;$feature11;$feature13;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature4;$feature8;$feature10;$feature11;$feature13;$catalogVersion;
  ;1377492;30;<ignore>;<ignore>;<ignore>;<ignore>;1280 x 1024;
  ;280916;15;<ignore>;<ignore>;<ignore>;<ignore>;640 x 480;
  ;458542;15;<ignore>;<ignore>;<ignore>;<ignore>;640 x 480;
@@ -207,7 +207,7 @@ $feature17=@Viewing angle, horizontal, 37[$clAttrModifiers];  # Viewing angle, h
 $feature21=@Camera voice function, 1288[$clAttrModifiers];  # Camera voice function
 $feature22=@Camera movie function, 1287[$clAttrModifiers];  # Camera movie function
 $feature23=@Megapixel, 63[$clAttrModifiers];  # Megapixel in megapixel (MP)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature4;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$feature13;$feature14;$feature16;$feature17;$feature21;$feature22;$feature23;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature4;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$feature13;$feature14;$feature16;$feature17;$feature21;$feature22;$feature23;$catalogVersion;
  ;1377492;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;66.5;<ignore>;<ignore>;<ignore>;
  ;280916;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;458542;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -217,7 +217,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature4;$feature6;$feature7;$featur
 $feature1=@Camera CCD sensor, 1283[$clAttrModifiers];  # Camera CCD sensor
 $feature2=@Optical sensor size, 1618[$clAttrModifiers];  # Optical sensor size in inch (")
 $feature3=@Sensor type, 1574[$clAttrModifiers];  # Sensor type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1377492;<ignore>;<ignore>;CMOS;
  ;280916;<ignore>;<ignore>;CMOS;
  ;458542;<ignore>;<ignore>;"CMOS 1/4""";
@@ -230,7 +230,7 @@ $feature5=@Interface type, 990[$clAttrModifiers];  # Interface type
 $feature6=@Video out, 1595[$clAttrModifiers];  # Video out
 $feature7=@Connection to PC, 1311[$clAttrModifiers];  # Connection to PC
 $feature8=@Cable length, 1266[$clAttrModifiers];  # Cable length in meter (m)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
  ;1377492;USB;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;280916;USB 1.1;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;458542;USB 2.0;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -239,7 +239,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature4;$feature5;$featur
 
 # Classification: Colour (3553)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1377492;Black;
  ;280916;Black;
 
@@ -251,7 +251,7 @@ $feature3=@Minimum hard disk space, 66[$clAttrModifiers];  # Minimum hard disk s
 $feature4=@Compatible operating syst, 2507[$clAttrModifiers];  # Compatible operating systems
 $feature5=@Minimum RAM, 68[$clAttrModifiers];  # Minimum RAMin megabyte (MB)
 $feature7=@Mac compatibility, 853[$clAttrModifiers];  # Mac compatibility
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature7;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature7;$catalogVersion;
  ;1377492;<ignore>;<ignore>;<ignore>;Windows 2000, XP, Vista;<ignore>;false;
  ;280916;<ignore>;<ignore>;<ignore>;Windows 98/2000/XP;<ignore>;<ignore>;
  ;458542;Pentium 500 MHz;USB 2.0 port \nCD-ROM drive\nmonitor XGA;20;Windows 2000/XP;128;<ignore>;
@@ -264,7 +264,7 @@ $feature2=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature3=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature4=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature5=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1377492;<ignore>;20.8;14;86;20;
  ;280916;54x60x80;<ignore>;50;<ignore>;<ignore>;
 
@@ -278,7 +278,7 @@ $feature7=@Package weight, 762[$clAttrModifiers];  # Package weight in gram (g)
 $feature8=@Packaging height, 3807[$clAttrModifiers];  # Packaging height in millimeter (mm)
 $feature9=@Packaging width, 3808[$clAttrModifiers];  # Packaging width in millimeter (mm)
 $feature10=@Packaging length, 4932[$clAttrModifiers];  # Packaging length in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
  ;280916;9500;40;795 x 345 x 425;<ignore>;190;<ignore>;<ignore>;<ignore>;
 
 
@@ -301,7 +301,7 @@ $feature48=@Shutter Lag, 664[$clAttrModifiers];  # Shutter Lag
 $feature61=@Viewing angle, 1684[$clAttrModifiers];  # Viewing angle in degrees (°)
 $feature72=@Technical features, 2143[$clAttrModifiers];  # Technical features
 $feature87=@Data compression, 710[$clAttrModifiers];  # Data compression
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature11;$feature12;$feature15;$feature23;$feature24;$feature26;$feature28;$feature31;$feature32;$feature34;$feature37;$feature40;$feature47;$feature48;$feature61;$feature72;$feature87;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature11;$feature12;$feature15;$feature23;$feature24;$feature26;$feature28;$feature31;$feature32;$feature34;$feature37;$feature40;$feature47;$feature48;$feature61;$feature72;$feature87;$catalogVersion;
  ;1377492;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;280916;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;458542;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -314,7 +314,7 @@ $feature2=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature3=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature4=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature5=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1209761;119.7 x 137.7 x 61.2;<ignore>;490;<ignore>;<ignore>;
  ;284533;127x150x70;<ignore>;600 ;<ignore>;<ignore>;
 
@@ -343,7 +343,7 @@ $feature20=@Megapixel, 63[$clAttrModifiers];  # Megapixel in megapixel (MP)
 $feature21=@Supported image formats, 2417[$clAttrModifiers];  # Supported image formats
 $feature22=@Compatible memory cards, 730[$clAttrModifiers];  # Compatible memory cards
 $feature23=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$feature21;$feature22;$feature23;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$feature14;$feature15;$feature16;$feature17;$feature18;$feature19;$feature20;$feature21;$feature22;$feature23;$catalogVersion;
  ;1209761;3.1;6.6;<ignore>;Black;false;25;true;<ignore>;8x;13.5;<ignore>;Porro Prism II;52.8;3.5;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;
  ;284533;3;6;<ignore>;Black;<ignore>;30;<ignore>;<ignore>;10;14.5;<ignore>;Porro;60;±4.2;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;
 
@@ -355,7 +355,7 @@ $feature3=@Battery type, 908[$clAttrModifiers];  # Battery type
 $feature4=@Number of batteries suppo, 1211[$clAttrModifiers];  # Number of batteries supported
 $feature5=@Battery life, 1721[$clAttrModifiers];  # Battery life in hour (h)
 $feature7=@Power supply type, 514[$clAttrModifiers];  # Power supply type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature7;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature7;$catalogVersion;
  ;1099413;<ignore>;<ignore>;AA;4;<ignore>;<ignore>;
  ;289540;20 ;<ignore>;InfoLITHIUM ;<ignore>;<ignore>;<ignore>;
  ;791635;<ignore>;<ignore>;AA;4;<ignore>;<ignore>;
@@ -367,7 +367,7 @@ $feature2=@Megapixel, 63[$clAttrModifiers];  # Megapixel in megapixel (MP)
 $feature3=@Data compression, 710[$clAttrModifiers];  # Data compression
 $feature4=@Supported camera resoluti, 1748[$clAttrModifiers];  # Supported camera resolutions
 $feature5=@Maximum resolution, 1659[$clAttrModifiers];  # Maximum resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1320808;true;12.1;JPEG/EXIF v2.21;12.0 MP (4000 × 3000)—4-3\n10.7 MP (4000 × 2664)—3-2\n9.0 MP (4000 × 2256)—16-9\n6.0 MP (2832 × 2128)—4-3\n3.1 MP (2048 × 1536)—4-3\n2.2 MP (1800 × 1200)—3-2\n2.1 MP (1920 × 1080)—16-9\n1.2 MP (1280 × 960)—4-;4088 x 3040;
  ;1382080;<ignore>;12.2;<ignore>;<ignore>;4272 x 2848;
  ;1934793;<ignore>;10;<ignore>;(L) 3648 x 2736\n(M1) 2816 x 2112\n(M2) 2272 x 1704\n1600 x 1200\n(S) 640 x 480\n(W) 3648 x 2048;3648 x 2736;
@@ -425,7 +425,7 @@ $feature14=@Digital SLR, 3567[$clAttrModifiers];  # Digital SLR
 $feature15=@Lens focal range, 744[$clAttrModifiers];  # Lens focal range
 $feature16=@Optical zoom, 74[$clAttrModifiers];  # Optical zoom in zoom factor (x)
 $feature17=@Lens system, 576[$clAttrModifiers];  # Lens system
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature13;$feature14;$feature15;$feature16;$feature17;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature13;$feature14;$feature15;$feature16;$feature17;$catalogVersion;
  ;1320808;<ignore>;5;<ignore>;f/3.4–5.3;<ignore>;<ignore>;<ignore>;37–111;<ignore>;<ignore>;<ignore>;<ignore>;false;<ignore>;3;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;1.6 x;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;4;<ignore>;f/3.0 - f/5.8;1;<ignore>;7 / 6;<ignore>;6.6 - 21.6;<ignore>;<ignore>;<ignore>;false;<ignore>;3.3;<ignore>;
@@ -472,7 +472,7 @@ $feature2=@Camera CCD sensor, 1283[$clAttrModifiers];  # Camera CCD sensor
 $feature3=@Optical sensor size, 1618[$clAttrModifiers];  # Optical sensor size in inch (")
 $feature4=@Sensor type, 1574[$clAttrModifiers];  # Sensor type
 $feature5=@Aspect ratio, 39[$clAttrModifiers];  # Aspect ratio
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1320808;4011 × 3011;<ignore>;1/1.72;CCD;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;CMOS;3-2;
  ;1934793;10.0;<ignore>;1/2.3;CCD;<ignore>;
@@ -529,7 +529,7 @@ $feature16=@Focus, 759[$clAttrModifiers];  # Focus
 $feature17=@Closest focusing distance, 2726[$clAttrModifiers];  # Closest focusing distance in meter (m)
 $feature18=@Auto focus, 1614[$clAttrModifiers];  # Auto focus
 $feature19=@Auto focusing  AF  modes, 7365[$clAttrModifiers];  # Auto focusing (AF) modes
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature10;$feature11;$feature13;$feature15;$feature16;$feature17;$feature18;$feature19;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature10;$feature11;$feature13;$feature15;$feature16;$feature17;$feature18;$feature19;$catalogVersion;
  ;1320808;<ignore>;0.4,0.7;<ignore>;<ignore>;<ignore>;0.05,0.7;0.6, ∞;0.6, ∞;<ignore>;<ignore>;<ignore>;TTL-AF;<ignore>;true;continuous auto focus,multi point auto focus,single auto focus,centre weighted auto focus;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;
  ;1934793;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;0.01;true;<ignore>;
@@ -580,7 +580,7 @@ $feature7=@Electronic shutter, 3729[$clAttrModifiers];  # Electronic shutter
 $feature8=@Camera sensitivity, 1302[$clAttrModifiers];  # Camera sensitivity
 $feature9=@Mechanical shutter, 3728[$clAttrModifiers];  # Mechanical shutter
 $feature10=@Light exposure type, 550[$clAttrModifiers];  # Light exposure type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
  ;1320808;<ignore>;8–1/1200;<ignore>;<ignore>;64, 100, 200, 400, 800, 1600, 3200, auto(64-400);<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1382080;<ignore>;30 - 1/4000;+/- 3 EV, 1/2;<ignore>;Auto (100-800), 100, 200, 400, 800, 1600;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;1/60 - 1/2000;<ignore>;<ignore>;80, 100, 200, 400, 800, 1600;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -631,7 +631,7 @@ $feature7=@Flash working distance, 2002[$clAttrModifiers];  # Flash working dist
 $feature8=@Built-in flash, 1289[$clAttrModifiers];  # Built-in flash
 $feature10=@Flash range  tele , 3726[$clAttrModifiers];  # Flash range (tele)in meter (m)
 $feature11=@Flash recharging time, 3682[$clAttrModifiers];  # Flash recharging timein seconds (s)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$feature7;$feature8;$feature10;$feature11;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$feature7;$feature8;$feature10;$feature11;$catalogVersion;
  ;1320808;<ignore>;0.6,4.6;<ignore>;<ignore>;Red-eye reduction,auto,fill-in,Flash off;<ignore>;true;0.6 , 2.9;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;Red-eye reduction,auto,manual,Flash off;<ignore>;true;<ignore>;<ignore>;
  ;1934793;<ignore>;0.30 , 3;<ignore>;<ignore>;auto,Flash off;<ignore>;true;<ignore>;<ignore>;
@@ -680,7 +680,7 @@ $feature5=@Storage media capacity, 481[$clAttrModifiers];  # Storage media capac
 $feature6=@Memory type, 642[$clAttrModifiers];  # Memory type
 $feature7=@Memory upgrade, 584[$clAttrModifiers];  # Memory upgrade in gigabyte (GB)
 $feature8=@Compatible memory cards, 730[$clAttrModifiers];  # Compatible memory cards
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
  ;1320808;<ignore>;<ignore>;32;<ignore>;<ignore>;<ignore>;<ignore>;sd,mmc;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;sd;
  ;1934793;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;sd,mmc;
@@ -728,7 +728,7 @@ $feature3=@Video capability, 2079[$clAttrModifiers];  # Video capability
 $feature4=@Video capture resolution, 1597[$clAttrModifiers];  # Video capture resolution in pixels (pixels)
 $feature5=@Video footnote, 2082[$clAttrModifiers];  # Video footnote
 $feature6=@Video modes resolution, 1922[$clAttrModifiers];  # Video modes resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1320808;Quicktime, MPEG 4;30;true;720p, 640 × 480, 320 × 240;<ignore>;<ignore>;
  ;1382080;<ignore>;3.5;false;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;<ignore>;true;640 x 480;<ignore>;<ignore>;
@@ -776,7 +776,7 @@ $feature3=@Audio system, 442[$clAttrModifiers];  # Audio system
 $feature4=@Voice recording, 2171[$clAttrModifiers];  # Voice recording
 $feature5=@Built-in microphone, 1025[$clAttrModifiers];  # Built-in microphone
 $feature6=@Audio recorder, 85[$clAttrModifiers];  # Audio recorder
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1981415;WAV;<ignore>;<ignore>;<ignore>;true;<ignore>;
  ;1997551;WAVE;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;300938;<ignore>;<ignore>;Unlimited (depends on memory capacity);<ignore>;<ignore>;true;
@@ -789,7 +789,7 @@ $feature3=@Field of view, 6952[$clAttrModifiers];  # Field of view in percent (%
 $feature4=@Camera display resolution, 6205[$clAttrModifiers];  # Camera display resolution in pixels (pixels)
 $feature5=@Display, 83[$clAttrModifiers];  # Display
 $feature6=@Display diagonal, 944[$clAttrModifiers];  # Display diagonal in inch (")
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1320808;<ignore>;<ignore>;LCD;3.1;
  ;1382080;<ignore>;230000;TFT;3;
  ;1934793;<ignore>;<ignore>;TFT;2.5;
@@ -835,7 +835,7 @@ $feature1=@Camera viewfinder, 1293[$clAttrModifiers];  # Camera viewfinder
 $feature2=@Electrical viewfinder, 3274[$clAttrModifiers];  # Electrical viewfinder
 $feature3=@Optical viewfinder, 3273[$clAttrModifiers];  # Optical viewfinder
 $feature4=@Magnification, 1864[$clAttrModifiers];  # Magnification in zoom factor (x)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1990255;<ignore>;true;false;<ignore>;
  ;1997551;FLCD;true;<ignore>;<ignore>;
  ;2053226;<ignore>;<ignore>;<ignore>;0.87x;
@@ -862,7 +862,7 @@ $feature5=@USB 2 0 ports quantity, 2308[$clAttrModifiers];  # USB 2.0 ports quan
 $feature6=@DC-in jack, 2316[$clAttrModifiers];  # DC-in jack
 $feature7=@HDMI ports quantity, 3566[$clAttrModifiers];  # HDMI ports quantity
 $feature9=@Connection to PC, 1311[$clAttrModifiers];  # Connection to PC
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$feature9;$catalogVersion;
  ;1320808;<ignore>;Dock;A/V out;1;<ignore>;<ignore>;<ignore>;
  ;1382080;<ignore>;USB 2.0;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;USB (Mini-B, MTP, PTP);<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -915,7 +915,7 @@ $feature10=@Drive modes, 3341[$clAttrModifiers];  # Drive modes
 $feature11=@Live view, 5642[$clAttrModifiers];  # Live view
 $feature12=@Camera voice function, 1288[$clAttrModifiers];  # Camera voice function
 $feature13=@Camera movie function, 1287[$clAttrModifiers];  # Camera movie function
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
  ;1320808;<ignore>;2, 10;true;<ignore>;<ignore>;JPEG/EXIF v2.21;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;JPEG;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1934793;2x - 10x;<ignore>;<ignore>;<ignore>;<ignore>;JPEG;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -967,7 +967,7 @@ $feature9=@Power supply, 1242[$clAttrModifiers];  # Power supply in Watt (W)
 $feature10=@Power requirements, 780[$clAttrModifiers];  # Power requirements
 $feature11=@Power supply type, 514[$clAttrModifiers];  # Power supply type
 $feature12=@Power source, 1390[$clAttrModifiers];  # Power source
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
  ;1320808;<ignore>;Lithium-Ion;KLIC-7004;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1382080;<ignore>;Lithium-Ion;LP-E5;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;Alkaline;AA;<ignore>;2;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -1040,7 +1040,7 @@ $feature66=@Shot-to-shot time, 3327[$clAttrModifiers];  # Shot-to-shot time
 $feature69=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
 $feature71=@Exposure type, 5998[$clAttrModifiers];  # Exposure type
 $feature73=@Upgrade type, 1633[$clAttrModifiers];  # Upgrade type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$feature5;$feature9;$feature12;$feature13;$feature15;$feature16;$feature20;$feature21;$feature22;$feature23;$feature27;$feature28;$feature29;$feature31;$feature36;$feature37;$feature38;$feature40;$feature42;$feature43;$feature47;$feature52;$feature57;$feature58;$feature60;$feature61;$feature62;$feature63;$feature65;$feature66;$feature69;$feature71;$feature73;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature4;$feature5;$feature9;$feature12;$feature13;$feature15;$feature16;$feature20;$feature21;$feature22;$feature23;$feature27;$feature28;$feature29;$feature31;$feature36;$feature37;$feature38;$feature40;$feature42;$feature43;$feature47;$feature52;$feature57;$feature58;$feature60;$feature61;$feature62;$feature63;$feature65;$feature66;$feature69;$feature71;$feature73;$catalogVersion;
  ;1320808;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -1084,7 +1084,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$feature5;$featur
 # Classification: Operating system/software (3473)
 $feature1=@Compatible operating syst, 2507[$clAttrModifiers];  # Compatible operating systems
 $feature2=@Bundled software, 251[$clAttrModifiers];  # Bundled software
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1382080;Windows 2000/ XP/ Vista\nOS X v10.3-10.4;<ignore>;
  ;1934793;Windows XP SP2-3 / Vista\nMac OS X v10.4 - 10.5;<ignore>;
  ;1981415;Windows 2000/XP/Vista\nMac OS 10.3 +;Samsung Master\nQuick Time Player 7.5\nAdobe Reader;
@@ -1110,7 +1110,7 @@ $feature3=@Minimum hard disk space, 66[$clAttrModifiers];  # Minimum hard disk s
 $feature4=@Minimum system requiremen, 493[$clAttrModifiers];  # Minimum system requirements for Macintosh
 $feature5=@Minimum RAM, 68[$clAttrModifiers];  # Minimum RAMin megabyte (MB)
 $feature6=@Mac compatibility, 853[$clAttrModifiers];  # Mac compatibility
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1320808;<ignore>;WINDOWS XP\nMACINTOSH OS X 10.3\nIE 6.0\nSAFARI 1.1;200;<ignore>;128;true;
  ;1382080;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;
  ;1934793;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;
@@ -1137,7 +1137,7 @@ $feature11=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimens
 $feature17=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature18=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
 $feature20=@Product weight optional  , 6119[$clAttrModifiers];  # Product weight optional (imperial)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$feature5;$feature7;$feature11;$feature17;$feature18;$feature20;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature5;$feature7;$feature11;$feature17;$feature18;$feature20;$catalogVersion;
  ;1320808;<ignore>;<ignore>;<ignore>;155;54.6;<ignore>;23.4;101.9;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;475;97.5;<ignore>;61.9;128.8;<ignore>;
  ;1934793;<ignore>;<ignore>;<ignore>;140;62.0;<ignore>;31.1;92.1;<ignore>;
@@ -1186,7 +1186,7 @@ $feature5=@Operating temperature ran, 1112[$clAttrModifiers];  # Operating tempe
 $feature6=@Storage relative humidity, 1383[$clAttrModifiers];  # Storage relative humidity range in percent (%)
 $feature8=@Recommended humidity oper, 563[$clAttrModifiers];  # Recommended humidity operating range
 $feature9=@Storage temperature range, 757[$clAttrModifiers];  # Storage temperature range (T-T)in degrees Celcium (°C)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$catalogVersion;
  ;1382080;<ignore>;<ignore>;<ignore>;0 , 40;<ignore>;<ignore>;<ignore>;
  ;1934793;<ignore>;10 , 90;<ignore>;0 , 40;<ignore>;<ignore>;<ignore>;
  ;1981415;<ignore>;5 , 85;<ignore>;0 , 40;<ignore>;<ignore>;<ignore>;
@@ -1207,7 +1207,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$featur
 
 # Classification: Certificates (3909)
 $feature2=@Energy Star certified, 838[$clAttrModifiers];  # Energy Star certified
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$catalogVersion;
  ;300938;false;
 
 
@@ -1215,7 +1215,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$catalogVersion;
 $feature2=@Case or master carton qua, 777[$clAttrModifiers];  # Case or master carton quantity in pieces (pcs)
 $feature3=@Package dimensions  W x D, 582[$clAttrModifiers];  # Package dimensions (W x D x H)in millimeter (mm)
 $feature4=@Package weight, 762[$clAttrModifiers];  # Package weight in gram (g)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$catalogVersion;
  ;300938;4;203 x 77 x 173;520;
 
 
@@ -1225,7 +1225,7 @@ $feature2=@Centre-weighted, 3670[$clAttrModifiers];  # Centre-weighted
 $feature3=@Multi-pattern, 3668[$clAttrModifiers];  # Multi-pattern
 $feature4=@Metering, 476[$clAttrModifiers];  # Metering
 $feature5=@Evaluative, 3669[$clAttrModifiers];  # Evaluative
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1320808;true;true;true;<ignore>;<ignore>;
  ;1382080;<ignore>;<ignore>;<ignore>;EV 1-20;<ignore>;
  ;1978440;true;true;true;<ignore>;<ignore>;
@@ -1256,7 +1256,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 # Classification: Scene modes (3470)
 $feature1=@Scene modes, 7356[$clAttrModifiers];  # Scene modes
 $feature2=@Shooting modes, 1577[$clAttrModifiers];  # Shooting modes
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1320808;Landscape,Portrait,Night portrait,self-portrait,Night landscape,Children,Close-up (macro),Documents,Sunset,beach,Fireworks,Sports,Backlight,Museum,Panorama,Candlelight;<ignore>;
  ;1382080;Landscape,Portrait,Night portrait,Close-up (macro),Sports;<ignore>;
  ;1934793;Landscape,Portrait,Close-up (macro),Sunset,Underwater,beach,Fireworks,party (indoor);<ignore>;
@@ -1289,7 +1289,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 
 # Classification: Colour (2762)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1320808;Black;
  ;1382080;Black;
  ;1934793;Red;
@@ -1334,7 +1334,7 @@ $feature1=@Custom colour, 3743[$clAttrModifiers];  # Custom colour
 $feature2=@Saturation adjustment, 3720[$clAttrModifiers];  # Saturation adjustment
 $feature3=@Photo effects, 4279[$clAttrModifiers];  # Photo effects
 $feature4=@Contrast adjustment, 3719[$clAttrModifiers];  # Contrast adjustment
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1320808;<ignore>;<ignore>;black&white,Sepia;<ignore>;
  ;1981415;<ignore>;true;Negative film,black&white,Sepia;true;
  ;2006139;<ignore>;<ignore>;Sepia,black&white;<ignore>;
@@ -1345,14 +1345,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Packaging content (4007)
 $feature1=@Soft travel pouch, 4000[$clAttrModifiers];  # Soft travel pouch
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;493683;true;
 
 
 # Classification: Technical details (1107)
 $feature2=@Cable colour, 1272[$clAttrModifiers];  # Cable colour
 $feature6=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature6;$catalogVersion;
  ;2063624;Black;ICEcat.biz;
  ;592506;<ignore>;ICEcat.biz;
  ;768108;Black;ICEcat.biz;
@@ -1364,7 +1364,7 @@ $feature1=@Manual exposure, 3673[$clAttrModifiers];  # Manual exposure
 $feature2=@Aperture priority AE, 3675[$clAttrModifiers];  # Aperture priority AE
 $feature3=@Shutter priority AE, 3674[$clAttrModifiers];  # Shutter priority AE
 $feature4=@Auto exposure, 3672[$clAttrModifiers];  # Auto exposure
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1320808;<ignore>;<ignore>;<ignore>;true;
  ;1981415;<ignore>;<ignore>;<ignore>;true;
  ;1997551;true;true;true;<ignore>;
@@ -1384,7 +1384,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: White balance (3468)
 $feature1=@White balance, 682[$clAttrModifiers];  # White balance
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1320808;auto,Tungsten,Fluorescent,daylight,Shade;
  ;1382080;Tungsten,Fluorescent,Cloudy,daylight,Shade;
  ;1934793;auto,manual,Fluorescent,Cloudy,daylight;
@@ -1432,7 +1432,7 @@ $feature8=@Rotating, 3774[$clAttrModifiers];  # Rotating
 $feature9=@Album organization, 3418[$clAttrModifiers];  # Album organization
 $feature11=@Trimming, 3772[$clAttrModifiers];  # Trimming
 $feature12=@Single image, 3771[$clAttrModifiers];  # Single image
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$catalogVersion;
  ;1320808;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;true;<ignore>;<ignore>;
  ;1978440;true;<ignore>;<ignore>;<ignore>;<ignore>;true;true;true;<ignore>;true;true;
  ;1981415;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;true;true;<ignore>;true;true;
@@ -1464,7 +1464,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Material (3912)
 $feature1=@Material, 898[$clAttrModifiers];  # Material
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;726510;Metal/Plastic;
  ;726511;Metal/Plastic;
 
@@ -1472,14 +1472,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
 # Classification: Weight & dimensions (1108)
 $feature1=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature2=@Cable length, 1266[$clAttrModifiers];  # Cable length in meter (m)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;768108;<ignore>;3;
  ;918735;<ignore>;1.5;
 
 
 # Classification: Connectivity (2436)
 $feature1=@Connector s , 1496[$clAttrModifiers];  # Connector(s)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;768108;RCA;
 
 
@@ -1491,7 +1491,7 @@ $feature4=@Film type, 1948[$clAttrModifiers];  # Film type
 $feature5=@Camera shutter speed, 1295[$clAttrModifiers];  # Camera shutter speed in seconds (s)
 $feature6=@Built-in flash, 1289[$clAttrModifiers];  # Built-in flash
 $feature7=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$catalogVersion;
  ;779841;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;ICEcat.biz;
  ;898503;25 - 5000 / 6 - 6400;2 - 10;10 fps;35 mm;30 - 1/8000;true;ICEcat.biz;
 
@@ -1500,7 +1500,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 $feature1=@Shots quantity, 5705[$clAttrModifiers];  # Shots quantity
 $feature2=@ISO sensitivity, 2102[$clAttrModifiers];  # ISO sensitivity
 $feature3=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;779842;24;200;ICEcat.biz;
  ;779848;36;200;ICEcat.biz;
  ;834954;24;200;ICEcat.biz;
@@ -1509,7 +1509,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalo
 
 # Classification: Packaging data (4075)
 $feature1=@Quantity per box, 2055[$clAttrModifiers];  # Quantity per box in pieces (pcs)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;779842;2;
  ;779848;2;
  ;834954;1;
@@ -1520,7 +1520,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
 $feature1=@Shots quantity, 5705[$clAttrModifiers];  # Shots quantity
 $feature2=@ISO sensitivity, 2102[$clAttrModifiers];  # ISO sensitivity
 $feature3=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1291399;<ignore>;<ignore>;ICEcat.biz;
  ;779864;<ignore>;<ignore>;ICEcat.biz;
  ;779866;<ignore>;<ignore>;ICEcat.biz;
@@ -1530,7 +1530,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalo
 # Classification: Focusing (3756)
 $feature1=@Auto focus, 1614[$clAttrModifiers];  # Auto focus
 $feature2=@Manual focus, 3738[$clAttrModifiers];  # Manual focus
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;3595723;true;true;
  ;832382;true;<ignore>;
  ;832386;true;true;
@@ -1541,7 +1541,7 @@ $feature1=@Lens, 1290[$clAttrModifiers];  # Lens in millimeter (mm)
 $feature2=@Focus, 759[$clAttrModifiers];  # Focus
 $feature3=@Lens system, 576[$clAttrModifiers];  # Lens system
 $feature4=@Closest focusing distance, 2726[$clAttrModifiers];  # Closest focusing distance in meter (m)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;898503;<ignore>;<ignore>;SLR;<ignore>;
 
 
@@ -1550,20 +1550,20 @@ $feature1=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature3=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature4=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;898503;70.8;945;120.8;161;
 
 
 # Classification: Colour (2625)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;898503;Black;
 
 
 # Classification: Processor (3419)
 $feature1=@Processor clock speed, 5[$clAttrModifiers];  # Processor clock speed in megahertz (MHz)
 $feature2=@Processor model, 47[$clAttrModifiers];  # Processor model
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1320808;600;<ignore>;
  ;1382080;<ignore>;DIGIC III;
  ;1934793;<ignore>;DIGIC III;
@@ -1575,20 +1575,20 @@ $feature1=@Focus adjustment, 1600[$clAttrModifiers];  # Focus adjustment
 $feature2=@Camera focusing range, 1291[$clAttrModifiers];  # Camera focusing range
 $feature3=@Manual focus, 3738[$clAttrModifiers];  # Manual focus
 $feature4=@Focus, 759[$clAttrModifiers];  # Focus
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1377492;<ignore>;0.3 - ∞;<ignore>;<ignore>;
 
 
 # Classification: Audio (3551)
 $feature1=@Recording of audio files, 1307[$clAttrModifiers];  # Recording of audio files
 $feature2=@Built-in microphone, 1025[$clAttrModifiers];  # Built-in microphone
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1377492;<ignore>;true;
 
 
 # Classification: Technical details (4439)
 $feature1=@Source data-sheet, 6617[$clAttrModifiers];  # Source data-sheet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1422706;ICEcat.biz;
  ;1716323;ICEcat.biz;
 
@@ -1605,7 +1605,7 @@ $feature10=@Megapixel, 63[$clAttrModifiers];  # Megapixel in megapixel (MP)
 $feature11=@Lens focal range, 744[$clAttrModifiers];  # Lens focal range
 $feature12=@Optical zoom, 74[$clAttrModifiers];  # Optical zoom in zoom factor (x)
 $feature13=@Lens system, 576[$clAttrModifiers];  # Lens system
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature4;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature4;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
  ;1432722;30;<ignore>;<ignore>;<ignore>;46.2 , 503.6;6.0 , 60.0;<ignore>;0.9;<ignore>;10;<ignore>;
  ;1776947;4;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;5;<ignore>;5;<ignore>;
  ;1776948;4;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;5;<ignore>;5;<ignore>;
@@ -1619,7 +1619,7 @@ $feature1=@Optical sensor resolution, 1617[$clAttrModifiers];  # Optical sensor 
 $feature2=@Effective sensor resoluti, 1616[$clAttrModifiers];  # Effective sensor resolution in pixels (pixels)
 $feature3=@Optical sensor size, 1618[$clAttrModifiers];  # Optical sensor size in inch (")
 $feature4=@Sensor type, 1574[$clAttrModifiers];  # Sensor type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1432722;<ignore>;<ignore>;0.33;<ignore>;
  ;1934398;<ignore>;<ignore>;1/5;CMOS;
  ;1934406;2360000;1990000;1/5.0;Exmor CMOS Sensor;
@@ -1630,7 +1630,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 $feature1=@Display, 83[$clAttrModifiers];  # Display
 $feature2=@Display diagonal, 944[$clAttrModifiers];  # Display diagonal in inch (")
 $feature3=@Display resolution, 1585[$clAttrModifiers];  # Display resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1432722;<ignore>;3;<ignore>;
  ;1776947;TFT LCD;3;<ignore>;
  ;1776948;TFT LCD;2.5;<ignore>;
@@ -1643,7 +1643,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalo
 $feature1=@Digital video capture spe, 1570[$clAttrModifiers];  # Digital video capture speed in frames per second (fps)
 $feature2=@Video compression formats, 2225[$clAttrModifiers];  # Video compression formats
 $feature3=@Video capture resolution, 1597[$clAttrModifiers];  # Video capture resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1432722;<ignore>;MPEG AVC/H.264 AC3 (Dolby Digital) 2ch;<ignore>;
  ;1776947;60;MOV;848 x 480;
  ;1776948;60;MOV;848 x 480;
@@ -1673,7 +1673,7 @@ $feature25=@Additional accessories, 1305[$clAttrModifiers];  # Additional access
 $feature26=@Power consumption, 445[$clAttrModifiers];  # Power consumption in Watt (W)
 $feature28=@Photo mode, 1817[$clAttrModifiers];  # Photo mode
 $feature29=@On Screen Display  OSD , 3064[$clAttrModifiers];  # On Screen Display (OSD)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature11;$feature12;$feature13;$feature15;$feature16;$feature17;$feature19;$feature20;$feature21;$feature25;$feature26;$feature28;$feature29;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature11;$feature12;$feature13;$feature15;$feature16;$feature17;$feature19;$feature20;$feature21;$feature25;$feature26;$feature28;$feature29;$catalogVersion;
  ;1432722;<ignore>;HDD;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;1280 x 720;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1776947;<ignore>;Flash memory;10;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1776948;<ignore>;Flash memory;10;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -1685,7 +1685,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 # Classification: Storage media (2911)
 $feature2=@Hard disk drive capacity, 7[$clAttrModifiers];  # Hard disk drive capacity in gigabyte (GB)
 $feature4=@Compatible memory cards, 730[$clAttrModifiers];  # Compatible memory cards
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature4;$catalogVersion;
  ;1432722;80;<ignore>;
  ;1934398;80;MS, MS Duo, MS PRO;
  ;1934406;<ignore>;Memory Stick, Memory Stick Duo;
@@ -1697,7 +1697,7 @@ $feature2=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature3=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature5=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature6=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
  ;1432722;<ignore>;166.8;570;80;86.8;
  ;1776947;<ignore>;65;320;117;56;
  ;1776948;<ignore>;17.9;87;100;57;
@@ -1713,7 +1713,7 @@ $feature4=@Battery performance, 909[$clAttrModifiers];  # Battery performance in
 $feature5=@Battery life  CIPA standa, 6231[$clAttrModifiers];  # Battery life (CIPA standard)in shots (shots)
 $feature6=@Battery life, 1721[$clAttrModifiers];  # Battery life in hour (h)
 $feature7=@Power requirements, 780[$clAttrModifiers];  # Power requirements
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$catalogVersion;
  ;1432722;Lithium-Ion;<ignore>;2400;<ignore>;<ignore>;<ignore>;
  ;1776947;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1776948;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -1724,7 +1724,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature4;$featur
 # Classification: Still image (3479)
 $feature1=@Still image capture resol, 1598[$clAttrModifiers];  # Still image capture resolutions
 $feature2=@Supported image formats, 2417[$clAttrModifiers];  # Supported image formats
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1776947;3200 x 2400 / 2592 x 1944 / 2048 x 1536;JPG;
  ;1776948;3200 x 2400 / 2592 x 1944 / 2048 x 1536;JPG;
  ;1934398;2304 x 1728;JPEG;
@@ -1736,7 +1736,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 $feature1=@Recording speed, 1582[$clAttrModifiers];  # Recording speed
 $feature2=@Internal memory, 6[$clAttrModifiers];  # Internal memory in megabyte (MB)
 $feature3=@Flash memory, 538[$clAttrModifiers];  # Flash memory in megabyte (MB)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1776947;<ignore>;<ignore>;128;
  ;1776948;<ignore>;<ignore>;128;
  ;1934406;"HD ; FH (1920x1080i, 16Mbps) / HQ (9Mbps) / SP (7Mbps) / LP (5Mbps) , SD ; HQ (9Mbps) / SP (6Mbps) / LP (3Mbps)";8000;<ignore>
@@ -1754,7 +1754,7 @@ $feature8=@Composite video out, 3016[$clAttrModifiers];  # Composite video out
 $feature14=@I/O ports, 470[$clAttrModifiers];  # I/O ports
 $feature15=@HDMI ports quantity, 3566[$clAttrModifiers];  # HDMI ports quantity
 $feature16=@S-Video out, 3200[$clAttrModifiers];  # S-Video out
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature14;$feature15;$feature16;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature14;$feature15;$feature16;$catalogVersion;
  ;1776947;<ignore>;<ignore>;1;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;1;<ignore>;
  ;1776948;<ignore>;<ignore>;1;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;1;<ignore>;
  ;1934398;<ignore>;1;1;<ignore>;1;<ignore>;1;<ignore>;<ignore>;1;1;
@@ -1768,7 +1768,7 @@ $feature2=@Minimum system requiremen, 861[$clAttrModifiers];  # Minimum system r
 $feature3=@Minimum hard disk space, 66[$clAttrModifiers];  # Minimum hard disk space in megabyte (MB)
 $feature4=@Minimum system requiremen, 493[$clAttrModifiers];  # Minimum system requirements for Macintosh
 $feature5=@Minimum RAM, 68[$clAttrModifiers];  # Minimum RAMin megabyte (MB)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1776947;Pentium III 800MHz;"4X CD-ROM; 1 x USB;";700;<ignore>;256
  ;1776948;Pentium III 800MHz;"4X CD-ROM; 1 x USB;";700;<ignore>;256
 
@@ -1776,7 +1776,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 # Classification: Operating system/software (3480)
 $feature1=@Compatible operating syst, 2507[$clAttrModifiers];  # Compatible operating systems
 $feature2=@Bundled software, 251[$clAttrModifiers];  # Bundled software
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1776947;"Microsoft® Windows ® 2000/XP/Vista; ";
  ;1776948;"Microsoft® Windows ® 2000/XP/Vista; ";
  ;1934406;<ignore>;  \n\nPicture Motion Browser;
@@ -1789,7 +1789,7 @@ $feature2=@Focus adjustment, 1600[$clAttrModifiers];  # Focus adjustment
 $feature3=@Auto focus, 1614[$clAttrModifiers];  # Auto focus
 $feature4=@Manual focus, 3738[$clAttrModifiers];  # Manual focus
 $feature5=@Focus, 759[$clAttrModifiers];  # Focus
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1934398;<ignore>;<ignore>;true;true;<ignore>;
  ;1934406;<ignore>;<ignore>;true;true;<ignore>;
  ;1986316;<ignore>;<ignore>;true;true;<ignore>;
@@ -1799,7 +1799,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 $feature1=@Indoor white balance, 5572[$clAttrModifiers];  # Indoor white balance
 $feature2=@Outdoor white balance, 5571[$clAttrModifiers];  # Outdoor white balance
 $feature3=@Onepush white balance, 5573[$clAttrModifiers];  # Onepush white balance
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1934398;true;true;true;
  ;1934406;true;true;true;
 
@@ -1808,7 +1808,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalo
 $feature1=@Twilight, 3751[$clAttrModifiers];  # Twilight
 $feature2=@Spotlight, 5574[$clAttrModifiers];  # Spotlight
 $feature3=@Sports, 3708[$clAttrModifiers];  # Sports
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;1934398;true;true;<ignore>;
  ;1934406;true;true;<ignore>;
  ;1986316;<ignore>;true;true;
@@ -1819,7 +1819,7 @@ $feature2=@Wind filter, 3228[$clAttrModifiers];  # Wind filter
 $feature4=@Built-in speakers, 2433[$clAttrModifiers];  # Built-in speakers
 $feature5=@Audio system, 442[$clAttrModifiers];  # Audio system
 $feature6=@Built-in microphone, 1025[$clAttrModifiers];  # Built-in microphone
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature4;$feature5;$feature6;$catalogVersion;
  ;1934398;<ignore>;true;<ignore>;true;
  ;1934406;<ignore>;true;Dolby Digital 2ch;true;
  ;1986316;<ignore>;true;Dolby Digital 2ch;true;
@@ -1827,7 +1827,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$feature5;$featur
 
 # Classification: Colour (2928)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1934398;Black;
  ;1934406;Red;
  ;1986316;Black;
@@ -1835,14 +1835,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
 
 # Classification: Viewfinder (3021)
 $feature2=@Camera viewfinder, 1293[$clAttrModifiers];  # Camera viewfinder
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$catalogVersion;
  ;1934406;false;
 
 
 # Classification: Flash (2974)
 $feature1=@Flash, 463[$clAttrModifiers];  # Flash
 $feature2=@Built-in flash, 1289[$clAttrModifiers];  # Built-in flash
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1934406;<ignore>;false;
  ;1986316;<ignore>;true;
 
@@ -1851,14 +1851,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 $feature2=@Pastel, 3752[$clAttrModifiers];  # Pastel
 $feature3=@Photo effects, 4279[$clAttrModifiers];  # Photo effects
 $feature4=@Art, 3749[$clAttrModifiers];  # Art
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$catalogVersion;
  ;1934406;true;<ignore>;<ignore>;
  ;1986316;<ignore>;<ignore>;true;
 
 
 # Classification: Camera (3527)
 $feature1=@Progressive scan, 3221[$clAttrModifiers];  # Progressive scan
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1934406;false;
 
 
@@ -1866,7 +1866,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
 $feature1=@Cables included, 1830[$clAttrModifiers];  # Cables included
 $feature2=@AC adapter bundled, 1230[$clAttrModifiers];  # AC adapter bundled
 $feature3=@Additional accessories, 1305[$clAttrModifiers];  # Additional accessories
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;2006139;<ignore>;true;<ignore>;
 
 # Classification: Technical details (2725)
@@ -1885,7 +1885,7 @@ $feature23=@Number of layers per pall, 1680[$clAttrModifiers];  # Number of laye
 $feature25=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimensions when open (LxWxD)in inch (")
 $feature26=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
 $feature27=@Material, 898[$clAttrModifiers];  # Material
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$feature6;$feature7;$feature9;$feature15;$feature17;$feature18;$feature19;$feature21;$feature23;$feature25;$feature26;$feature27;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature6;$feature7;$feature9;$feature15;$feature17;$feature18;$feature19;$feature21;$feature23;$feature25;$feature26;$feature27;$catalogVersion;
  ;1297878;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;Polyurethane;
  ;2006365;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;2140197;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -1911,7 +1911,7 @@ $feature2=@Megapixel, 63[$clAttrModifiers];  # Megapixel in megapixel (MP)
 $feature3=@Data compression, 710[$clAttrModifiers];  # Data compression
 $feature4=@Supported camera resoluti, 1748[$clAttrModifiers];  # Supported camera resolutions
 $feature5=@Maximum resolution, 1659[$clAttrModifiers];  # Maximum resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1225694;<ignore>;10.5;<ignore>;3888x2592\n3888x2592\n2816x1880\n2816x1880\n1936x1288\n1936x1288\n3888x2592\n1936x1288;3888 x 2592;
  ;1325806;true;7.1;<ignore>;7.1 MP (3072 × 2304)\n6.3 MP (3072 × 2048)—3-2\n5.3 MP (3072 × 1728)—16-9\n5.0 MP (2592 × 1944)\n3.1 MP (2048 × 1536)\n2.2 MP (1800 × 1200)—3-2\n2.1 MP (1920 × 1080)—16-9\n1.2 MP (1280 × 960)\n;3082 x 2314;
  ;1391319;<ignore>;10.2;<ignore>;3880 x 2600\n3872 x 2592\n2896 x 1936\n1920 x 1280;3880 x 2600;
@@ -2016,7 +2016,7 @@ $feature14=@Digital SLR, 3567[$clAttrModifiers];  # Digital SLR
 $feature15=@Lens focal range, 744[$clAttrModifiers];  # Lens focal range
 $feature16=@Optical zoom, 74[$clAttrModifiers];  # Optical zoom in zoom factor (x)
 $feature17=@Lens system, 576[$clAttrModifiers];  # Lens system
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature13;$feature14;$feature15;$feature16;$feature17;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature13;$feature14;$feature15;$feature16;$feature17;$catalogVersion;
  ;1225694;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;
  ;1325806;<ignore>;5;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;38–380;38–380  ;<ignore>;<ignore>;<ignore>;false;<ignore>;10;<ignore>;
  ;1391319;<ignore>;0;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;27 - 105;18 - 70;<ignore>;<ignore>;<ignore>;true;<ignore>;3.5;<ignore>;
@@ -2120,7 +2120,7 @@ $feature16=@Focus, 759[$clAttrModifiers];  # Focus
 $feature17=@Closest focusing distance, 2726[$clAttrModifiers];  # Closest focusing distance in meter (m)
 $feature18=@Auto focus, 1614[$clAttrModifiers];  # Auto focus
 $feature19=@Auto focusing  AF  modes, 7365[$clAttrModifiers];  # Auto focusing (AF) modes
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature10;$feature11;$feature13;$feature15;$feature16;$feature17;$feature18;$feature19;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature10;$feature11;$feature13;$feature15;$feature16;$feature17;$feature18;$feature19;$catalogVersion;
  ;1225694;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;true;true;TTL-CT-SIR;<ignore>;true;<ignore>;
  ;1325806;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;TTL ;<ignore>;true;<ignore>;
  ;1391319;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;true;<ignore>;<ignore>;true;continuous auto focus,selective auto focus,spot auto focus;
@@ -2213,7 +2213,7 @@ $feature7=@Electronic shutter, 3729[$clAttrModifiers];  # Electronic shutter
 $feature8=@Camera sensitivity, 1302[$clAttrModifiers];  # Camera sensitivity
 $feature9=@Mechanical shutter, 3728[$clAttrModifiers];  # Mechanical shutter
 $feature10=@Light exposure type, 550[$clAttrModifiers];  # Light exposure type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$catalogVersion;
  ;1225694;<ignore>;30-1/8000 ;<ignore>;<ignore>;Auto (100-800), 100-1600 ;<ignore>;<ignore>;<ignore>;<ignore>;+/- 2 EV;
  ;1325806;<ignore>;"1/2–1/2000; 8-1/1000 ";<ignore>;<ignore>;auto, 80, 100, 200, 400, 800, 1600;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;<ignore>;+/-2.0 EV;<ignore>;100 - 3200;<ignore>;<ignore>;<ignore>;<ignore>;TTL;
@@ -2311,7 +2311,7 @@ $feature7=@Flash working distance, 2002[$clAttrModifiers];  # Flash working dist
 $feature8=@Built-in flash, 1289[$clAttrModifiers];  # Built-in flash
 $feature10=@Flash range  tele , 3726[$clAttrModifiers];  # Flash range (tele)in meter (m)
 $feature11=@Flash recharging time, 3682[$clAttrModifiers];  # Flash recharging timein seconds (s)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$feature7;$feature8;$feature10;$feature11;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$feature7;$feature8;$feature10;$feature11;$catalogVersion;
  ;1225694;true;<ignore>;<ignore>;<ignore>;Red-eye reduction,second curtain synchro,auto,manual,Flash off;<ignore>;true;<ignore>;<ignore>;
  ;1325806;<ignore>;<ignore>;<ignore>;<ignore>;Red-eye reduction,auto,fill-in,Flash off;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;12;<ignore>;GN12;fill-in,Flash off,forced,Red-eye reduction,Slow synchronization,auto;<ignore>;true;<ignore>;4;
@@ -2404,7 +2404,7 @@ $feature5=@Storage media capacity, 481[$clAttrModifiers];  # Storage media capac
 $feature6=@Memory type, 642[$clAttrModifiers];  # Memory type
 $feature7=@Memory upgrade, 584[$clAttrModifiers];  # Memory upgrade in gigabyte (GB)
 $feature8=@Compatible memory cards, 730[$clAttrModifiers];  # Compatible memory cards
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$catalogVersion;
  ;1225694;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;cf;
  ;1325806;<ignore>;<ignore>;32;<ignore>;<ignore>;<ignore>;<ignore>;sd,mmc;
  ;1391319;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;memory stick (ms),ms pro;
@@ -2497,7 +2497,7 @@ $feature3=@Field of view, 6952[$clAttrModifiers];  # Field of view in percent (%
 $feature4=@Camera display resolution, 6205[$clAttrModifiers];  # Camera display resolution in pixels (pixels)
 $feature5=@Display, 83[$clAttrModifiers];  # Display
 $feature6=@Display diagonal, 944[$clAttrModifiers];  # Display diagonal in inch (")
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1225694;<ignore>;230000;TFT;3;
  ;1325806;<ignore>;<ignore>;LCD TFT;2;
  ;1391319;<ignore>;<ignore>;LCD;2.7;
@@ -2590,7 +2590,7 @@ $feature1=@Camera viewfinder, 1293[$clAttrModifiers];  # Camera viewfinder
 $feature2=@Electrical viewfinder, 3274[$clAttrModifiers];  # Electrical viewfinder
 $feature3=@Optical viewfinder, 3273[$clAttrModifiers];  # Optical viewfinder
 $feature4=@Magnification, 1864[$clAttrModifiers];  # Magnification in zoom factor (x)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1391319;TTL;<ignore>;true;0.83x;
  ;1438465;<ignore>;<ignore>;<ignore>;0.74x;
  ;1438466;<ignore>;<ignore>;<ignore>;0.74x;
@@ -2648,7 +2648,7 @@ $feature5=@USB 2 0 ports quantity, 2308[$clAttrModifiers];  # USB 2.0 ports quan
 $feature6=@DC-in jack, 2316[$clAttrModifiers];  # DC-in jack
 $feature7=@HDMI ports quantity, 3566[$clAttrModifiers];  # HDMI ports quantity
 $feature9=@Connection to PC, 1311[$clAttrModifiers];  # Connection to PC
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature4;$feature5;$feature6;$feature7;$feature9;$catalogVersion;
  ;1225694;true;<ignore>;PAL/ NTSC;1;<ignore>;<ignore>;<ignore>;
  ;1325806;true;<ignore>;A/V\nNTSC/PAL;1;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;USB 2.0;<ignore>;1;<ignore>;<ignore>;<ignore>;
@@ -2747,7 +2747,7 @@ $feature10=@Drive modes, 3341[$clAttrModifiers];  # Drive modes
 $feature11=@Live view, 5642[$clAttrModifiers];  # Live view
 $feature12=@Camera voice function, 1288[$clAttrModifiers];  # Camera voice function
 $feature13=@Camera movie function, 1287[$clAttrModifiers];  # Camera movie function
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$feature10;$feature11;$feature12;$feature13;$catalogVersion;
  ;1225694;<ignore>;2, 10;<ignore>;<ignore>;<ignore>;JPEG;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1325806;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;JPEG/EXIF v2.21;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;JPEG, RAW;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -2867,7 +2867,7 @@ $feature66=@Shot-to-shot time, 3327[$clAttrModifiers];  # Shot-to-shot time
 $feature69=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
 $feature71=@Exposure type, 5998[$clAttrModifiers];  # Exposure type
 $feature73=@Upgrade type, 1633[$clAttrModifiers];  # Upgrade type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature4;$feature5;$feature9;$feature12;$feature13;$feature15;$feature16;$feature20;$feature21;$feature22;$feature23;$feature27;$feature28;$feature29;$feature31;$feature36;$feature37;$feature38;$feature40;$feature42;$feature43;$feature47;$feature52;$feature57;$feature58;$feature60;$feature61;$feature62;$feature63;$feature65;$feature66;$feature69;$feature71;$feature73;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature4;$feature5;$feature9;$feature12;$feature13;$feature15;$feature16;$feature20;$feature21;$feature22;$feature23;$feature27;$feature28;$feature29;$feature31;$feature36;$feature37;$feature38;$feature40;$feature42;$feature43;$feature47;$feature52;$feature57;$feature58;$feature60;$feature61;$feature62;$feature63;$feature65;$feature66;$feature69;$feature71;$feature73;$catalogVersion;
  ;1225694;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1325806;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -2966,7 +2966,7 @@ $feature11=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimens
 $feature17=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature18=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
 $feature20=@Product weight optional  , 6119[$clAttrModifiers];  # Product weight optional (imperial)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$feature5;$feature7;$feature11;$feature17;$feature18;$feature20;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature5;$feature7;$feature11;$feature17;$feature18;$feature20;$catalogVersion;
  ;1225694;<ignore>;<ignore>;<ignore>;740;73.5;<ignore>;107.8 ;145.5;<ignore>;
  ;1325806;<ignore>;<ignore>;<ignore>;280;77.5;<ignore>;72.6;97.8;<ignore>;
  ;1391319;<ignore>;<ignore>;<ignore>;532;98.5;<ignore>;71.3;130.8;<ignore>;
@@ -3057,7 +3057,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$featur
 # Classification: Operating system/software (3473)
 $feature1=@Compatible operating syst, 2507[$clAttrModifiers];  # Compatible operating systems
 $feature2=@Bundled software, 251[$clAttrModifiers];  # Bundled software
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1225694;Windows 2000 (SP4) / XP (SP2) / Vista ;ZoomBrowser EX\nImageBrowser\nPhotoStitch\nEOS Utility \nPicture Style Editor;
  ;1325806;WINDOWS XP OS + /INTERNET EXPLORER 6.0 +/MACINTOSH OS X 10.3 +/SAFARI 1.1 + \n ;KODAK EASYSHARE ;
  ;1934794;Windows XP SP2-3 / Vista\nMac OS X v10.4 - 10.5;<ignore>;
@@ -3123,7 +3123,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 $feature1=@Cables included, 1830[$clAttrModifiers];  # Cables included
 $feature2=@AC adapter bundled, 1230[$clAttrModifiers];  # AC adapter bundled
 $feature3=@Additional accessories, 1305[$clAttrModifiers];  # Additional accessories
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$catalogVersion;
  ;23213;<ignore>;<ignore>;NP-FM50 Infolithium. Rechargeable Battery, AC-L10 AC Adapter/In-Camera Charger, A/V and USB Cables, Lens Cap w/Strap, Shoulder Strap, Software CD-ROM ;
  ;3514515;USB, AV, PWR;<ignore>;<ignore>;
  ;3514517;USB, AV, PWR;<ignore>;<ignore>;
@@ -3146,7 +3146,7 @@ $feature20=@Capacity, 1237[$clAttrModifiers];  # Capacity in Watt (W)
 $feature21=@Number of batteries suppo, 1211[$clAttrModifiers];  # Number of batteries supported
 $feature24=@Battery performance, 909[$clAttrModifiers];  # Battery performance in milliAmpere * hour (mAh)
 $feature25=@AC adapter output voltage, 904[$clAttrModifiers];  # AC adapter output voltage in Volt (V)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature5;$feature6;$feature10;$feature11;$feature13;$feature14;$feature17;$feature18;$feature20;$feature21;$feature24;$feature25;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature5;$feature6;$feature10;$feature11;$feature13;$feature14;$feature17;$feature18;$feature20;$feature21;$feature24;$feature25;$catalogVersion;
  ;107701;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;DC8.4V, 1.5A;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;12/24;
  ;110561;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;4.2;100 , 240; NP-FR1, NP-FT1;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;266899;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;4.2;100 , 240;AA;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3159,7 +3159,7 @@ $feature1=@Dimensions W x D x H, 49[$clAttrModifiers];  # Dimensions W x D x Hin
 $feature3=@Maximum dimensions  W x D, 669[$clAttrModifiers];  # Maximum dimensions (W x D x H)in millimeter (mm)
 $feature4=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature6=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimensions when open (LxWxD)in inch (")
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature6;$catalogVersion;
  ;107701;46 x 36 x 110;<ignore>;300;<ignore>;
  ;110561;72 x 47 x 36;<ignore>;70;<ignore>;
  ;266899;105 x 56 x 36;<ignore>;<ignore>;<ignore>;
@@ -3182,7 +3182,7 @@ $feature46=@Cable length, 1266[$clAttrModifiers];  # Cable length in meter (m)
 $feature50=@Technical features, 2143[$clAttrModifiers];  # Technical features
 $feature52=@Compatibility, 890[$clAttrModifiers];  # Compatibility
 $feature53=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature11;$feature13;$feature14;$feature21;$feature24;$feature31;$feature36;$feature39;$feature46;$feature50;$feature52;$feature53;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature11;$feature13;$feature14;$feature21;$feature24;$feature31;$feature36;$feature39;$feature46;$feature50;$feature52;$feature53;$catalogVersion;
  ;107701;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;110561;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1422222;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3197,7 +3197,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature11;$featu
 
 # Classification: Colour (3516)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;110561;Grey;
  ;1422222;Black;
  ;1422224;Black;
@@ -3215,7 +3215,7 @@ $feature4=@Input voltage, 1466[$clAttrModifiers];  # Input voltage in Volt (V)
 $feature5=@Battery type, 908[$clAttrModifiers];  # Battery type
 $feature6=@Number of batteries suppo, 1211[$clAttrModifiers];  # Number of batteries supported
 $feature8=@Battery performance, 909[$clAttrModifiers];  # Battery performance in milliAmpere * hour (mAh)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$catalogVersion;
  ;1298094;<ignore>;<ignore>;<ignore>;InfoLITHIUM M;2;<ignore>;
  ;1312564;2, 2.8, 4, 9;<ignore>;220 - 240;AA, AAA;4;<ignore>;
  ;1312640;1.4 / 9;<ignore>;220 - 240;AA, AAA;2;2000;
@@ -3249,7 +3249,7 @@ $feature66=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature68=@Number of layers per pall, 1680[$clAttrModifiers];  # Number of layers per pallet
 $feature70=@Cables included, 1830[$clAttrModifiers];  # Cables included
 $feature72=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature4;$feature14;$feature15;$feature16;$feature18;$feature19;$feature20;$feature30;$feature32;$feature38;$feature39;$feature40;$feature42;$feature43;$feature44;$feature51;$feature53;$feature60;$feature64;$feature66;$feature68;$feature70;$feature72;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature4;$feature14;$feature15;$feature16;$feature18;$feature19;$feature20;$feature30;$feature32;$feature38;$feature39;$feature40;$feature42;$feature43;$feature44;$feature51;$feature53;$feature60;$feature64;$feature66;$feature68;$feature70;$feature72;$catalogVersion;
  ;1298094;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1312564;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;3;<ignore>;50;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1312640;<ignore>;<ignore>;0.12 - 0.14;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;50 - 60;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3267,7 +3267,7 @@ $feature2=@Camera CCD sensor, 1283[$clAttrModifiers];  # Camera CCD sensor
 $feature3=@Optical sensor size, 1618[$clAttrModifiers];  # Optical sensor size in inch (")
 $feature4=@Sensor type, 1574[$clAttrModifiers];  # Sensor type
 $feature5=@Aspect ratio, 39[$clAttrModifiers];  # Aspect ratio
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1225694;10100000;<ignore>;<ignore>;CMOS;3-2;
  ;1325806;3152 × 2342;<ignore>;1 / 2.5;CCD;<ignore>;
  ;1391319;<ignore>;<ignore>;<ignore>;CCD;<ignore>;
@@ -3359,7 +3359,7 @@ $feature3=@Video capability, 2079[$clAttrModifiers];  # Video capability
 $feature4=@Video capture resolution, 1597[$clAttrModifiers];  # Video capture resolution in pixels (pixels)
 $feature5=@Video footnote, 2082[$clAttrModifiers];  # Video footnote
 $feature6=@Video modes resolution, 1922[$clAttrModifiers];  # Video modes resolution in pixels (pixels)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1225694;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;
  ;1325806;QUICKTIME, JPEG;30;true;VGA (640 × 480) ;<ignore>;<ignore>;
  ;1391319;<ignore>;<ignore>;false;<ignore>;<ignore>;<ignore>;
@@ -3445,7 +3445,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Colour (2762)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1225694;Black;
  ;1325806;Black;
  ;1391319;Black;
@@ -3543,7 +3543,7 @@ $feature9=@Power supply, 1242[$clAttrModifiers];  # Power supply in Watt (W)
 $feature10=@Power requirements, 780[$clAttrModifiers];  # Power requirements
 $feature11=@Power supply type, 514[$clAttrModifiers];  # Power supply type
 $feature12=@Power source, 1390[$clAttrModifiers];  # Power source
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature10;$feature11;$feature12;$catalogVersion;
  ;1225694;<ignore>;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;800;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;<ignore>;Lithium-Ion;NP-FM500H;<ignore>;<ignore>;1600;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1438465;<ignore>;<ignore>;NP-FM500H;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3626,7 +3626,7 @@ $feature3=@Minimum hard disk space, 66[$clAttrModifiers];  # Minimum hard disk s
 $feature4=@Minimum system requiremen, 493[$clAttrModifiers];  # Minimum system requirements for Macintosh
 $feature5=@Minimum RAM, 68[$clAttrModifiers];  # Minimum RAMin megabyte (MB)
 $feature6=@Mac compatibility, 853[$clAttrModifiers];  # Mac compatibility
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1325806;600 MHz ;USB;200;<ignore>;128;true;
  ;1934794;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;
  ;1934795;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;
@@ -3680,7 +3680,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 # Classification: Scene modes (3470)
 $feature1=@Scene modes, 7356[$clAttrModifiers];  # Scene modes
 $feature2=@Shooting modes, 1577[$clAttrModifiers];  # Shooting modes
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1225694;Landscape,Portrait,Night portrait,Close-up (macro),Sports;<ignore>;
  ;1391319;Landscape,Night,Portrait,Sunset,beach;<ignore>;
  ;1438465;Landscape,Night,Portrait,Sunset;<ignore>;
@@ -3750,14 +3750,14 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 # Classification: Weight & dimensions (2285)
 $feature1=@Dimensions W x D x H, 49[$clAttrModifiers];  # Dimensions W x D x Hin millimeter (mm)
 $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1298094;128 x 135 x 48;500;
  ;325234;42 x 76 x 32;60;
 
 
 # Classification: Colour (2763)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1298094;Black;
  ;1312564;Black;
  ;1312640;Black;
@@ -3772,7 +3772,7 @@ $feature8=@Read speed, 1644[$clAttrModifiers];  # Read speed in megabyte per sec
 $feature9=@Flash card type, 2305[$clAttrModifiers];  # Flash card type
 $feature10=@X-speed rating, 6563[$clAttrModifiers];  # X-speed rating
 $feature12=@Write speed, 1645[$clAttrModifiers];  # Write speed in megabyte per second (MB/s)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature5;$feature8;$feature9;$feature10;$feature12;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature5;$feature8;$feature9;$feature10;$feature12;$catalogVersion;
  ;1322031;<ignore>;8192;25;CompactFlash (CF);133;20;
  ;1322041;<ignore>;4096;25;CompactFlash (CF);133;20;
  ;1366001;<ignore>;4096;10;Secure Digital High-Capacity (SDHC);<ignore>;9;
@@ -3806,7 +3806,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature5;$feature8;$featur
 # Classification: Endurance (853)
 $feature1=@Mean time between failure, 533[$clAttrModifiers];  # Mean time between failures (MTBF)in hour (h)
 $feature2=@Data retention, 1642[$clAttrModifiers];  # Data retentionin year(s) (year(s))
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;328796;1000000;10;
  ;335443;1000000;10;
  ;335546;1000000;10;
@@ -3817,7 +3817,7 @@ $feature3=@Operating relative humidi, 703[$clAttrModifiers];  # Operating relati
 $feature4=@Operating temperature ran, 1112[$clAttrModifiers];  # Operating temperature range (T-T)in degrees Celcium (°C)
 $feature5=@Storage relative humidity, 1383[$clAttrModifiers];  # Storage relative humidity range in percent (%)
 $feature6=@Storage temperature range, 757[$clAttrModifiers];  # Storage temperature range (T-T)in degrees Celcium (°C)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1322031;<ignore>;0 , 60;<ignore>;-20 , 85;
  ;1322041;<ignore>;0 , 60;<ignore>;-20 , 85;
  ;1641905;<ignore>;-25 , 85;<ignore>;-40 , 85;
@@ -3848,7 +3848,7 @@ $feature2=@Depth, 1650[$clAttrModifiers];  # Depth in millimeter (mm)
 $feature3=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature5=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature6=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature5;$feature6;$catalogVersion;
  ;1322031;36.4 x 42.8 x 3.3;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1322041;36.4 x 42.8 x 3.3;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1366001;20 x 32 x 2.1;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3891,7 +3891,7 @@ $feature60=@Warranty, 1448[$clAttrModifiers];  # Warranty
 $feature63=@Technical features, 2143[$clAttrModifiers];  # Technical features
 $feature64=@USB 2 0 ports quantity, 2308[$clAttrModifiers];  # USB 2.0 ports quantity
 $feature77=@Cables included, 1830[$clAttrModifiers];  # Cables included
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature11;$feature15;$feature17;$feature21;$feature32;$feature41;$feature45;$feature57;$feature60;$feature63;$feature64;$feature77;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature11;$feature15;$feature17;$feature21;$feature32;$feature41;$feature45;$feature57;$feature60;$feature63;$feature64;$feature77;$catalogVersion;
  ;1322031;<ignore>;<ignore>;ICEcat.biz;50-pin CompactFlash;true;<ignore>;<ignore>;false;<ignore>;Lifetime;<ignore>;<ignore>;<ignore>;
  ;1322041;<ignore>;<ignore>;ICEcat.biz;50-pin CompactFlash;true;<ignore>;<ignore>;false;<ignore>;Lifetime;<ignore>;<ignore>;<ignore>;
  ;1366001;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -3929,7 +3929,7 @@ $feature3=@Input voltage, 1466[$clAttrModifiers];  # Input voltage in Volt (V)
 $feature4=@Power management, 1376[$clAttrModifiers];  # Power management
 $feature8=@Power requirements, 780[$clAttrModifiers];  # Power requirements
 $feature9=@Expansion voltage, 1359[$clAttrModifiers];  # Expansion voltage in Volt (V)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature3;$feature4;$feature8;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature8;$feature9;$catalogVersion;
  ;1366001;<ignore>;2.7 - 3.6;<ignore>;<ignore>;<ignore>
  ;1366053;<ignore>;2.7 - 3.6;<ignore>;<ignore>;<ignore>
  ;1641905;<ignore>;3.3;<ignore>;<ignore>;<ignore>
@@ -3960,7 +3960,7 @@ $feature2=@Centre-weighted, 3670[$clAttrModifiers];  # Centre-weighted
 $feature3=@Multi-pattern, 3668[$clAttrModifiers];  # Multi-pattern
 $feature4=@Metering, 476[$clAttrModifiers];  # Metering
 $feature5=@Evaluative, 3669[$clAttrModifiers];  # Evaluative
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1225694;true;true;<ignore>;<ignore>;true;
  ;1391319;true;true;true;<ignore>;<ignore>;
  ;1438465;true;true;true;<ignore>;<ignore>;
@@ -4016,7 +4016,7 @@ $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
 $feature3=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature4=@Width, 1649[$clAttrModifiers];  # Width in millimeter (mm)
 $feature5=@Length, 2738[$clAttrModifiers];  # Length in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$catalogVersion;
  ;1297878;75 x 40 x 117;<ignore>;<ignore>;<ignore>;<ignore>;
  ;2006365;75 x 40 x 115;60;<ignore>;<ignore>;<ignore>;
  ;2140197;190 x 70 x 55;40;<ignore>;<ignore>;<ignore>;
@@ -4049,7 +4049,7 @@ $feature63=@Height, 1464[$clAttrModifiers];  # Height in millimeter (mm)
 $feature68=@Number of layers per pall, 1680[$clAttrModifiers];  # Number of layers per pallet
 $feature70=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimensions when open (LxWxD)in inch (")
 $feature75=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
-INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature16;$feature17;$feature18;$feature20;$feature21;$feature26;$feature29;$feature31;$feature38;$feature39;$feature40;$feature42;$feature43;$feature52;$feature59;$feature63;$feature68;$feature70;$feature75;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature3;$feature16;$feature17;$feature18;$feature20;$feature21;$feature26;$feature29;$feature31;$feature38;$feature39;$feature40;$feature42;$feature43;$feature52;$feature59;$feature63;$feature68;$feature70;$feature75;$catalogVersion;
  ;1231346;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1232590;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1422218;<ignore>;<ignore>;EOS 450D;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
@@ -4074,7 +4074,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature3;$feature16;$feature17;$feat
 
 # Classification: Colour (2727)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;2006365;Black;
  ;2140197;Black;
  ;2140285;Black;
@@ -4097,7 +4097,7 @@ $feature3=@Minimum hard disk space, 66[$clAttrModifiers];  # Minimum hard disk s
 $feature4=@Compatible operating syst, 2507[$clAttrModifiers];  # Compatible operating systems
 $feature5=@Minimum RAM, 68[$clAttrModifiers];  # Minimum RAMin megabyte (MB)
 $feature6=@Compatibility, 890[$clAttrModifiers];  # Compatibility
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;443175;<ignore>;<ignore>;<ignore>;Windows XP, 2000, 95, 98, NT\nMac OS, OS/2;<ignore>;<ignore>;
  ;4868199;<ignore>;<ignore>;<ignore>;Windows XP, 2000, 95, 98, NT\nMac OS, OS/2;<ignore>;<ignore>;
  ;4869234;<ignore>;<ignore>;<ignore>;Windows 7, Vista (SP1 +), XP (SP2 +);<ignore>;<ignore>;
@@ -4108,7 +4108,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Colour (4162)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1322031;Black,Green;
  ;1322041;Black,Green;
  ;1641905;Black;
@@ -4144,7 +4144,7 @@ $feature11=@Number of batteries suppo, 1211[$clAttrModifiers];  # Number of batt
 $feature12=@Capacity, 1237[$clAttrModifiers];  # Capacity in Watt (W)
 $feature15=@Battery performance, 909[$clAttrModifiers];  # Battery performance in milliAmpere * hour (mAh)
 $feature20=@Battery life, 1721[$clAttrModifiers];  # Battery life in hour (h)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$feature15;$feature20;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$feature15;$feature20;$catalogVersion;
  ;1231346;<ignore>;3.6;<ignore>;<ignore>;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;650;<ignore>;
  ;1232590;<ignore>;<ignore>;7.2;<ignore>;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;1650;<ignore>;
  ;1422218;<ignore>;<ignore>;<ignore>;<ignore>;Lithium-Ion;<ignore>;<ignore>;<ignore>;<ignore>;1080;<ignore>;
@@ -4168,7 +4168,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 # Classification: Weight & dimensions (877)
 $feature1=@Dimensions W x D x H, 49[$clAttrModifiers];  # Dimensions W x D x Hin millimeter (mm)
 $feature2=@Weight, 94[$clAttrModifiers];  # Weight in gram (g)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1231346;35.5 x 5.3 x 46;22;
  ;1232590;38.2 x 20.5 x 55.6;78;
  ;1451546;34.5 x 40 x 7.1;20;
@@ -4185,7 +4185,7 @@ $feature1=@Manual exposure, 3673[$clAttrModifiers];  # Manual exposure
 $feature2=@Aperture priority AE, 3675[$clAttrModifiers];  # Aperture priority AE
 $feature3=@Shutter priority AE, 3674[$clAttrModifiers];  # Shutter priority AE
 $feature4=@Auto exposure, 3672[$clAttrModifiers];  # Auto exposure
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1225694;true;<ignore>;<ignore>;true;
  ;1325806;<ignore>;<ignore>;<ignore>;true;
  ;1391319;true;true;true;true;
@@ -4223,7 +4223,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: White balance (3468)
 $feature1=@White balance, 682[$clAttrModifiers];  # White balance
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1225694;auto,manual,Tungsten,Fluorescent,Cloudy,daylight,flash,Shade;
  ;1325806;auto,Tungsten,Fluorescent,daylight;
  ;1391319;auto,manual,Tungsten,Fluorescent,Cloudy,daylight,Shade;
@@ -4298,7 +4298,7 @@ $feature5=@Operating temperature ran, 1112[$clAttrModifiers];  # Operating tempe
 $feature6=@Storage relative humidity, 1383[$clAttrModifiers];  # Storage relative humidity range in percent (%)
 $feature8=@Recommended humidity oper, 563[$clAttrModifiers];  # Recommended humidity operating range
 $feature9=@Storage temperature range, 757[$clAttrModifiers];  # Storage temperature range (T-T)in degrees Celcium (°C)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature2;$feature3;$feature4;$feature5;$feature6;$feature8;$feature9;$catalogVersion;
  ;1225694;<ignore>;85;0,40;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1532809;<ignore>;<ignore>;<ignore>;0 , 40;<ignore>;<ignore>;<ignore>;
  ;1715477;<ignore>;<ignore>;<ignore>;0 , 40;<ignore>;<ignore>;<ignore>;
@@ -4330,7 +4330,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature2;$feature3;$feature4;$featur
 # Classification: Connectivity (2848)
 $feature1=@I/O ports, 470[$clAttrModifiers];  # I/O ports
 $feature2=@Interface type, 990[$clAttrModifiers];  # Interface type
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;479956;<ignore>;10-pin Serial Memory Stick & 4-pin Parallel;
 
 
@@ -4339,7 +4339,7 @@ $feature1=@Custom colour, 3743[$clAttrModifiers];  # Custom colour
 $feature2=@Saturation adjustment, 3720[$clAttrModifiers];  # Saturation adjustment
 $feature3=@Photo effects, 4279[$clAttrModifiers];  # Photo effects
 $feature4=@Contrast adjustment, 3719[$clAttrModifiers];  # Contrast adjustment
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$catalogVersion;
  ;1438465;<ignore>;<ignore>;Vivid;<ignore>;
  ;1438466;<ignore>;<ignore>;Vivid;<ignore>;
  ;1438467;<ignore>;<ignore>;Vivid;<ignore>;
@@ -4393,7 +4393,7 @@ $feature8=@Rotating, 3774[$clAttrModifiers];  # Rotating
 $feature9=@Album organization, 3418[$clAttrModifiers];  # Album organization
 $feature11=@Trimming, 3772[$clAttrModifiers];  # Trimming
 $feature12=@Single image, 3771[$clAttrModifiers];  # Single image
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$feature7;$feature8;$feature9;$feature11;$feature12;$catalogVersion;
  ;1225694;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
  ;1391319;true;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;
  ;1438465;true;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;true;<ignore>;<ignore>;<ignore>;
@@ -4451,7 +4451,7 @@ $feature3=@Audio system, 442[$clAttrModifiers];  # Audio system
 $feature4=@Voice recording, 2171[$clAttrModifiers];  # Voice recording
 $feature5=@Built-in microphone, 1025[$clAttrModifiers];  # Built-in microphone
 $feature6=@Audio recorder, 85[$clAttrModifiers];  # Audio recorder
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$feature3;$feature4;$feature5;$feature6;$catalogVersion;
  ;1391319;<ignore>;<ignore>;<ignore>;<ignore>;false;<ignore>;
  ;1550476;WAV;<ignore>;<ignore>;true;<ignore>;<ignore>;
  ;1981412;WAV;<ignore>;<ignore>;<ignore>;true;<ignore>;
@@ -4472,7 +4472,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$feature3;$featur
 
 # Classification: Colour (3856)
 $feature1=@Colour of product, 1766[$clAttrModifiers];  # Colour of product
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;1231346;White;
  ;1232590;Black;
  ;2114091;Black;
@@ -4492,7 +4492,7 @@ $feature5=@Package weight, 762[$clAttrModifiers];  # Package weight in gram (g)
 $feature7=@Packaging height, 3807[$clAttrModifiers];  # Packaging height in millimeter (mm)
 $feature8=@Packaging width, 3808[$clAttrModifiers];  # Packaging width in millimeter (mm)
 $feature9=@Packaging length, 4932[$clAttrModifiers];  # Packaging length in millimeter (mm)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature4;$feature5;$feature7;$feature8;$feature9;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature4;$feature5;$feature7;$feature8;$feature9;$catalogVersion;
  ;1366001;<ignore>;<ignore>;181;122;14;
  ;1366053;<ignore>;<ignore>;181;122;14;
  ;872912;<ignore>;<ignore>;181;122;14;
@@ -4501,7 +4501,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature4;$feature5;$feature7;$featur
 # Classification: Processor (3419)
 $feature1=@Processor clock speed, 5[$clAttrModifiers];  # Processor clock speed in megahertz (MHz)
 $feature2=@Processor model, 47[$clAttrModifiers];  # Processor model
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$feature2;$catalogVersion;
  ;1225694;<ignore>;DIGIC III;
  ;1934795;<ignore>;DIGIC III;
  ;1934796;<ignore>;DIGIC III;
@@ -4524,7 +4524,7 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$feature2;$catalogVersion;
 
 # Classification: Material (3912)
 $feature1=@Material, 898[$clAttrModifiers];  # Material
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;2054947;Metal/Plastic;
  ;2054948;Metal/Plastic;
  ;3555166;Metal/Plastic;
@@ -4544,6 +4544,6 @@ INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
 
 # Classification: Environmental conditions (4759)
 $feature1=@Operating temperature ran, 1112[$clAttrModifiers];  # Operating temperature range (T-T)in degrees Celcium (°C)
-INSERT_UPDATE MEAProduct;code[unique=true];$feature1;$catalogVersion;
+INSERT_UPDATE Product;code[unique=true];$feature1;$catalogVersion;
  ;2861342;0 - 40;
 
