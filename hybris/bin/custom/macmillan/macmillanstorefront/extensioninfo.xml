@@ -14,16 +14,28 @@
 
 
 
-<requires-extension name="worldpaynotificationaddon"/>
-<requires-extension name="worldpayaddon"/>
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>
 <requires-extension name="promotionenginesamplesaddon"/>
 <requires-extension name="customerticketingaddon"/>
+<requires-extension name="springernatureassistedservicestorefront"/>
 <requires-extension name="assistedservicestorefront"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="commerceorgsamplesaddon"/>
+<requires-extension name="worldpaynotificationaddon"/>
+<requires-extension name="springernatureworldpayaddon"/>
+<requires-extension name="worldpayaddon"/>
+
+
+
+
+
+
+
+
+
+
 
 
 <requires-extension name="worldpaysampledataaddon"/>
