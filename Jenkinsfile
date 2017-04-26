@@ -4,32 +4,37 @@ pipeline {
     agent { node { label 'hybris' } }
     tools { jdk 'jdk8', ant 'apache-ant-1.9.1' }
     environment {
-        PLATFORM_HOME = "$WORKSPACE/hybris/bin/platform"
+        PLATFORM_HOME="$WORKSPACE/hybris/bin/platform"
         ANT_OPTS="-Xmx512m -Dfile.encoding=UTF-8"
     }
     stages {
         stage('1) Build base Image') {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "echo '$PLATFORM_HOME'"
                 checkout scm
                 sh 'git clean -dfx'
-                sh 'cd $WORKSPACE/docker/Images/01_base && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/01_base'
+                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('2) Build Tomcat Image') {
             steps {
                 echo "Building Tomcat"
-                sh 'cd $WORKSPACE/docker/Images/02_tomcat && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/02_tomcat'
+                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('3) Build Server Image') {
             steps {
                 echo "Building Server"
-                sh 'cd $WORKSPACE/docker/Images/03_server && ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                dir '$WORKSPACE/docker/Images/03_server'
+                sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('4) Download Hybris Archive') {
             steps {
+                dir '$WORKSPACE'
                 echo "Downloading hybris.zip"
                 sh './download.sh'
                 echo "Extracting hybris.zip"
@@ -38,8 +43,9 @@ pipeline {
         }
         stage('5) Install Hybris Addons') {
             steps {
+                echo 'PLATFORM_HOME: $PLATFORM_HOME'
                 dir '$PLATFORM_HOME'
-                sh './install_addons.sh'
+                sh './$WORKSPACE/install_addons.sh'
             }
         }
         stage('6) Build and Test') {
@@ -48,17 +54,21 @@ pipeline {
                   echo "PATH = ${PATH}"
                   echo "JAVA_HOME = ${JAVA_HOME}"
                 '''
-                sh './build_test.sh'
+                dir '$PLATFORM_HOME'
+                sh './$WORKSPACE/build_test.sh'
                 junit '**/junit/*.xml'
             }
         }
         stage('7) Create Production Artifacts') {
             steps {
-                sh './production.sh'
+                echo '$PLATFORM_HOME'
+                dir '$PLATFORM_HOME'
+                sh './$WORKSPACE/production.sh'
             }
         }
         stage('8) Create final Image') {
           steps {
+              dir '$WORKSPACE'
               sh './docker_production.sh -w $WORKSPACE -b $BUILD_ID'
           }
         }
