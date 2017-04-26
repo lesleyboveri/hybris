@@ -12,12 +12,13 @@ pipeline {
     }
     stages {
         stage('1 Build base Image') {
+            dir '$WORKSPACE/docker/Images/01_base'
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "echo '$PLATFORM_HOME'"
                 checkout scm
                 sh 'git clean -dfx'
-                dir '$WORKSPACE/docker/Images/01_base'
+                
                 sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
@@ -29,15 +30,16 @@ pipeline {
             }
         }
         stage('3 Build Server Image') {
+            dir '$WORKSPACE/docker/Images/03_server'
             steps {
                 echo "Building Server"
-                dir '$WORKSPACE/docker/Images/03_server'
+                
                 sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
             }
         }
         stage('4 Download Hybris Archive') {
+            dir '$WORKSPACE'
             steps {
-                sh 'cd $WORKSPACE'
                 echo "Downloading hybris.zip"
                 sh './download.sh'
                 echo "Extracting hybris.zip"
