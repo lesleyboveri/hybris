@@ -19,9 +19,6 @@
 
       <coremodule generated="true" manager="com.springer.hybris.springerlink.jalo.SpringerlinkstoreManager" packageroot="com.springer.hybris.springerlink"/>
 
-      <webmodule jspcompile="false" webroot="/springerlinkstore"/>
-					
-	
 
    </extension>
       

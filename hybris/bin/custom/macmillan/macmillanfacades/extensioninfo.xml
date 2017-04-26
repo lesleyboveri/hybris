@@ -21,9 +21,7 @@
 
       <coremodule generated="true" manager="com.mea.hybris.facades.jalo.MacmillanfacadesManager" packageroot="com.mea.hybris.facades"/>
 
-      <webmodule jspcompile="false" webroot="/macmillanfacades"/>
-					
-	
+
 
    </extension>
       

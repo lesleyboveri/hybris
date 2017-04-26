@@ -20,9 +20,6 @@
 
       <coremodule generated="true" manager="com.springernature.hybris.sonar.jalo.SpringernaturesonarManager" packageroot="com.springernature.hybris.sonar"/>
 
-      <webmodule jspcompile="false" webroot="/springernaturesonar"/>
-      
-      
 
    </extension>
       

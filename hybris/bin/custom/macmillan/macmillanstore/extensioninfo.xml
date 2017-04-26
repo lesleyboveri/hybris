@@ -19,9 +19,6 @@
 
       <coremodule generated="true" manager="com.mea.hybris.initialdata.jalo.MacmillanstoreManager" packageroot="com.mea.hybris.initialdata"/>
 
-      <webmodule jspcompile="false" webroot="/macmillanstore"/>
-					
-	
 
    </extension>
       
