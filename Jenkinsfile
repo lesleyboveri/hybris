@@ -3,12 +3,12 @@
 pipeline {
     agent { node { label 'hybris' } }
     tools {
-       jdk 'jdk8'
-       ant 'apache-ant-1.9.1'
+        jdk 'jdk8'
+        ant 'apache-ant-1.9.1'
     }
     environment {
-        PLATFORM_HOME="$WORKSPACE/hybris/bin/platform"
-        ANT_OPTS="-Xmx512m -Dfile.encoding=UTF-8"
+        PLATFORM_HOME = "$WORKSPACE/hybris/bin/platform"
+        ANT_OPTS = "-Xmx512m -Dfile.encoding=UTF-8"
     }
     stages {
         stage('1 Build base Image') {
@@ -18,7 +18,7 @@ pipeline {
                 checkout scm
                 sh 'git clean -dfx'
                 dir("$WORKSPACE/docker/Images/01_base") {
-                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
                 }
             }
         }
@@ -26,27 +26,29 @@ pipeline {
             steps {
                 echo "Building Tomcat"
                 dir("$WORKSPACE/docker/Images/02_tomcat") {
-                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
                 }
             }
         }
         stage('3 Build Server Image') {
-            
+
             steps {
                 echo "Building Server"
                 dir("$WORKSPACE/docker/Images/03_server") {
-                  sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
                 }
             }
         }
         stage('4 Download Hybris Archive') {
             steps {
-              dir("$WORKSPACE"){
-                echo "Downloading hybris.zip"
-                sh './download.sh'
-                echo "Extracting hybris.zip"
-                sh './extract.sh'
-              }
+                timeout(15, MINUTES) {
+                    dir("$WORKSPACE") {
+                        echo "Downloading hybris.zip"
+                        sh './download.sh'
+                        echo "Extracting hybris.zip"
+                        sh './extract.sh'
+                    }
+                }
             }
         }
         stage('5 Install Hybris Addons') {
@@ -66,9 +68,9 @@ pipeline {
             }
         }
         stage('8 Create final Image') {
-          steps {
-              sh 'cd $WORKSPACE && ./docker_production.sh -w $WORKSPACE -b $BUILD_ID'
-          }
+            steps {
+                sh 'cd $WORKSPACE && ./docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+            }
         }
         stage('9 Deploy to QA') {
             when { branch 'master' }
