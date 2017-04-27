@@ -57,8 +57,8 @@ INSERT_UPDATE Vendor;code[unique=true];name
 ;electro;
 
 # Warehouse
-#INSERT_UPDATE Warehouse;code[unique=true];name;vendor(code)[default=default];default[default=true]
-#;default;Default Warehouse;
+INSERT_UPDATE Warehouse;code[unique=true];name;vendor(code)[default=default];default[default=true]
+;default_springerlink_warehouse;Default SpringerLink Warehouse;
 
 # Disable preview for email pages
 UPDATE CMSPageType;code[unique=true];previewDisabled
