@@ -3,6 +3,7 @@
 pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '1'))
+        disableConcurrentBuilds()
     }
     agent { node { label 'hybris' } }
     tools {
@@ -64,6 +65,8 @@ pipeline {
             steps {
                 dir("$PLATFORM_HOME") {
                     sh '$WORKSPACE/build_test.sh'
+                }
+                dir("$WORKSPACE") {
                     junit '**/junit/*.xml'
                 }
             }
@@ -77,7 +80,9 @@ pipeline {
         }
         stage('8 Create final Image') {
             steps {
-                sh 'cd $WORKSPACE && ./docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+                dir("$WORKSPACE") {
+                    sh 'docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+                }
             }
         }
         stage('9 Deploy to QA') {
