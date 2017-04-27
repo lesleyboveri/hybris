@@ -1,8 +1,8 @@
 #!groovy
 
 pipeline {
-    options{
-        buildDiscarder(logRotator(numToKeepStr:'1'))
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '1'))
     }
     agent { node { label 'hybris' } }
     tools {
@@ -34,7 +34,6 @@ pipeline {
             }
         }
         stage('3 Build Server Image') {
-
             steps {
                 echo "Building Server"
                 dir("$WORKSPACE/docker/Images/03_server") {
@@ -56,18 +55,24 @@ pipeline {
         }
         stage('5 Install Hybris Addons') {
             steps {
-                sh 'cd $PLATFORM_HOME && ./$WORKSPACE/install_addons.sh'
+                dir("$PLATFORM_HOME") {
+                    sh '$WORKSPACE/install_addons.sh'
+                }
             }
         }
         stage('6 Build and Test') {
             steps {
-                sh 'cd $PLATFORM_HOME && ./$WORKSPACE/build_test.sh'
-                junit '**/junit/*.xml'
+                dir("$PLATFORM_HOME") {
+                    sh '$WORKSPACE/build_test.sh'
+                    junit '**/junit/*.xml'
+                }
             }
         }
         stage('7 Create Production Artifacts') {
             steps {
-                sh 'cd $PLATFORM_HOME && ./$WORKSPACE/production.sh'
+                dir("$PLATFORM_HOME") {
+                    sh '$WORKSPACE/production.sh'
+                }
             }
         }
         stage('8 Create final Image') {
