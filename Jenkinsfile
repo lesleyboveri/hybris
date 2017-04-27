@@ -81,7 +81,7 @@ pipeline {
         stage('8 Create final Image') {
             steps {
                 dir("$WORKSPACE") {
-                    sh 'docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+                    sh './docker_production.sh -w $WORKSPACE -b $BUILD_ID'
                 }
             }
         }
