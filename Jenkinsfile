@@ -41,7 +41,7 @@ pipeline {
         }
         stage('4 Download Hybris Archive') {
             steps {
-              dir '$WORKSPACE'{
+              dir("$WORKSPACE"){
                 echo "Downloading hybris.zip"
                 sh './download.sh'
                 echo "Extracting hybris.zip"
