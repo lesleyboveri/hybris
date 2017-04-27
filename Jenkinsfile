@@ -1,6 +1,11 @@
 #!groovy
 
+def projectProperties = [
+    [$class: 'BuildDiscarderProperty',strategy: [$class: 'LogRotator', numToKeepStr: '2']],
+]
+
 pipeline {
+    properties(projectProperties)
     agent { node { label 'hybris' } }
     tools {
         jdk 'jdk8'
