@@ -41,7 +41,7 @@ pipeline {
         }
         stage('4 Download Hybris Archive') {
             steps {
-                timeout(15, MINUTES) {
+                timeout(15 MINUTES) {
                     dir("$WORKSPACE") {
                         echo "Downloading hybris.zip"
                         sh './download.sh'
