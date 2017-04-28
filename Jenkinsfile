@@ -15,34 +15,13 @@ pipeline {
         ANT_OPTS = "-Xmx512m -Dfile.encoding=UTF-8"
     }
     stages {
-        stage('1 Build base Image') {
-            steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                echo "echo '$PLATFORM_HOME'"
-                checkout scm
-                sh 'git clean -dfx'
-                dir("$WORKSPACE/docker/Images/01_base") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+        stage('0 Setup workspace') {
+                steps {
+                  checkout scm
+                  sh 'git clean -dfx'
                 }
-            }
         }
-        stage('2 Build Tomcat Image') {
-            steps {
-                echo "Building Tomcat"
-                dir("$WORKSPACE/docker/Images/02_tomcat") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
-                }
-            }
-        }
-        stage('3 Build Server Image') {
-            steps {
-                echo "Building Server"
-                dir("$WORKSPACE/docker/Images/03_server") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
-                }
-            }
-        }
-        stage('4 Download Hybris Archive') {
+        stage('1 Download Hybris Archive') {
             steps {
                 timeout(900) {
                     dir("$WORKSPACE") {
@@ -54,14 +33,14 @@ pipeline {
                 }
             }
         }
-        stage('5 Install Hybris Addons') {
+        stage('2 Install Hybris Addons') {
             steps {
                 dir("$PLATFORM_HOME") {
                     sh '$WORKSPACE/install_addons.sh'
                 }
             }
         }
-        stage('6 Build and Test') {
+        stage('3 Build and Test') {
             steps {
                 dir("$PLATFORM_HOME") {
                     sh '$WORKSPACE/build_test.sh'
@@ -71,14 +50,45 @@ pipeline {
                 }
             }
         }
-        stage('7 Create Production Artifacts') {
+        stage('4 Create Production Artifacts') {
+            when { branch 'master' }
             steps {
                 dir("$PLATFORM_HOME") {
                     sh '$WORKSPACE/production.sh'
                 }
             }
         }
-        stage('8 Create final Image') {
+        stage('5 Build base Image') {
+            when { branch 'master' }
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "echo '$PLATFORM_HOME'"
+                
+                dir("$WORKSPACE/docker/Images/01_base") {
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
+            }
+        }
+        stage('6 Build Tomcat Image') {
+            when { branch 'master' }
+            steps {
+                echo "Building Tomcat"
+                dir("$WORKSPACE/docker/Images/02_tomcat") {
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
+            }
+        }
+        stage('7 Build Server Image') {
+            when { branch 'master' }
+            steps {
+                echo "Building Server"
+                dir("$WORKSPACE/docker/Images/03_server") {
+                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                }
+            }
+        }
+        stage('8 Create Platform Image') {
+            when { branch 'master' }
             steps {
                 dir("$WORKSPACE") {
                     sh './docker_production.sh -w $WORKSPACE -b $BUILD_ID'

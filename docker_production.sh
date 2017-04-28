@@ -30,4 +30,4 @@ mv $workspace/hybris/temp/hybris/hybrisServer/hybrisServer-TomcatConfig.zip $wor
 cd $workspace/docker/Images/04_platform
 ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$build_number
 
-#docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$build_number
+docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$build_number
