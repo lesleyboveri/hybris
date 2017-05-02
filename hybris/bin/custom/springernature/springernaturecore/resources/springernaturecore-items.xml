@@ -80,7 +80,7 @@
                 </attributes>
             </itemtype>
             <itemtype code="MEAAuthor" autocreate="true" generate="true">
-                <deployment table="meauthor" typecode="20001"/>
+                <deployment table="meaauthor" typecode="20001"/>
                 <attributes>
                     <attribute qualifier="firstName" type="java.lang.String">
                         <persistence type="property"/>
