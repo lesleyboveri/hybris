@@ -1885,24 +1885,24 @@ $feature23=@Number of layers per pall, 1680[$clAttrModifiers];  # Number of laye
 $feature25=@Product dimensions when o, 5721[$clAttrModifiers];  # Product dimensions when open (LxWxD)in inch (")
 $feature26=@Number of cartons per pal, 1679[$clAttrModifiers];  # Number of cartons per pallet
 $feature27=@Material, 898[$clAttrModifiers];  # Material
-INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature6;$feature7;$feature9;$feature15;$feature17;$feature18;$feature19;$feature21;$feature23;$feature25;$feature26;$feature27;$catalogVersion;
- ;1297878;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;Polyurethane;
- ;2006365;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;2140197;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;2140285;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;2149500;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;2292454;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;23191;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;3400506;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;356788;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;Fine-grain cloth;
- ;3683639;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;3683640;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;4135570;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;429430;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;442466;135/180mm;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;861175;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;911227;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
- ;917699;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+#INSERT_UPDATE Product;code[unique=true];$feature1;$feature3;$feature4;$feature6;$feature7;$feature9;$feature15;$feature17;$feature18;$feature19;$feature21;$feature23;$feature25;$feature26;$feature27;$catalogVersion;
+# ;1297878;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;Polyurethane;
+ #;2006365;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;2140197;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;2140285;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;2149500;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;2292454;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;23191;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;3400506;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;356788;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;Fine-grain cloth;
+ #;3683639;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;3683640;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;4135570;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;429430;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;442466;135/180mm;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;861175;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;911227;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
+ #;917699;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;ICEcat.biz;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;<ignore>;
 
 
 # Classification: Picture quality (57)
