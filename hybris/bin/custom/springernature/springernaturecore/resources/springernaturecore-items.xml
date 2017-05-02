@@ -73,12 +73,9 @@
 
         <!-- HERE ONLY SPRINGERLINK ITEMS !!! -->
         <typegroup name="SpringerLinkItems">
-            <itemtype code="OrderEntry" autocreate="false" generate="false">
+            <itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
                 <attributes>
-                    <attribute qualifier="isxn" type="java.lang.String">
-                        <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="doi" type="java.lang.String">
+                    <attribute qualifier="parameters" type="java.util.Map">
                         <persistence type="property"/>
                     </attribute>
                 </attributes>

@@ -65,5 +65,10 @@
     </bean>
 
 	-->
+	<bean class="de.hybris.platform.commerceservices.service.data.CommerceCartParameter">
+		<property name="parameters" type="java.util.Map&lt;String,String[]&gt;">
+			<description>Request parameters</description>
+		</property>
 
+	</bean>
 </beans>

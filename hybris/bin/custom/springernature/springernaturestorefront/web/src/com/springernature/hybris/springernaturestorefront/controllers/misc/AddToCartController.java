@@ -10,6 +10,7 @@
  */
 package com.springernature.hybris.springernaturestorefront.controllers.misc;
 
+import com.springernature.hybris.springernaturefacades.cart.PayPerViewCartFacade;
 import de.hybris.platform.acceleratorfacades.product.data.ProductWrapperData;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartForm;
@@ -25,15 +26,14 @@ import de.hybris.platform.commerceservices.order.CommerceCartModificationExcepti
 import de.hybris.platform.util.Config;
 import com.springernature.hybris.springernaturestorefront.controllers.ControllerConstants;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -65,7 +65,10 @@ public class AddToCartController extends AbstractController
 	@Resource(name = "cartFacade")
 	private CartFacade cartFacade;
 
-	@Resource(name = "accProductFacade")
+	@Resource(name = "payPerViewCartFacade")
+	private PayPerViewCartFacade payPerViewCartFacade;
+
+    @Resource(name = "accProductFacade")
 	private ProductFacade productFacade;
 
 	@Resource(name = "groupCartModificationListPopulator")
@@ -75,6 +78,37 @@ public class AddToCartController extends AbstractController
 	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
 			@Valid final AddToCartForm form, final BindingResult bindingErrors)
 	{
+		return addToCart(null, code, model, form, bindingErrors, ControllerConstants.Views.Fragments.Cart.AddToCartPopup);
+	}
+
+
+    static final String PARAM_MAC = "mac";
+	static final String PARAM_RURL = "returnurl";
+
+	@RequestMapping(value = "/slcart/add", method = RequestMethod.POST)
+	public String addToSpringerLinkCart(@RequestParam("productCodePost") final String code, final Model model,
+							@Valid final AddToCartForm form, final BindingResult bindingErrors, final HttpServletRequest request)
+	{
+        if (StringUtils.isEmpty(request.getParameter(PARAM_MAC))) {
+            model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.missing");
+            return null;
+        }
+
+        if (!verifyMac(request, Config.getString("ppvMd5SecretKey", null))) {
+            model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.failed");
+            return null;
+        }
+
+        if (cartFacade.hasSessionCart()) {
+            cartFacade.removeSessionCart();
+        }
+
+		return addToCart(request.getParameterMap(), code, model, form, bindingErrors, REDIRECT_PREFIX + "/cart/checkout");
+	}
+
+
+	private String addToCart (final Map<String, String[]> parameterMap, final String code, final Model model,
+						   final AddToCartForm form, final BindingResult bindingErrors, final String view) {
 		if (bindingErrors.hasErrors())
 		{
 			return getViewWithBindingErrorMessages(model, bindingErrors);
@@ -91,7 +125,7 @@ public class AddToCartController extends AbstractController
 		{
 			try
 			{
-				final CartModificationData cartModification = cartFacade.addToCart(code, qty);
+				final CartModificationData cartModification = parameterMap != null ? payPerViewCartFacade.addToCart(parameterMap, code) : cartFacade.addToCart(code, qty);
 				model.addAttribute(QUANTITY_ATTR, Long.valueOf(cartModification.getQuantityAdded()));
 				model.addAttribute("entry", cartModification.getEntry());
 				model.addAttribute("cartCode", cartModification.getCartCode());
@@ -117,10 +151,28 @@ public class AddToCartController extends AbstractController
 
 		model.addAttribute("product", productFacade.getProductForCodeAndOptions(code, Arrays.asList(ProductOption.BASIC)));
 
-		return ControllerConstants.Views.Fragments.Cart.AddToCartPopup;
+		return view;
 	}
 
-	protected String getViewWithBindingErrorMessages(final Model model, final BindingResult bindingErrors)
+    boolean verifyMac(final HttpServletRequest request, final String secret)
+	{
+		final Map<String,String[]> parameterMap= new TreeMap<>(request.getParameterMap());
+
+        final String mac = parameterMap.get(PARAM_MAC)[0];
+		parameterMap.remove(PARAM_MAC);
+        parameterMap.remove(PARAM_RURL);
+
+        final StringBuilder md5str = new StringBuilder();
+        for (String[] value : parameterMap.values()) {
+            md5str.append(value[0]);
+        }
+        md5str.append(secret);
+        final String hash = Hex.encodeHexString(DigestUtils.getMd5Digest().digest(md5str.toString().getBytes()));
+        return hash.equals(mac);
+    }
+
+
+    protected String getViewWithBindingErrorMessages(final Model model, final BindingResult bindingErrors)
 	{
 		for (final ObjectError error : bindingErrors.getAllErrors())
 		{

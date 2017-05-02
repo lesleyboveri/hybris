@@ -89,5 +89,24 @@
         <property name="mediaService" ref="mediaService"/>
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
-			
+
+
+	<alias name="defaultPayPerViewCartFacade" alias="payPerViewCartFacade"/>
+	<bean id="defaultPayPerViewCartFacade" class="com.springernature.hybris.springernaturefacades.cart.PayPerViewCartFacade">
+		<property name="cartService" ref="cartService"/>
+		<property name="commerceCartService" ref="commerceCartService"/>
+		<property name="productService" ref="productService"/>
+		<property name="cartModificationConverter" ref="cartModificationConverter"/>
+
+	</bean>
+
+	<alias name="defaultPayPerViewAddToCartHook" alias="payPerViewAddToCartHook" />
+        <bean id="defaultPayPerViewAddToCartHook" class="com.springernature.hybris.springernaturefacades.cart.PayPerViewAddToCartMethodHook">
+
+    </bean>
+
+	<bean id="payPerViewAddToCartHooksListMergeDirective" depends-on="commerceAddToCartMethodHooks" parent="listMergeDirective">
+		<property name="add" ref="payPerViewAddToCartHook" />
+	</bean>
+
 </beans>
