@@ -1,4 +1,4 @@
 #Insert products metadata
 
-INSERT_UPDATE Product;code[unique=true];component;authors;inspectionCopyAllowed;publicationDate;binding(code);format(code)
-;9781420271652;eBook;;true;;HardCover;ePub
+INSERT_UPDATE Product;code[unique=true];component;inspectionCopyAllowed;publicationDate;binding(code);format(code)
+;9781420271652;eBook;true;;HardCover;ePub

@@ -1,0 +1,9 @@
+# Product authors data
+
+INSERT_UPDATE Product;code[unique=true];authors
+;9781420271652;1
+;9781420271652;2
+
+INSERT_UPDATE MEAAuthorsList;code[unique=true];firstName;lastName
+1;Tracey;Reeder
+2;Ben;Smith

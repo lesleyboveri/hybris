@@ -19,5 +19,6 @@ $baseProduct=baseProduct(code,$catalogVersion)
 $approved=approvalstatus(code)[default='check']
 
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];name[lang=$lang];$catalogVersion;$approved;description[lang=$lang];summary[lang=$lang]
-;9781420271652;Animal Lives;;;The fascinating examples;test animals
+INSERT_UPDATE Product;code[unique=true];name[lang=$lang];$catalogVersion;$approved
+;9781420271652;Animal Lives;;
+

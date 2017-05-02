@@ -38,8 +38,8 @@
     <relations>
         <relation code="Product2MEAAuthor" localized="false" generate="true" autocreate="true">
             <deployment table="meaauthorrel" typecode="20000"/>
-            <sourceElement type="Product" cardinality="many"/>
-            <targetElement type="MEAAuthor" cardinality="many"/>
+            <sourceElement type="Product" qualifier="product" cardinality="many"/>
+            <targetElement type="MEAAuthor" qualifier="author" cardinality="many"/>
         </relation>
     </relations>
     <!-- END MACMILLAN SECTION -->
