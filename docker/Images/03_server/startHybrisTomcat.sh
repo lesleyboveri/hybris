@@ -5,7 +5,7 @@ APP_BASE=${TOMCAT}/conf/Catalina/localhost
 LIB=${TOMCAT}/lib
 
 HYBRIS_WEBAPPS=${PLATFORM_PACKAGE}/conf/Catalina/localhost
-HYBRIS_YTOMCAT=${PLATFORM_PACKAGE}/lib/ytomcat.jar
+HYBRIS_YTOMCAT=${PLATFORM_PACKAGE}/hybris/bin/platform/bootstrap/bin/ytomcat.jar
 
 
 # ---------------------------------------------------------------------------
