@@ -19,6 +19,7 @@ $baseProduct=baseProduct(code,$catalogVersion)
 $approved=approvalstatus(code)[default='check']
 
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];name;$catalogVersion;$approved;description;summary;component;authors;inspectionCopyAllowed;publicationDate;binding;format
+INSERT_UPDATE Product;code[unique=true];name;$catalogVersion;$approved;description[lang];summary;component;authors;inspectionCopyAllowed;publicationDate;binding;format(code)
 ;9781420271652;Animal Lives;;;The fascinating examples of how a range of animals behave when migrating will entertain middle-upper primary students;It presents contrasting examples of migration and the approach encourages young readers to develop an understanding about the similarities and differences in the behaviours and features of a range of animals;eBook;Kimberley Jane Pryor;true;;;ePub
 
+INSERT_UPDATE MEAAuthorsList
