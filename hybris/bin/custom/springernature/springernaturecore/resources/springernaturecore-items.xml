@@ -57,7 +57,7 @@
                     <attribute qualifier="component" type="java.lang.String">
                         <persistence type="property"/>
                     </attribute>
-                    <attribute qualifier="authors" type="MEAAuthorsList">
+                    <attribute qualifier="authors" type="Product2MEAAuthor">
                         <persistence type="property"/>
                     </attribute>
                     <attribute qualifier="inspectionCopyAllowed" type="java.lang.Boolean">
