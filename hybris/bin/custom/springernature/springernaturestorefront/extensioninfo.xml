@@ -13,6 +13,10 @@
 	<extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">		
         
 
+<requires-extension name="springerlinkcheckoutaddon"/>
+<requires-extension name="sapcoreaddon"/>
+
+
 <requires-extension name="smarteditaddon"/>
 <requires-extension name="liveeditaddon"/>
 <requires-extension name="textfieldconfiguratortemplateaddon"/>
@@ -27,7 +31,7 @@
 <requires-extension name="worldpayaddon"/>
 
 
-<requires-extension name="sapcoreaddon"/>
+
 
 
 
