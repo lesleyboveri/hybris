@@ -5,8 +5,8 @@ import de.hybris.platform.commerceservices.order.CommerceCartModificationExcepti
 import de.hybris.platform.commerceservices.order.hook.CommerceAddToCartMethodHook;
 import de.hybris.platform.commerceservices.service.data.CommerceCartParameter;
 import de.hybris.platform.core.model.order.AbstractOrderEntryModel;
+import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.servicelayer.util.ServicesUtil;
-import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +14,17 @@ import org.slf4j.LoggerFactory;
 public class PayPerViewAddToCartMethodHook implements CommerceAddToCartMethodHook
 {
     private static final Logger LOG = LoggerFactory.getLogger(PayPerViewAddToCartMethodHook.class);
+
+
+    public ModelService getModelService() {
+        return modelService;
+    }
+
+    public void setModelService(ModelService modelService) {
+        this.modelService = modelService;
+    }
+
+    private ModelService modelService;
 
     @Override
     public void beforeAddToCart(CommerceCartParameter parameters) throws CommerceCartModificationException {
@@ -33,9 +44,12 @@ public class PayPerViewAddToCartMethodHook implements CommerceAddToCartMethodHoo
                 LOG.warn("No entry created");
             }
             else
+
             {
                 entry.setParameters(parameters.getParameters());
+                getModelService().save(entry);
             }
         }
     }
 }
+

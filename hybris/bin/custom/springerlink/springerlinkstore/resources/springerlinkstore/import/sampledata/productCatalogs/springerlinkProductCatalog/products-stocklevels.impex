@@ -28,3 +28,4 @@ UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, w
 ; PPVJ      ; ; PPVJ:default_springerlink_warehouse ;
 ; PPVB      ; ; PPVB:default_springerlink_warehouse ;
 ; PPVJ_ADIS ; ; PPVB:default_springerlink_warehouse ;
+; PPVB_PROT ; ; PPVB:default_springerlink_warehouse ;

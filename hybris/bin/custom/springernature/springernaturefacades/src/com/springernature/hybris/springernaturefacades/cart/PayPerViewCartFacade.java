@@ -10,11 +10,13 @@ import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.order.CartService;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.servicelayer.dto.converter.Converter;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class PayPerViewCartFacade implements CartFacade
@@ -69,7 +71,11 @@ public class PayPerViewCartFacade implements CartFacade
         parameter.setProduct(product);
         parameter.setUnit(product.getUnit());
         parameter.setCreateNewEntry(false);
-        parameter.setParameters(parameterMap);
+
+        final Map<String,String> parameters = parameterMap.entrySet().stream()
+                  .collect(Collectors.toMap(Map.Entry::getKey, e -> StringUtils.join(e.getValue(), "|")));
+
+        parameter.setParameters(parameters);
 
         final CommerceCartModification modification = getCommerceCartService().addToCart(parameter);
 

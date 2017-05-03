@@ -102,7 +102,7 @@
 
 	<alias name="defaultPayPerViewAddToCartHook" alias="payPerViewAddToCartHook" />
         <bean id="defaultPayPerViewAddToCartHook" class="com.springernature.hybris.springernaturefacades.cart.PayPerViewAddToCartMethodHook">
-
+			<property name="modelService" ref="modelService"/>
     </bean>
 
 	<bean id="payPerViewAddToCartHooksListMergeDirective" depends-on="commerceAddToCartMethodHooks" parent="listMergeDirective">

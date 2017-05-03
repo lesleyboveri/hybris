@@ -12,18 +12,21 @@
 
 # Insert Product taxes for US
 INSERT_UPDATE ProductTaxCode;productCode[unique=true];taxCode;taxArea[unique=true]
-;PPVJ;P0000000;DE
-;PPVB;P0000000;DE
-;PPVJ_ADIS;P0000000;DE
+;PPVJ;P0000000;US
+;PPVB;P0000000;US
+;PPVJ_ADIS;P0000000;US
+;PPVB_PROT;P0000000;US
 
 # Insert Product taxes for GB
 INSERT_UPDATE ProductTaxCode;productCode[unique=true];taxCode;taxArea[unique=true]
 ;PPVJ;P0000000;GB
 ;PPVB;P0000000;GB
 ;PPVJ_ADIS;P0000000;GB
+;PPVB_PROT;P0000000;GB
 
 # Insert Product taxes fo DE
 INSERT_UPDATE ProductTaxCode;productCode[unique=true];taxCode;taxArea[unique=true]
 ;PPVJ;P0000000;DE
 ;PPVB;P0000000;DE
 ;PPVJ_ADIS;P0000000;DE
+;PPVB_PROT;P0000000;DE

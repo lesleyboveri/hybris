@@ -32,6 +32,14 @@
             <value code="PrintDigital"/>
         </enumtype>
     </enumtypes>
+    <maptypes>
+        <maptype code="ParameterMapType"
+        argumenttype="java.lang.String"
+        returntype="java.lang.String"
+        autocreate="true"
+        generate="true"/>
+    </maptypes>
+
     <!-- END MACMILLAN SECTION -->
 
     <!-- SPRINGERLINK SECTION -->
@@ -75,7 +83,8 @@
         <typegroup name="SpringerLinkItems">
             <itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
                 <attributes>
-                    <attribute qualifier="parameters" type="java.util.Map">
+                    <attribute qualifier="parameters" type="ParameterMapType">
+                        <modifiers read="true" write="true" search="false"/>
                         <persistence type="property"/>
                     </attribute>
                 </attributes>

@@ -22,21 +22,26 @@ UPDATE Product;code[unique=true];$approved;$catalogVersion;$taxGroup
 ;PPVJ
 ;PPVB
 ;PPVJ_ADIS
+;PPVB_PROT
 
 INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
 ;PPVJ;pieces;USD;39,95;1;1;true
 ;PPVB;pieces;USD;29,95;1;1;true
 ;PPVJ_ADIS;pieces;USD;49,95;1;1;true
+;PPVB_PROT;pieces;USD;49,95;1;1;true
 
 ;PPVJ;pieces;EUR;34,95;1;1;true
 ;PPVB;pieces;EUR;24,95;1;1;true
 ;PPVJ_ADIS;pieces;EUR;39,95;1;1;true
+;PPVB_PROT;pieces;EUR;39,95;1;1;true
 
 ;PPVJ;pieces;CHF;34,95;1;1;true
 ;PPVB;pieces;CHF;24,95;1;1;true
 ;PPVJ_ADIS;pieces;CHF;39,95;1;1;true
+;PPVB_PROT;pieces;CHF;39,95;1;1;true
 
-;PPVJ;pieces;GBP;34,95;1;1;true
-;PPVB;pieces;GBP;24,95;1;1;true
-;PPVJ_ADIS;pieces;GBP;39,95;1;1;true
+;PPVJ;pieces;GBP;29,95;1;1;true
+;PPVB;pieces;GBP;19,95;1;1;true
+;PPVJ_ADIS;pieces;GBP;34,95;1;1;true
+;PPVB_PROT;pieces;GBP;34,95;1;1;true
 
