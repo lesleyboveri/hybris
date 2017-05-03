@@ -82,6 +82,10 @@
             <itemtype code="MEAAuthor" autocreate="true" generate="true">
                 <deployment table="meaauthor" typecode="20001"/>
                 <attributes>
+                    <attribute qualifier="code" type="java.lang.Integer">
+                        <persistence type="property"/>
+                        <modifiers unique="true"/>
+                    </attribute>
                     <attribute qualifier="firstName" type="java.lang.String">
                         <persistence type="property"/>
                     </attribute>

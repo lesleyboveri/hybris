@@ -15,7 +15,6 @@
 $productCatalog=macmillanProductCatalog
 $productCatalogName=Macmillan Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-
 $lang=en
 
 
