@@ -12,6 +12,9 @@
 <extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
     <extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">
+        <requires-extension name="springernaturefacades"/>
+        <requires-extension name="springerlinkcheckoutaddon"/>
+        <requires-extension name="sapcoreaddon"/>
         <requires-extension name="smarteditaddon"/>
         <requires-extension name="liveeditaddon"/>
         <requires-extension name="textfieldconfiguratortemplateaddon"/>
@@ -24,11 +27,9 @@
         <requires-extension name="worldpaynotificationaddon"/>
         <requires-extension name="springernatureworldpayaddon"/>
         <requires-extension name="worldpayaddon"/>
-        <requires-extension name="sapcoreaddon"/>
         <requires-extension name="worldpaysampledataaddon"/>
         <requires-extension name="acceleratorstorefrontcommons"/>
         <requires-extension name="yacceleratorfacades"/>
-        <requires-extension name="springernaturefacades"/>
         <webmodule jspcompile="false" webroot="/springernaturestorefront"/>
         <meta key="modulegen-name" value="accelerator"/>
     </extension>

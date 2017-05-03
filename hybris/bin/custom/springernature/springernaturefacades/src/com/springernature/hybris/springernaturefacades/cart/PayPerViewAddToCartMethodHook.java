@@ -44,7 +44,6 @@ public class PayPerViewAddToCartMethodHook implements CommerceAddToCartMethodHoo
                 LOG.warn("No entry created");
             }
             else
-
             {
                 entry.setParameters(parameters.getParameters());
                 getModelService().save(entry);
