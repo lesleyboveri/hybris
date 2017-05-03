@@ -20,6 +20,8 @@ $lang=en
 
 
 # Update allProducts with localisations
-UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+UPDATE Product;code[unique=true];$catalogVersion;summary[lang=$lang];description[lang=$lang]
  #;107701;;DC Car Battery Adapter;DC Car Battery Adapter;It's time to take a road trip and you want to capture the whole event with your HandyCam® camcorder but you know the battery isn't going to last the whole trip. Not a problem with the DCC-L50B Car Battery Adaptor. You can power your HandyCam® camcorder directly from your car's cigarette lighter socket and record your adventure non-stop!<br/>Includes the DK215 and DK235 connecting cords
-;9781420271652;;;The fascinating examples of how a range of animals behave when migrating will entertain middle-upper primary students;It presents contrasting examples of migration and the approach encourages young readers to develop an understanding about the similarities and differences in the behaviours and features of a range of animals
+;9781420271652;;The fascinating examples of how a range of animals behave when migrating will entertain middle-upper primary students;It presents contrasting examples of migration and the approach encourages young readers to develop an understanding about the similarities and differences in the behaviours and features of a range of animals
+;9780732985875;;Two friends who are in a ski race together - who will win?;
+;9780732985899;;This engaging story tells of a group of friends dressing up and making a playhouse in their backyard.;This engaging story tells of a group of friends dressing up and making a playhouse in their backyard.

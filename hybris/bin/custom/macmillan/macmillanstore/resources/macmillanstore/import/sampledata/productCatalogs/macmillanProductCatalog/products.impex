@@ -21,4 +21,6 @@ $approved=approvalstatus(code)[default='check']
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];name[lang=$lang];$catalogVersion;$approved
 ;9781420271652;Animal Lives;;
+;9780732985875;The Sky Race;;
+;9780732985899;The Playhouse;;
 

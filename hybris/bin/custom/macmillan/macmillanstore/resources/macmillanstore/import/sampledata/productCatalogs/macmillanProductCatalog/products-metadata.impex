@@ -2,3 +2,5 @@
 
 INSERT_UPDATE Product;code[unique=true];component;inspectionCopyAllowed;publicationDate;binding(code);format(code)
 ;9781420271652;eBook;true;;HardCover;ePub
+;9780732985875;eBook;true;;SoftCover;ePub
+;9780732985899;eBook;true;;HardCover;ePub
