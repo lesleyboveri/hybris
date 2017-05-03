@@ -11,10 +11,7 @@
 -->
 <extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-    <extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront"
-               usemaven="false">
-
-
+    <extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">
         <requires-extension name="smarteditaddon"/>
         <requires-extension name="liveeditaddon"/>
         <requires-extension name="textfieldconfiguratortemplateaddon"/>
@@ -34,8 +31,5 @@
         <requires-extension name="springernaturefacades"/>
         <webmodule jspcompile="false" webroot="/springernaturestorefront"/>
         <meta key="modulegen-name" value="accelerator"/>
-
-
     </extension>
-
 </extensioninfo>

@@ -61,7 +61,7 @@
 
     <!-- storefront addons
          ant addoninstall -Daddonnames="commerceorgsamplesaddon,orderselfserviceaddon,assistedservicestorefront,springernatureassistedservicestorefront,customerticketingaddon,promotionenginesamplesaddon,textfieldconfiguratortemplateaddon,liveeditaddon,smarteditaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"
-         ant addoninstall -Daddonnames="sapcoreaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"
+         ant addoninstall -Daddonnames="sapcoreaddon,springerlinkcheckoutaddon" -DaddonStorefront.yacceleratorstorefront="springernaturestorefront"
          ant addoninstall -Daddonnames="worldpayaddon,springernatureworldpayaddon,worldpaynotificationaddon" -DaddonStorefront.yacceleratorstorefront="macmillanstorefront,springernaturestorefront"
     -->
 
@@ -88,6 +88,7 @@
 
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>
+    <extension name="springerlinkcheckoutaddon"/>
 
     <!-- macmillan -->
     <extension name="macmillanstorefront"/>
