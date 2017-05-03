@@ -1,4 +1,4 @@
-FROM docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base
+FROM docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base:latest
 MAINTAINER axel.grossmann@hybris.de
 
 # Note: adding a *.tar.gz automatically unzips the archive
