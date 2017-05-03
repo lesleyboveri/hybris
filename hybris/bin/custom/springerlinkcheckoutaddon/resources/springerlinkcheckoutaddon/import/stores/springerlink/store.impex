@@ -1,0 +1,13 @@
+$storeUid=springerlink
+
+$springerlinkCheckoutGroup=springerlinkCheckoutGroup
+$springerlinkResponsiveCheckoutGroup=springerlinkResponsiveCheckoutGroup
+
+# Base Store
+UPDATE BaseStore;uid[unique=true];checkoutFlowGroup
+;$storeUid;$springerlinkCheckoutGroup
+
+#% if: "responsive".equalsIgnoreCase(Config.getParameter("commerceservices.default.desktop.ui.experience"));
+UPDATE BaseStore;uid[unique=true];checkoutFlowGroup
+;$storeUid;$springerlinkResponsiveCheckoutGroup
+#% endif:
