@@ -1,4 +1,4 @@
-FROM docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server
+FROM docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server:latest
 MAINTAINER axel.grossmann@hybris.de
 
 ADD hybrisServer/hybrisServer-*.zip /tmp/
