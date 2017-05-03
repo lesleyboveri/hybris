@@ -1,0 +1,283 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.springer.hybris.checkout.controllers"/>
+
+    <!-- Springerlink Checkout Steps START -->
+
+    <alias name="defaultSpringerlinkMultiStepCheckout" alias="springerlinkMultiStepCheckout" />
+    <bean id="defaultSpringerlinkMultiStepCheckout" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultMultiStepCheckoutValidator"/>
+        <property name="transitions">
+            <map>
+                <entry key="previous" value-ref="REDIRECT_TO_CART"/>
+                <entry key="current" value-ref="REDIRECT_MULTI_STEP_CHECKOUT"/>
+                <entry key="next" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="multi"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkDeliveryAddressCheckoutStep" alias="springerlinkDeliveryAddressCheckoutStep"/>
+    <bean id="defaultSpringerlinkDeliveryAddressCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="deliveryAddressCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_MULTI_STEP_CHECKOUT"/>
+                <entry key="current" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="next" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="deliveryAddress"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkDeliveryMethodCheckoutStep" alias="springerlinkDeliveryMethodCheckoutStep" />
+    <bean id="defaultSpringerlinkDeliveryMethodCheckoutStep"  parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="deliveryMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="current" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="deliveryMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkPickupLocationCheckoutStep" alias="springerlinkPickupLocationCheckoutStep" />
+    <bean id="defaultSpringerlinkPickupLocationCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultPickupCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_PICKUP_LOCATION"/>
+                <entry key="next" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="deliveryMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkChoosePaymentCheckoutStep" alias="springerlinkChoosePaymentCheckoutStep"/>
+    <bean id="defaultSpringerlinkChoosePaymentCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultPaymentMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_SUMMARY"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="paymentMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkPaymentMethodCheckoutStep" alias="springerlinkPaymentMethodCheckoutStep" />
+    <bean id="defaultSpringerlinkPaymentMethodCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultPaymentMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_PAYMENT_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_SUMMARY"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="paymentMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkSummaryCheckoutStep" alias="springerlinkSummaryCheckoutStep"/>
+    <bean id="defaultSpringerlinkSummaryCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultSummaryCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_SUMMARY"/>
+                <entry key="next" value="redirect:/checkout/worldpay/orderConfirmation/%s"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="confirmOrder"/>
+    </bean>
+    <!-- Springerlink Checkout Steps END -->
+
+    <!-- Springerlink responsive Checkout Steps START -->
+
+    <alias name="defaultSpringerlinkResponsiveMultiStepCheckout" alias="springerlinkResponsiveMultiStepCheckout" />
+    <bean id="defaultSpringerlinkResponsiveMultiStepCheckout" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultResponsiveMultiStepCheckoutValidator"/>
+        <property name="transitions">
+            <map>
+                <entry key="previous" value-ref="REDIRECT_TO_CART"/>
+                <entry key="current" value-ref="REDIRECT_MULTI_STEP_CHECKOUT"/>
+                <entry key="next" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="multi"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkResponsiveDeliveryAddressCheckoutStep" alias="springerlinkResponsiveDeliveryAddressCheckoutStep" />
+    <bean id="defaultSpringerlinkResponsiveDeliveryAddressCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultResponsiveDeliveryAddressCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_CART"/>
+                <entry key="current" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="next" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="deliveryAddress"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkResponsiveDeliveryMethodCheckoutStep" alias="springerlinkResponsiveDeliveryMethodCheckoutStep" />
+    <bean id="defaultSpringerlinkResponsiveDeliveryMethodCheckoutStep"  parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultResponsiveDeliveryMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="current" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="deliveryMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkResponsiveChoosePaymentCheckoutStep" alias="springerlinkResponsiveChoosePaymentCheckoutStep"/>
+    <bean id="defaultSpringerlinkResponsiveChoosePaymentCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultPaymentMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_SUMMARY"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="paymentMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkResponsivePaymentMethodCheckoutStep" alias="springerlinkResponsivePaymentMethodCheckoutStep" />
+    <bean id="defaultSpringerlinkResponsivePaymentMethodCheckoutStep" parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultResponsivePaymentMethodCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_PAYMENT_METHOD"/>
+                <entry key="next" value-ref="REDIRECT_TO_SUMMARY"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="paymentMethod"/>
+    </bean>
+
+    <alias name="defaultSpringerlinkResponsiveSummaryCheckoutStep" alias="springerlinkResponsiveSummaryCheckoutStep" />
+    <bean id="defaultSpringerlinkResponsiveSummaryCheckoutStep"  parent="checkoutStep">
+        <property name="checkoutGroup" ref="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepValidator" ref="defaultResponsiveSummaryCheckoutValidator"/>
+        <property name="transitions">
+            <map merge="true">
+                <entry key="previous" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="current" value-ref="REDIRECT_TO_SUMMARY"/>
+                <entry key="next" value="redirect:/checkout/worldpay/orderConfirmation/%s"/>
+            </map>
+        </property>
+        <property name="progressBarId" value="confirmOrder"/>
+    </bean>
+
+    <!-- Springerlink responsive Checkout Steps END -->
+
+    <!--- Springerlink checkout group START-->
+
+    <bean id="springerlinkCheckoutGroup" class="de.hybris.platform.acceleratorstorefrontcommons.checkout.steps.CheckoutGroup">
+        <property name="groupId" value="springerlinkCheckoutGroup"/>
+        <property name="checkoutStepMap">
+            <map merge="true">
+                <entry key="multi" value-ref="springerlinkMultiStepCheckout"/>
+                <entry key="delivery-address" value-ref="springerlinkDeliveryAddressCheckoutStep"/>
+                <entry key="delivery-method" value-ref="springerlinkDeliveryMethodCheckoutStep"/>
+                <entry key="pickup-location" value-ref="springerlinkPickupLocationCheckoutStep"/>
+                <entry key="choose-payment-method" value-ref="springerlinkChoosePaymentCheckoutStep"/>
+                <entry key="payment-method" value-ref="springerlinkPaymentMethodCheckoutStep"/>
+                <entry key="summary" value-ref="springerlinkSummaryCheckoutStep"/>
+            </map>
+        </property>
+        <property name="validationResultsMap">
+            <map merge="true">
+                <entry key="FAILED" value-ref="REDIRECT_TO_CART"/>
+                <entry key="REDIRECT_TO_DELIVERY_ADDRESS" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="REDIRECT_TO_PICKUP_LOCATION" value-ref="REDIRECT_TO_PICKUP_LOCATION"/>
+                <entry key="REDIRECT_TO_CART" value-ref="REDIRECT_TO_CART"/>
+                <entry key="REDIRECT_TO_PAYMENT_METHOD" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="REDIRECT_TO_DELIVERY_METHOD" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+            </map>
+        </property>
+        <property name="checkoutProgressBar">
+            <map merge="true">
+                <entry key="1" value-ref="springerlinkDeliveryAddressCheckoutStep"/>
+                <entry key="2" value-ref="springerlinkDeliveryMethodCheckoutStep"/>
+                <entry key="3" value-ref="springerlinkChoosePaymentCheckoutStep"/>
+                <entry key="4" value-ref="springerlinkSummaryCheckoutStep"/>
+            </map>
+        </property>
+    </bean>
+
+    <!--- Springerlink checkout group END-->
+
+    <!--- Springerlink Responsive checkout group START-->
+
+    <bean id="springerlinkResponsiveCheckoutGroup"  class="de.hybris.platform.acceleratorstorefrontcommons.checkout.steps.CheckoutGroup">
+        <property name="groupId"  value="springerlinkResponsiveCheckoutGroup"/>
+        <property name="checkoutStepMap">
+            <map merge="true">
+                <entry key="multi" value-ref="springerlinkResponsiveMultiStepCheckout"/>
+                <entry key="delivery-address" value-ref="springerlinkResponsiveDeliveryAddressCheckoutStep"/>
+                <entry key="delivery-method" value-ref="springerlinkResponsiveDeliveryMethodCheckoutStep"/>
+                <entry key="choose-payment-method" value-ref="springerlinkResponsiveChoosePaymentCheckoutStep"/>
+                <entry key="payment-method" value-ref="springerlinkResponsivePaymentMethodCheckoutStep"/>
+                <entry key="summary" value-ref="springerlinkResponsiveSummaryCheckoutStep"/>
+            </map>
+        </property>
+        <property name="validationResultsMap">
+            <map merge="true">
+                <entry key="FAILED" value-ref="REDIRECT_TO_CART"/>
+                <entry key="REDIRECT_TO_DELIVERY_ADDRESS" value-ref="REDIRECT_TO_DELIVERY_ADDRESS"/>
+                <entry key="REDIRECT_TO_CART" value-ref="REDIRECT_TO_CART"/>
+                <entry key="REDIRECT_TO_PAYMENT_METHOD" value-ref="REDIRECT_TO_CHOOSE_PAYMENT_METHOD"/>
+                <entry key="REDIRECT_TO_DELIVERY_METHOD" value-ref="REDIRECT_TO_DELIVERY_METHOD"/>
+                <entry key="REDIRECT_TO_SUMMARY" value-ref="REDIRECT_TO_SUMMARY"/>
+            </map>
+        </property>
+        <property name="checkoutProgressBar">
+            <map merge="true">
+                <entry key="1" value-ref="springerlinkResponsiveDeliveryAddressCheckoutStep"/>
+                <entry key="2" value-ref="springerlinkResponsiveDeliveryMethodCheckoutStep"/>
+                <entry key="3" value-ref="springerlinkResponsiveChoosePaymentCheckoutStep"/>
+                <entry key="4" value-ref="springerlinkResponsiveSummaryCheckoutStep"/>
+            </map>
+        </property>
+    </bean>
+    <!--- Springerlink Responsive checkout group END -->
+
+    <!--Checkout GroupMap-->
+    <bean id="springerlinkCheckoutFlowGroupMapMergeDirective" parent="mapMergeDirective" depends-on="checkoutFlowGroupMap">
+        <property name="key" value="springerlinkCheckoutGroup"/>
+        <property name="value" ref="springerlinkCheckoutGroup"/>
+    </bean>
+
+    <bean id="springerlinkCheckoutFlowGroupResponsiveMapMergeDirective" parent="mapMergeDirective" depends-on="checkoutFlowGroupMap">
+        <property name="key" value="springerlinkResponsiveCheckoutGroup"/>
+        <property name="value" ref="springerlinkResponsiveCheckoutGroup"/>
+    </bean>
+</beans>
