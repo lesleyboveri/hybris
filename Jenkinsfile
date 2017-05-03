@@ -65,7 +65,9 @@ pipeline {
                 echo "echo '$PLATFORM_HOME'"
                 
                 dir("$WORKSPACE/docker/Images/01_base") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh 'docker build -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base:latest -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base:$BUILD_ID .'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base:latest'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.base:$BUILD_ID'
                 }
             }
         }
@@ -74,7 +76,9 @@ pipeline {
             steps {
                 echo "Building Tomcat"
                 dir("$WORKSPACE/docker/Images/02_tomcat") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh 'docker build -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.tomcat:latest -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.tomcat:$BUILD_ID .'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.tomcat:latest'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.tomcat:$BUILD_ID'
                 }
             }
         }
@@ -83,7 +87,9 @@ pipeline {
             steps {
                 echo "Building Server"
                 dir("$WORKSPACE/docker/Images/03_server") {
-                    sh './build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$BUILD_ID'
+                    sh 'docker build -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server -t docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server:$BUILD_ID .'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server:latest'
+                    sh 'docker push docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.server:$BUILD_ID'
                 }
             }
         }
