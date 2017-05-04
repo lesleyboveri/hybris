@@ -13,27 +13,20 @@ import de.hybris.platform.servicelayer.dto.converter.Converter;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
 public class PayPerViewCartFacade implements CartFacade
 {
 
-    @Resource(name = "cartFacade")
+    @Resource(name = "defaultCartFacade")
     private CartFacade delegate;
 
     private CartService cartService;
     private ProductService productService;
     private CommerceCartService commerceCartService;
     private Converter<CommerceCartModification, CartModificationData> cartModificationConverter;
-
-    private CartFacade getDelegate()
-    {
-        return delegate;
-    }
 
     @Override
     public CartData getSessionCart() {
@@ -61,7 +54,7 @@ public class PayPerViewCartFacade implements CartFacade
     }
 
 
-    public CartModificationData addToCart(final Map<String, String[]> parameterMap, final String code) throws CommerceCartModificationException {
+    public CartModificationData addToCart(final Map<String,String> parameterMap, final String code) throws CommerceCartModificationException {
         final ProductModel product = getProductService().getProductForCode(code);
         final CartModel cartModel = getCartService().getSessionCart();
         final CommerceCartParameter parameter = new CommerceCartParameter();
@@ -72,10 +65,7 @@ public class PayPerViewCartFacade implements CartFacade
         parameter.setUnit(product.getUnit());
         parameter.setCreateNewEntry(false);
 
-        final Map<String,String> parameters = parameterMap.entrySet().stream()
-                  .collect(Collectors.toMap(Map.Entry::getKey, e -> StringUtils.join(e.getValue(), "|")));
-
-        parameter.setParameters(parameters);
+        parameter.setParameters(parameterMap);
 
         final CommerceCartModification modification = getCommerceCartService().addToCart(parameter);
 
@@ -204,5 +194,8 @@ public class PayPerViewCartFacade implements CartFacade
         this.cartModificationConverter = cartModificationConverter;
     }
 
-
+    private CartFacade getDelegate()
+    {
+        return delegate;
+    }
 }

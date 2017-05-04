@@ -60,6 +60,9 @@ public class AddToCartController extends AbstractController
 	private static final String QUANTITY_INVALID_BINDING_MESSAGE_KEY = "basket.error.quantity.invalid.binding";
 	private static final String SHOWN_PRODUCT_COUNT = "springernaturestorefront.storefront.minicart.shownProductCount";
 
+	private static final String PARAM_MAC = "mac";
+	private static final String PARAM_RURL = "returnurl";
+
 	private static final Logger LOG = Logger.getLogger(AddToCartController.class);
 
 	@Resource(name = "cartFacade")
@@ -81,20 +84,27 @@ public class AddToCartController extends AbstractController
 		return addToCart(null, code, model, form, bindingErrors, ControllerConstants.Views.Fragments.Cart.AddToCartPopup);
 	}
 
-
-    static final String PARAM_MAC = "mac";
-	static final String PARAM_RURL = "returnurl";
-
 	@RequestMapping(value = "/slcart/add", method = RequestMethod.POST)
 	public String addToSpringerLinkCart(@RequestParam("productCodePost") final String code, final Model model,
 							@Valid final AddToCartForm form, final BindingResult bindingErrors, final HttpServletRequest request)
 	{
-        if (StringUtils.isEmpty(request.getParameter(PARAM_MAC))) {
+
+		final String mac = request.getParameter(PARAM_MAC);
+        if (StringUtils.isEmpty(mac)) {
             model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.missing");
             return null;
         }
 
-        if (!verifyMac(request, Config.getString("ppvMd5SecretKey", null))) {
+		final Map<String,String> parameterMap = new HashMap<>();
+
+		for (Map.Entry<String,String[]> entry : request.getParameterMap().entrySet()) {
+			if(entry.getValue().length > 1) {
+				LOG.warn("Parameter " + entry.getKey() + " contains multiple values.");
+			}
+			parameterMap.put(entry.getKey(), entry.getValue()[0]);
+		}
+
+        if (!verifyMac(mac, parameterMap, Config.getString("ppvMd5SecretKey", null))) {
             model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.failed");
             return null;
         }
@@ -103,11 +113,11 @@ public class AddToCartController extends AbstractController
             cartFacade.removeSessionCart();
         }
 
-		return addToCart(request.getParameterMap(), code, model, form, bindingErrors, REDIRECT_PREFIX + "/cart/checkout");
+		return addToCart(parameterMap, code, model, form, bindingErrors, REDIRECT_PREFIX + "/cart/checkout");
 	}
 
 
-	private String addToCart (final Map<String, String[]> parameterMap, final String code, final Model model,
+	private String addToCart (final Map<String, String> parameterMap, final String code, final Model model,
 						   final AddToCartForm form, final BindingResult bindingErrors, final String view) {
 		if (bindingErrors.hasErrors())
 		{
@@ -154,17 +164,19 @@ public class AddToCartController extends AbstractController
 		return view;
 	}
 
-    boolean verifyMac(final HttpServletRequest request, final String secret)
+    protected boolean verifyMac(final String mac, final Map<String,String> parameters, final String secret)
 	{
-		final Map<String,String[]> parameterMap= new TreeMap<>(request.getParameterMap());
 
-        final String mac = parameterMap.get(PARAM_MAC)[0];
-		parameterMap.remove(PARAM_MAC);
-        parameterMap.remove(PARAM_RURL);
+		// mirrors MAC creation of
+		// https://github.com/springernature/sprcom-price-service/blob/master/app/controllers/BuyBoxController.scala
+		parameters.remove(PARAM_MAC);
+		parameters.remove(PARAM_RURL);
+
+		final Map<String,String> parameterMap= new TreeMap<>(parameters);
 
         final StringBuilder md5str = new StringBuilder();
-        for (String[] value : parameterMap.values()) {
-            md5str.append(value[0]);
+        for (Map.Entry<String,String> entry : parameterMap.entrySet()) {
+            md5str.append(entry.getValue());
         }
         md5str.append(secret);
         final String hash = Hex.encodeHexString(DigestUtils.getMd5Digest().digest(md5str.toString().getBytes()));
