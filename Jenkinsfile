@@ -29,6 +29,8 @@ pipeline {
                         sh './download.sh'
                         echo "Extracting hybris.zip"
                         sh './extract.sh'
+                        echo 'Now we remove all zips'
+                        sh 'rm -f *.zip'
                     }
                 }
             }
