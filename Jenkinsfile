@@ -124,4 +124,9 @@ pipeline {
             steps { echo 'not yet implemented' }
         }
     }
+    post {
+        success {
+            cleanWs()
+        }
+    }
 }
