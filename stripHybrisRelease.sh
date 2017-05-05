@@ -11,4 +11,5 @@ hybris-ems/* \
 c4c-integration/* \
 build-tools/* \
 hybris-Mobile-Apps-SDK/* \
+hybris/bin/ext-data/* \
 hybris-sbg/*

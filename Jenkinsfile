@@ -29,6 +29,8 @@ pipeline {
                         sh './download.sh'
                         echo "Extracting hybris.zip"
                         sh './extract.sh'
+                        echo 'Now we remove all zips'
+                        sh 'rm -f *.zip'
                     }
                 }
             }
@@ -120,6 +122,11 @@ pipeline {
         stage('13 Deploy to Prod') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
+        }
+    }
+    post {
+        success {
+            cleanWs()
         }
     }
 }
