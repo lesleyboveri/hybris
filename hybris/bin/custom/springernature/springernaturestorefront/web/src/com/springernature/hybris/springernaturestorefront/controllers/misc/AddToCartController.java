@@ -10,7 +10,6 @@
  */
 package com.springernature.hybris.springernaturestorefront.controllers.misc;
 
-import com.springernature.hybris.springernaturefacades.cart.PayPerViewCartFacade;
 import de.hybris.platform.acceleratorfacades.product.data.ProductWrapperData;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartForm;
@@ -26,14 +25,15 @@ import de.hybris.platform.commerceservices.order.CommerceCartModificationExcepti
 import de.hybris.platform.util.Config;
 import com.springernature.hybris.springernaturestorefront.controllers.ControllerConstants;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.apache.commons.codec.binary.Hex;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -60,18 +60,12 @@ public class AddToCartController extends AbstractController
 	private static final String QUANTITY_INVALID_BINDING_MESSAGE_KEY = "basket.error.quantity.invalid.binding";
 	private static final String SHOWN_PRODUCT_COUNT = "springernaturestorefront.storefront.minicart.shownProductCount";
 
-	private static final String PARAM_MAC = "mac";
-	private static final String PARAM_RURL = "returnurl";
-
 	private static final Logger LOG = Logger.getLogger(AddToCartController.class);
 
 	@Resource(name = "cartFacade")
 	private CartFacade cartFacade;
 
-	@Resource(name = "payPerViewCartFacade")
-	private PayPerViewCartFacade payPerViewCartFacade;
-
-    @Resource(name = "accProductFacade")
+	@Resource(name = "accProductFacade")
 	private ProductFacade productFacade;
 
 	@Resource(name = "groupCartModificationListPopulator")
@@ -79,46 +73,8 @@ public class AddToCartController extends AbstractController
 
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, produces = "application/json")
 	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
-			@Valid final AddToCartForm form, final BindingResult bindingErrors)
+							@Valid final AddToCartForm form, final BindingResult bindingErrors)
 	{
-		return addToCart(null, code, model, form, bindingErrors, ControllerConstants.Views.Fragments.Cart.AddToCartPopup);
-	}
-
-	@RequestMapping(value = "/slcart/add", method = RequestMethod.POST)
-	public String addToSpringerLinkCart(@RequestParam("productCodePost") final String code, final Model model,
-							@Valid final AddToCartForm form, final BindingResult bindingErrors, final HttpServletRequest request)
-	{
-
-		final String mac = request.getParameter(PARAM_MAC);
-        if (StringUtils.isEmpty(mac)) {
-            model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.missing");
-            return null;
-        }
-
-		final Map<String,String> parameterMap = new HashMap<>();
-
-		for (Map.Entry<String,String[]> entry : request.getParameterMap().entrySet()) {
-			if(entry.getValue().length > 1) {
-				LOG.warn("Parameter " + entry.getKey() + " contains multiple values.");
-			}
-			parameterMap.put(entry.getKey(), entry.getValue()[0]);
-		}
-
-        if (!verifyMac(mac, parameterMap, Config.getString("ppvMd5SecretKey", null))) {
-            model.addAttribute(ERROR_MSG_TYPE, "basket.information.mac.failed");
-            return null;
-        }
-
-        if (cartFacade.hasSessionCart()) {
-            cartFacade.removeSessionCart();
-        }
-
-		return addToCart(parameterMap, code, model, form, bindingErrors, REDIRECT_PREFIX + "/cart/checkout");
-	}
-
-
-	private String addToCart (final Map<String, String> parameterMap, final String code, final Model model,
-						   final AddToCartForm form, final BindingResult bindingErrors, final String view) {
 		if (bindingErrors.hasErrors())
 		{
 			return getViewWithBindingErrorMessages(model, bindingErrors);
@@ -135,7 +91,7 @@ public class AddToCartController extends AbstractController
 		{
 			try
 			{
-				final CartModificationData cartModification = parameterMap != null ? payPerViewCartFacade.addToCart(parameterMap, code) : cartFacade.addToCart(code, qty);
+				final CartModificationData cartModification = cartFacade.addToCart(code, qty);
 				model.addAttribute(QUANTITY_ATTR, Long.valueOf(cartModification.getQuantityAdded()));
 				model.addAttribute("entry", cartModification.getEntry());
 				model.addAttribute("cartCode", cartModification.getCartCode());
@@ -161,30 +117,10 @@ public class AddToCartController extends AbstractController
 
 		model.addAttribute("product", productFacade.getProductForCodeAndOptions(code, Arrays.asList(ProductOption.BASIC)));
 
-		return view;
+		return ControllerConstants.Views.Fragments.Cart.AddToCartPopup;
 	}
 
-    protected boolean verifyMac(final String mac, final Map<String,String> parameters, final String secret)
-	{
-
-		// mirrors MAC creation of
-		// https://github.com/springernature/sprcom-price-service/blob/master/app/controllers/BuyBoxController.scala
-		parameters.remove(PARAM_MAC);
-		parameters.remove(PARAM_RURL);
-
-		final Map<String,String> parameterMap= new TreeMap<>(parameters);
-
-        final StringBuilder md5str = new StringBuilder();
-        for (Map.Entry<String,String> entry : parameterMap.entrySet()) {
-            md5str.append(entry.getValue());
-        }
-        md5str.append(secret);
-        final String hash = Hex.encodeHexString(DigestUtils.getMd5Digest().digest(md5str.toString().getBytes()));
-        return hash.equals(mac);
-    }
-
-
-    protected String getViewWithBindingErrorMessages(final Model model, final BindingResult bindingErrors)
+	protected String getViewWithBindingErrorMessages(final Model model, final BindingResult bindingErrors)
 	{
 		for (final ObjectError error : bindingErrors.getAllErrors())
 		{
@@ -312,7 +248,7 @@ public class AddToCartController extends AbstractController
 	}
 
 	protected String addEntryToCart(final List<CartModificationData> modificationDataList, final OrderEntryData cartEntry,
-			final boolean isReducedQtyError)
+									final boolean isReducedQtyError)
 	{
 		String errorMsg = StringUtils.EMPTY;
 		try
