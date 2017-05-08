@@ -12,30 +12,21 @@ package com.springernature.hybris.springernaturestorefront.controllers.misc;
 
 import com.springernature.hybris.springernaturefacades.cart.PayPerViewCartFacade;
 import com.springernature.hybris.springernaturestorefront.controllers.ControllerConstants;
-import de.hybris.platform.acceleratorfacades.product.data.ProductWrapperData;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartOrderForm;
-import de.hybris.platform.commercefacades.order.CartFacade;
-import de.hybris.platform.commercefacades.order.converters.populator.GroupCartModificationListPopulator;
 import de.hybris.platform.commercefacades.order.data.CartModificationData;
-import de.hybris.platform.commercefacades.order.data.OrderEntryData;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commercefacades.product.ProductOption;
-import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commerceservices.order.CommerceCartModificationException;
 import de.hybris.platform.util.Config;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,7 +34,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
