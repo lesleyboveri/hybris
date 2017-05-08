@@ -35,10 +35,11 @@ pipeline {
                 }
             }
         }
-        stage('2 Install Hybris Addons') {
+        stage('2 Install Hybris Addons & License') {
             steps {
-                dir("$PLATFORM_HOME") {
+                dir("$WORKSPACE") {
                     sh '$WORKSPACE/install_addons.sh'
+                    sh '$WORKSPACE/install_license.sh'
                 }
             }
         }
