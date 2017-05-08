@@ -99,4 +99,13 @@
 		<property name="add" ref="payPerViewAddToCartHook" />
 	</bean>
 
+
+	<bean id="parametersPopulator"
+		  class="com.springernature.hybris.springernaturecore.order.converters.populator.ParametersPopulator"/>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="orderEntryConverter"/>
+		<property name="add" ref="parametersPopulator"/>
+	</bean>
+
 </beans>
