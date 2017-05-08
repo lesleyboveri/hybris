@@ -89,6 +89,8 @@
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>
     <extension name="springerlinkcheckoutaddon"/>
+    <extension name="springerlinkcheckoutfacades"/>
+    <extension name="springerlinkcheckoutservices"/>
 
     <!-- macmillan -->
     <extension name="macmillanstorefront"/>
