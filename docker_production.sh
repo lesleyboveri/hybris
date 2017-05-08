@@ -22,10 +22,7 @@ if [[ -z "$build_number" ]]; then
   exit 1
 fi
 
-mv $workspace/hybris/temp/hybris/hybrisServer/hybrisServer-Platform.zip $workspace/docker/Images/04_platform/hybrisServer/
-mv $workspace/hybris/temp/hybris/hybrisServer/hybrisServer-AllExtensions.zip $workspace/docker/Images/04_platform/hybrisServer/
-mv $workspace/hybris/temp/hybris/hybrisServer/hybrisServer-Config.zip $workspace/docker/Images/04_platform/hybrisServer/
-mv $workspace/hybris/temp/hybris/hybrisServer/hybrisServer-TomcatConfig.zip $workspace/docker/Images/04_platform/hybrisServer/
+mv $workspace/hybris/temp/hybris/hybrisServer/*.zip $workspace/docker/Images/04_platform/hybrisServer/
 
 cd $workspace/docker/Images/04_platform
 ./build.sh docker-registry.dc.springernature.pe/sprcom/sprcom.hybris.platform:$build_number
