@@ -1,9 +1,0 @@
-# Product authors data
-
-INSERT_UPDATE MEAAuthor;code[unique=true];firstName;lastName
-;1;Tracey;Reeder
-;2;Ben;Smith
-
-INSERT_UPDATE Product2MEAAuthor;product(code);author(code)
-;9781420271652;1
-;9781420271652;2

@@ -57,9 +57,6 @@
                     <attribute qualifier="component" type="java.lang.String">
                         <persistence type="property"/>
                     </attribute>
-                    <attribute qualifier="authors" type="Product2MEAAuthor">
-                        <persistence type="property"/>
-                    </attribute>
                     <attribute qualifier="inspectionCopyAllowed" type="java.lang.Boolean">
                         <defaultvalue>false</defaultvalue>
                         <modifiers optional="false"/>
@@ -82,7 +79,7 @@
             <itemtype code="MEAAuthor" autocreate="true" generate="true">
                 <deployment table="meaauthor" typecode="20001"/>
                 <attributes>
-                    <attribute qualifier="code" type="java.lang.Integer">
+                    <attribute qualifier="code" type="java.lang.String">
                         <persistence type="property"/>
                         <modifiers unique="true"/>
                     </attribute>
@@ -91,10 +88,6 @@
                     </attribute>
                     <attribute qualifier="lastName" type="java.lang.String">
                         <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="birthday" type="java.util.Date">
-                        <persistence type="property"/>
-                        <modifiers optional="true"/>
                     </attribute>
                 </attributes>
             </itemtype>
