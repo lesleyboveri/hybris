@@ -98,7 +98,9 @@
                                                     </div>
                                                 </sec:authorize>
 
-                                                <%--<wp-multi-checkout:billingAddress/>--%>
+                                                <div class="hidden">
+                                                    <wp-multi-checkout:billingAddress/>
+                                                </div>
                                                 <div class="form-additionals">
                                                 </div>
                                                 <wp-multi-checkout:termsAndConditions/>
