@@ -75,6 +75,9 @@
 			<div class="price"><format:price priceData="${entry.totalPrice}" displayFreeForZero="true"/></div>
 			<div class="details">
 				<div class="name"><a href="${productUrl}">${fn:escapeXml(entry.product.name)}</a></div>
+				<c:forEach var="keyValue" items="${entry.parameters}">
+					<div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+				</c:forEach>
 				<div>
                     <span class="label-spacing"><spring:theme code="order.itemPrice" />:</span>
 					<c:if test="${entry.product.multidimensional}">

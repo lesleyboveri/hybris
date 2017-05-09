@@ -85,10 +85,13 @@
 	<extension name="springernaturesaporderfulfillment"/>
     <extension name="springernatureworldpayaddon"/>
     <extension name="springernatureassistedservicestorefront"/>
+    <extension name="springernaturebackoffice"/>
 
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>
     <extension name="springerlinkcheckoutaddon"/>
+    <extension name="springerlinkcheckoutfacades"/>
+    <extension name="springerlinkcheckoutservices"/>
 
     <!-- macmillan -->
     <extension name="macmillanstorefront"/>

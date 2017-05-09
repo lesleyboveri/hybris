@@ -54,7 +54,9 @@
                 ${fn:escapeXml(orderEntry.product.code)}
             </ycommerce:testId>
         </div>
-
+        <c:forEach var="keyValue" items="${orderEntry.parameters}">
+            <div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+        </c:forEach>
         <%-- availability --%>
         <c:if test="${varShowStock}">
         	<div class="item__stock">

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <alias alias="springerlinkCheckoutService" name="defaultSpringerlinkCheckoutService"/>
+    <bean id="defaultSpringerlinkCheckoutService"
+          class="com.springernature.hybris.checkout.order.impl.DefaultSpringerlinkCommerceCheckoutService">
+        <property name="defaultCommerceCheckoutService" ref="commerceCheckoutService"/>
+        <property name="springerlinkDeliveryAndPaymentAddressStrategy" ref="springerlinkDeliveryAndPaymentAddressStrategy"/>
+    </bean>
+
+    <alias alias="springerlinkDeliveryAndPaymentAddressStrategy" name="defaultSpringerlinkDeliveryAndPaymentAddressStrategy"/>
+    <bean id="defaultSpringerlinkDeliveryAndPaymentAddressStrategy"
+          class="com.springernature.hybris.checkout.order.impl.DefaultSpringerlinkDeliveryAndPaymentAddressStrategy">
+        <property name="deliveryService" ref="deliveryService"/>
+        <property name="modelService" ref="modelService"/>
+        <property name="commerceCartCalculationStrategy" ref="commerceCartCalculationStrategy"/>
+        <property name="commerceDeliveryModeValidationStrategy" ref="commerceDeliveryModeValidationStrategy"/>
+    </bean>
+
+    <bean id="abstractWorldpayUrlService" class="com.worldpay.service.impl.AbstractWorldpayUrlService" abstract="true">
+        <property name="successPath" value="/checkout/multi/worldpay/hop-response"/>
+        <property name="pendingPath" value="/checkout/multi/worldpay/hop-pending"/>
+        <property name="failurePath" value="/checkout/multi/worldpay/hop-response"/>
+        <property name="errorPath" value="/checkout/multi/worldpay/error"/>
+        <property name="cancelPath" value="/checkout/multi/sl-worldpay/hop-cancel"/>
+        <property name="threeDSecureTermPath" value="/checkout/multi/worldpay/3dsecure/sop/response"/>
+        <property name="threeDSecureQuoteTermPath" value="/my-account/worldpay/3dsecure/sop/response"/>
+    </bean>
+
+    <bean id="springerlinkcheckoutservicesSystemSetup" class="com.springernature.hybris.checkout.setup.SpringerlinkcheckoutservicesSystemSetup">
+        <!-- constructor arg injection example -->
+        <constructor-arg ref="springerlinkcheckoutservicesService"/>
+    </bean>
+
+    <bean id="springerlinkcheckoutservicesService" class="com.springernature.hybris.checkout.service.impl.DefaultSpringerlinkcheckoutservicesService">
+        <!-- setter injection example -->
+        <property name="modelService" ref="modelService"/>
+        <property name="mediaService" ref="mediaService"/>
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+    </bean>
+			
+</beans>

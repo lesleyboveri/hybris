@@ -61,3 +61,5 @@ hybris/roles/local/tklostermann
 **/.lastupdate
 **/worldpayaddonbackoffice_bof.jar
 **/worldpayoccaddon/ruleset.xml
+
+hybris/config/licence/installedSaplicenses.properties

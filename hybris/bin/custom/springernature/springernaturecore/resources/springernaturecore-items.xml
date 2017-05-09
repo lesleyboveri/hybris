@@ -35,6 +35,14 @@
         </enumtype>
     </enumtypes>
 
+    <maptypes>
+        <maptype code="ParameterMapType"
+        argumenttype="java.lang.String"
+        returntype="java.lang.String"
+        autocreate="true"
+        generate="true"/>
+    </maptypes>
+
     <relations>
         <relation code="Product2MEAAuthor" localized="false" generate="true" autocreate="true">
             <deployment table="meaauthorrel" typecode="20000"/>
@@ -42,6 +50,7 @@
             <targetElement type="MEAAuthor" qualifier="author" cardinality="many"/>
         </relation>
     </relations>
+
     <!-- END MACMILLAN SECTION -->
 
     <!-- SPRINGERLINK SECTION -->
@@ -95,12 +104,11 @@
 
         <!-- HERE ONLY SPRINGERLINK ITEMS !!! -->
         <typegroup name="SpringerLinkItems">
-            <itemtype code="OrderEntry" autocreate="false" generate="false">
+            <itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
                 <attributes>
-                    <attribute qualifier="isxn" type="java.lang.String">
-                        <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="doi" type="java.lang.String">
+                    <attribute qualifier="parameters" type="ParameterMapType">
+                        <description>PayPerView Post Parameters</description>
+                        <modifiers read="true" write="true" search="false"/>
                         <persistence type="property"/>
                     </attribute>
                 </attributes>

@@ -23,3 +23,4 @@ INSERT_UPDATE Product; code[unique = true]; $supercategories; manufacturerName; 
 ; PPVJ      ; ; ; ; pieces ; ; ;
 ; PPVB      ; ; ; ; pieces ; ; ;
 ; PPVJ_ADIS ; ; ; ; pieces ; ; ;
+; PPVB_PROT ; ; ; ; pieces ; ; ;

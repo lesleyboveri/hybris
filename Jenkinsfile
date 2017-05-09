@@ -29,28 +29,38 @@ pipeline {
                         sh './download.sh'
                         echo "Extracting hybris.zip"
                         sh './extract.sh'
+                        echo 'Now we remove all zips'
+                        sh 'rm -f *.zip'
                     }
                 }
             }
         }
-        stage('2 Install Hybris Addons') {
+        stage('2 Install Hybris Addons & License') {
             steps {
-                dir("$PLATFORM_HOME") {
+                dir("$WORKSPACE") {
                     sh '$WORKSPACE/install_addons.sh'
+                    sh '$WORKSPACE/install_license.sh'
                 }
             }
         }
-        stage('3 Build and Test') {
+        stage('3 Build') {
             steps {
                 dir("$PLATFORM_HOME") {
-                    sh '$WORKSPACE/build_test.sh'
+                    sh '$WORKSPACE/build.sh'
+                }
+            }
+        }
+        stage('4 Test') {
+            steps {
+                dir("$PLATFORM_HOME") {
+                    sh '$WORKSPACE/test.sh'
                 }
                 dir("$WORKSPACE") {
                     junit '**/junit/*.xml'
                 }
             }
         }
-        stage('4 Create Production Artifacts') {
+        stage('5 Create Production Artifacts') {
             when { branch 'master' }
             steps {
                 dir("$PLATFORM_HOME") {
@@ -58,7 +68,7 @@ pipeline {
                 }
             }
         }
-        stage('5 Build base Image') {
+        stage('6 Build base Image') {
             when { branch 'master' }
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
@@ -71,7 +81,7 @@ pipeline {
                 }
             }
         }
-        stage('6 Build Tomcat Image') {
+        stage('7 Build Tomcat Image') {
             when { branch 'master' }
             steps {
                 echo "Building Tomcat"
@@ -82,7 +92,7 @@ pipeline {
                 }
             }
         }
-        stage('7 Build Server Image') {
+        stage('8 Build Server Image') {
             when { branch 'master' }
             steps {
                 echo "Building Server"
@@ -93,7 +103,7 @@ pipeline {
                 }
             }
         }
-        stage('8 Create Platform Image') {
+        stage('9 Create Platform Image') {
             when { branch 'master' }
             steps {
                 dir("$WORKSPACE") {
@@ -101,25 +111,30 @@ pipeline {
                 }
             }
         }
-        stage('9 Deploy to QA') {
+        stage('10 Deploy to QA') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
         }
-        stage('10 Load Testing') {
+        stage('11 Load Testing') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
         }
-        stage('11 UI Testing') {
+        stage('12 UI Testing') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
         }
-        stage('12 Tag branch') {
+        stage('13 Tag branch') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
         }
-        stage('13 Deploy to Prod') {
+        stage('14 Deploy to Prod') {
             when { branch 'master' }
             steps { echo 'not yet implemented' }
+        }
+    }
+    post {
+        success {
+            cleanWs()
         }
     }
 }
