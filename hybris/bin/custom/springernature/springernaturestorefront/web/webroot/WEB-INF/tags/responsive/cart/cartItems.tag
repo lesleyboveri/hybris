@@ -85,6 +85,10 @@
 
                 <div class="item__code">${fn:escapeXml(entry.product.code)}</div>
 
+                <c:forEach var="keyValue" items="${entry.parameters}">
+                    <div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+                </c:forEach>
+
                 <%-- availability --%>
                 <div class="item__stock">
                     <c:set var="entryStock" value="${entry.product.stock.stockLevelStatus.code}"/>

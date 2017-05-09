@@ -85,6 +85,7 @@
 	<extension name="springernaturesaporderfulfillment"/>
     <extension name="springernatureworldpayaddon"/>
     <extension name="springernatureassistedservicestorefront"/>
+    <extension name="springernaturebackoffice"/>
 
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>
