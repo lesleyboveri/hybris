@@ -84,6 +84,7 @@
             <itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
                 <attributes>
                     <attribute qualifier="parameters" type="ParameterMapType">
+                        <description>PayPerView Post Parameters</description>
                         <modifiers read="true" write="true" search="false"/>
                         <persistence type="property"/>
                     </attribute>
