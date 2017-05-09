@@ -177,13 +177,10 @@ public class DeliveryAndPaymentAddressCheckoutStepController extends AbstractChe
     protected void setDeliveryAddress(final AddressData selectedAddressData)
     {
         final AddressData cartCheckoutDeliveryAddress = getCheckoutFacade().getCheckoutCart().getDeliveryAddress();
-        if (isAddressIdChanged(cartCheckoutDeliveryAddress, selectedAddressData))
-        {
-            springerlinkCheckoutFacade.setDeliveryAndPaymentAddress(selectedAddressData);
-            if (cartCheckoutDeliveryAddress != null && !cartCheckoutDeliveryAddress.isVisibleInAddressBook())
-            { // temporary address should be removed
-                getUserFacade().removeAddress(cartCheckoutDeliveryAddress);
-            }
+        springerlinkCheckoutFacade.setDeliveryAndPaymentAddress(selectedAddressData);
+        if (cartCheckoutDeliveryAddress != null && !cartCheckoutDeliveryAddress.isVisibleInAddressBook())
+        { // temporary address should be removed
+            getUserFacade().removeAddress(cartCheckoutDeliveryAddress);
         }
     }
 
