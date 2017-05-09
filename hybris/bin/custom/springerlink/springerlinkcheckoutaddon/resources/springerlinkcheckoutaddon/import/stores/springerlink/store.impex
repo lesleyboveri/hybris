@@ -1,0 +1,7 @@
+$storeUid=springerlink
+
+$springerlinkResponsiveCheckoutGroup=springerlinkResponsiveCheckoutGroup
+
+# Base Store
+UPDATE BaseStore;uid[unique=true];checkoutFlowGroup
+;$storeUid;$springerlinkResponsiveCheckoutGroup

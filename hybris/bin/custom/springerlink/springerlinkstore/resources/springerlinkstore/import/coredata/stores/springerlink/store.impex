@@ -39,10 +39,5 @@ INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);currencies(isocode);net;ta
 ;$storeUid;$productCatalog,$classificationCatalog;$currencies;$net;jp-taxes;km;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode;$customerAllowedToIgnoreSuggestions;$paymentProvider;$expressCheckoutEnabled;300;defaultCheckoutGroup;$returnProcessCode;
 
 INSERT_UPDATE BaseStore2DeliveryModeRel;source(uid)[unique=true];target(code)[unique=true]
-;springerlink;premium-net
-;springerlink;standard-net
-;springerlink;premium-gross
-;springerlink;standard-gross
-;springerlink;pickup
-;springerlink;free-standard-shipping
+;springerlink;online
 
