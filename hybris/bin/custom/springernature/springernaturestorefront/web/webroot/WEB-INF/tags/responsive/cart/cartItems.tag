@@ -10,7 +10,7 @@
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="order" tagdir="/WEB-INF/tags/responsive/order" %>
-
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 <%--
     ~ /*
     ~  * [y] hybris Platform
@@ -74,7 +74,14 @@
 
             <%-- product image --%>
             <div class="item__image">
-                <a href="${productUrl}"><product:productPrimaryImage product="${entry.product}" format="thumbnail"/></a>
+                <c:choose>
+                <c:when test="${empty entry.parameters.type}">
+                    <a href="${productUrl}"><product:productPrimaryImage product="${entry.product}" format="thumbnail"/></a>
+                </c:when>
+                    <c:otherwise>
+                        <a href="${entry.parameters['returnurl']}"><checkout:entryImage entry="${entry}"/></a>
+                    </c:otherwise>
+                </c:choose>
             </div>
 
             <%-- product name, code, promotions --%>

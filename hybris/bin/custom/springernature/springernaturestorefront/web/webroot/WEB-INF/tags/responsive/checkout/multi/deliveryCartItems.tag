@@ -14,6 +14,7 @@
 <%@ taglib prefix="grid" tagdir="/WEB-INF/tags/responsive/grid" %>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common" %>
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 
 <c:set var="hasShippedItems" value="${cartData.deliveryItemsQuantity > 0}" />
 <c:set var="deliveryAddress" value="${cartData.deliveryAddress}"/>
@@ -68,9 +69,16 @@
 		<c:url value="${entry.product.url}" var="productUrl"/>
 		<li class="checkout-order-summary-list-items">
 			<div class="thumb">
-				<a href="${productUrl}">
-					<product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
-				</a>
+				<c:choose>
+					<c:when test="${empty entry.parameters.type}">
+						<a href="${productUrl}">
+						    <product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
+						</a>
+					</c:when>
+					<c:otherwise>
+						<a href="${entry.parameters['returnurl']}"><checkout:entryImage entry="${entry}"/></a>
+					</c:otherwise>
+				</c:choose>
 			</div>
 			<div class="price"><format:price priceData="${entry.totalPrice}" displayFreeForZero="true"/></div>
 			<div class="details">

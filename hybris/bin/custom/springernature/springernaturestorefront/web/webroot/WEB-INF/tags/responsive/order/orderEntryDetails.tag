@@ -16,6 +16,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="order" tagdir="/WEB-INF/tags/responsive/order" %>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common" %>
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 
 <c:set var="varShowStock" value="${(empty showStock) ? true : showStock}" />
 
@@ -24,7 +25,7 @@
 <li class="item__list--item">
 
     <%-- chevron for multi-d products --%>
-    <div class="hidden-xs hidden-sm item__toggle">
+    <div class="hidden-xs hidden-sm item__toggle">func
         <c:if test="${orderEntry.product.multidimensional}">
             <div class="js-show-multiD-grid-in-order" data-index="${itemIndex}">
                 <ycommerce:testId code="cart_product_updateQuantity">
@@ -37,9 +38,16 @@
     <%-- product image --%>
     <div class="item__image">
         <ycommerce:testId code="orderDetail_productThumbnail_link">
+            <c:choose>
+            <c:when test="${empty orderEntry.parameters.type}">
             <a href="${productUrl}">
                 <product:productPrimaryImage product="${orderEntry.product}" format="thumbnail"/>
             </a>
+            </c:when>
+                <c:otherwise>
+                    <a href="${orderEntry.parameters['returnurl']}"><checkout:entryImage entry="${orderEntry}"/></a>
+                </c:otherwise>
+            </c:choose>
         </ycommerce:testId>
     </div>
 
