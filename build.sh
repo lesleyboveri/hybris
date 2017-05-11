@@ -1,3 +1,5 @@
 #!/bin/bash
-
-ant customize all
+(
+cd hybris/bin/platform
+ant clean customize all
+)
