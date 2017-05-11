@@ -21,9 +21,6 @@
 
       <coremodule generated="true" manager="com.springernature.hybris.checkout.jalo.SpringerlinkcheckoutfacadesManager" packageroot="com.springernature.hybris.checkout"/>
 
-      <webmodule jspcompile="false" webroot="/springerlinkcheckoutfacades"/>
-					
-	
 
    </extension>
       

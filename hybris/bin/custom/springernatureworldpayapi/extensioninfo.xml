@@ -10,17 +10,15 @@
  license agreement you entered into with SAP.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-   <extension abstractclassprefix="Generated" classprefix="Springerlinkcheckoutservices" managername="SpringerlinkcheckoutservicesManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="springerlinkcheckoutservices" usemaven="false">
+   <extension abstractclassprefix="Generated" classprefix="Springernatureworldpayapi" managername="SpringernatureworldpayapiManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="springernatureworldpayapi" usemaven="false">
       <!-- for more information on maven managed libraries please consult https://wiki.hybris.com/x/Nq8sDQ -->
                
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
       <!-- <requires-extension name="cms"/> -->
-       <requires-extension name="springernatureworldpayapi"/>
-      <requires-extension name="commerceservices"/>
+      <requires-extension name="worldpayapi"/>
       
 
-      <coremodule generated="true" manager="com.springernature.hybris.checkout.jalo.SpringerlinkcheckoutservicesManager" packageroot="com.springernature.hybris.checkout"/>
-
+      <coremodule generated="true" manager="com.springernature.hybris.worldpay.jalo.SpringernatureworldpayapiManager" packageroot="com.springernature.hybris.worldpay"/>
 
    </extension>
       

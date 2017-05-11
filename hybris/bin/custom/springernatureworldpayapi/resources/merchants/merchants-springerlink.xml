@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:map id="springerlinkTestMerchantConfiguration" value-type="com.worldpay.config.merchant.WorldpayMerchantConfigData">
+        <entry key="web" value-ref="springerlinkTestWebsiteMerchantConfiguration"/>
+        <entry key="mobile" value-ref="springerlinkTestWebsiteMerchantConfiguration"/>
+        <entry key="customerService" value-ref="springerlinkTestWebsiteMerchantConfiguration"/>
+        <entry key="asm" value-ref="springerlinkTestWebsiteMerchantConfiguration"/>
+        <entry key="replenishment" value-ref="springerlinkTestWebsiteMerchantConfiguration"/>
+    </util:map>
+
+    <util:map id="springerlinkLiveMerchantConfiguration" value-type="com.worldpay.config.merchant.WorldpayMerchantConfigData">
+        <entry key="web" value-ref="springerlinkLiveWebsiteMerchantConfiguration"/>
+        <entry key="mobile" value-ref="springerlinkLiveWebsiteMerchantConfiguration"/>
+        <entry key="customerService" value-ref="springerlinkLiveWebsiteMerchantConfiguration"/>
+        <entry key="asm" value-ref="springerlinkLiveWebsiteMerchantConfiguration"/>
+        <entry key="replenishment" value-ref="springerlinkLiveWebsiteMerchantConfiguration"/>
+    </util:map>
+
+    <bean id="springerlinkTestWebsiteMerchantConfiguration" class="com.worldpay.config.merchant.WorldpayMerchantConfigData">
+        <property name="code" value="SPRINGERGER"/>
+        <property name="password" value="PVMK$W6aJ!"/>
+        <property name="macValidation" value="true"/>
+        <property name="macSecret" value="8TL=7A%35X]!(?jvSknf"/>
+        <property name="installationId" value="1199012"/>
+        <property name="statementNarrative" value=""/>
+        <property name="orderContent" value="Order Content SPRINGERGER TEST"/>
+    </bean>
+
+    <bean id="springerlinkLiveWebsiteMerchantConfiguration" class="com.worldpay.config.merchant.WorldpayMerchantConfigData">
+        <property name="code" value="SPRINGERGER"/>
+        <property name="password" value=""/>
+        <property name="macValidation" value="true"/>
+        <property name="macSecret" value="8TL=7A%35X]!(?jvSknf"/>
+        <property name="installationId" value="1199012"/>
+        <property name="statementNarrative" value=""/>
+        <property name="orderContent" value="Order Content SPRINGERGER LIVE"/>
+    </bean>
+</beans>
