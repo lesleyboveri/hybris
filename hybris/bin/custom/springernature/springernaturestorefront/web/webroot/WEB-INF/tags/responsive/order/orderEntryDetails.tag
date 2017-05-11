@@ -19,8 +19,14 @@
 <%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 
 <c:set var="varShowStock" value="${(empty showStock) ? true : showStock}" />
-
-<c:url value="${orderEntry.product.url}" var="productUrl"/>
+<c:choose>
+    <c:when test="${not empty orderEntry.parameters.returnurl}">
+        <c:url value="${orderEntry.parameters.returnurl}" var="productUrl"/>
+    </c:when>
+    <c:otherwise>
+        <c:url value="${orderEntry.product.url}" var="productUrl"/>
+    </c:otherwise>
+</c:choose>
 <c:set var="entryStock" value="${orderEntry.product.stock.stockLevelStatus.code}"/>
 <li class="item__list--item">
 
@@ -38,16 +44,16 @@
     <%-- product image --%>
     <div class="item__image">
         <ycommerce:testId code="orderDetail_productThumbnail_link">
-            <c:choose>
-            <c:when test="${empty orderEntry.parameters.type}">
             <a href="${productUrl}">
-                <product:productPrimaryImage product="${orderEntry.product}" format="thumbnail"/>
-            </a>
-            </c:when>
+            <c:choose>
+                <c:when test="${empty orderEntry.parameters.type}">
+                    <product:productPrimaryImage product="${orderEntry.product}" format="thumbnail"/>
+                </c:when>
                 <c:otherwise>
-                    <a href="${orderEntry.parameters['returnurl']}"><checkout:entryImage entry="${orderEntry}"/></a>
+                    <checkout:entryImage entry="${orderEntry}"/>
                 </c:otherwise>
             </c:choose>
+            </a>
         </ycommerce:testId>
     </div>
 

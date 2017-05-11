@@ -66,19 +66,26 @@
 
 <c:forEach items="${cartData.entries}" var="entry" varStatus="loop">
 	<c:if test="${entry.deliveryPointOfService == null}">
-		<c:url value="${entry.product.url}" var="productUrl"/>
+		<c:choose>
+			<c:when test="${not empty entry.parameters.returnurl}">
+				<c:url value="${entry.parameters.returnurl}" var="productUrl"/>
+			</c:when>
+			<c:otherwise>
+				<c:url value="${entry.product.url}" var="productUrl"/>
+			</c:otherwise>
+		</c:choose>
 		<li class="checkout-order-summary-list-items">
 			<div class="thumb">
-				<c:choose>
-					<c:when test="${empty entry.parameters.type}">
-						<a href="${productUrl}">
-						    <product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
-						</a>
-					</c:when>
-					<c:otherwise>
-						<a href="${entry.parameters['returnurl']}"><checkout:entryImage entry="${entry}"/></a>
-					</c:otherwise>
-				</c:choose>
+				<a href="${productUrl}">
+					<c:choose>
+						<c:when test="${empty entry.parameters.type}">
+							<product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
+						</c:when>
+						<c:otherwise>
+							<checkout:entryImage entry="${entry}"/>
+						</c:otherwise>
+					</c:choose>
+				</a>
 			</div>
 			<div class="price"><format:price priceData="${entry.totalPrice}" displayFreeForZero="true"/></div>
 			<div class="details">
