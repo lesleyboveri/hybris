@@ -129,12 +129,12 @@ public class AddToSLCartController extends AbstractController
     protected boolean verifyMac(final String mac, final Map<String,String> parameters, final String secret)
 	{
 
+		final Map<String,String> parameterMap= new TreeMap<>(parameters);
+
 		// mirrors MAC creation of
 		// https://github.com/springernature/sprcom-price-service/blob/master/app/controllers/BuyBoxController.scala
-		parameters.remove(PARAM_MAC);
-		parameters.remove(PARAM_RURL);
-
-		final Map<String,String> parameterMap= new TreeMap<>(parameters);
+		parameterMap.remove(PARAM_MAC);
+		parameterMap.remove(PARAM_RURL);
 
         final StringBuilder md5str = new StringBuilder();
         for (Map.Entry<String,String> entry : parameterMap.entrySet()) {
