@@ -1,4 +1,4 @@
-
+<%@ page import="de.hybris.platform.util.Config" %>
 
 <style type="text/css">
     .buybox {
@@ -245,7 +245,8 @@
     <div class="buybox__body">
         <div class="buybox__section">
             <div class="buybox__buttons">
-                <form class="buybox__form" action="https://springerlink.local:9002/springernaturestorefront/springerlink/en/slcart/add" method="POST">
+                <form class="buybox__form" action="<%=Config.getString("website.springerlink.https",
+        "https://springerlink.local:9002/springernaturestorefront") + "/springerlink/en/slcart/add" %>" method="POST">
 
                     <input type="hidden" name="productCodePost" value="PPVJ"/>
 
