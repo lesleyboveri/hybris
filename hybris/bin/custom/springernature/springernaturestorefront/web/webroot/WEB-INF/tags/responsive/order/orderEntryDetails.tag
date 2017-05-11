@@ -31,7 +31,7 @@
 <li class="item__list--item">
 
     <%-- chevron for multi-d products --%>
-    <div class="hidden-xs hidden-sm item__toggle">func
+    <div class="hidden-xs hidden-sm item__toggle">
         <c:if test="${orderEntry.product.multidimensional}">
             <div class="js-show-multiD-grid-in-order" data-index="${itemIndex}">
                 <ycommerce:testId code="cart_product_updateQuantity">
