@@ -19,7 +19,7 @@ $storeUid=springerlink
 $siteUid=springerlink
 $webServiceSiteUid=$siteUidWS
 $siteMapUrlLimitPerFile=50000
-$siteMapLangCur=jaJpy,jaUsd,enJpy,enUsd,deJpy,deUsd,zhJpy,zhUsd
+$siteMapLangCur=enUsd,deUsd
 $siteMapPage=Homepage,Product,CategoryLanding,Category,Store,Content,Custom
 $customSiteMapUrls=
 

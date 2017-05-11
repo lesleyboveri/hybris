@@ -24,3 +24,4 @@ UPDATE Product; code[unique = true]; $catalogVersion; name[lang = $lang]; summar
 ; PPVJ      ; ; PPVJ      ; PPVJ      ; PPVJ
 ; PPVB      ; ; PPVB      ; PPVB      ; PPVB
 ; PPVJ_ADIS ; ; PPVJ_ADIS ; PPVJ_ADIS ; PPVJ_ADIS
+; PPVB_PROT ; ; PPVB_PROT ; PPVB_PROT ; PPVB_PROT

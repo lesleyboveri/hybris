@@ -1,0 +1,43 @@
+$contentCatalog=springerlinkContentCatalog
+$addonExtensionName=springerlinkcheckoutaddon
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$jarResourceCms=jar:com.springer.hybris.checkout.constants.SpringerlinkcheckoutaddonConstants&/springerlinkcheckoutaddon/import/cockpits/cmscockpit
+
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;restrictedPageTypes(code);active[default=true];frontendTemplateName
+;;SpringerlinkIframePaymentAndBillingCheckoutPageTemplate;Springerlink iFrame Payment Page Template;WorldpayPaymentPage;;addon:/$addonExtensionName/pages/checkout/multi/springerlinkChooseIframePaymentDetailsPage
+
+#The velocity template is imported after creating a pageTemplate
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+;;SpringerlinkIframePaymentAndBillingCheckoutPageTemplate;$jarResourceCms/structure-view/structure_SpringerlinkIframePaymentAndBillingCheckoutPageTemplate.vm
+
+# ContentSlotNames for WorldpayIframePaymentAndBillingCheckoutPageTemplate
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='SpringerlinkIframePaymentAndBillingCheckoutPageTemplate'];validComponentTypes(code);compTypeGroup(code)
+;SiteLogo;;;logo
+;HeaderLinks;;;headerlinks
+;SearchBox;;;searchbox
+;MiniCart;;;minicart
+;NavigationBar;;;navigation
+;PaymentButtons;;;worldpaypaymentbuttons
+;SideContent;;;narrow
+;Footer;;;footer
+;TopHeaderSlot;;;wide
+;BottomHeaderSlot;;;wide
+;PlaceholderContentSlot;;;
+
+# Bind Content Slots to the Worldpay Payment And Billing Checkout Page Template
+INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='SpringerlinkIframePaymentAndBillingCheckoutPageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-SpringerlinkPaymentAndBillingCheckoutPage;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-SpringerlinkPaymentAndBillingCheckoutPage;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-SpringerlinkPaymentAndBillingCheckoutPage;NavigationBar;;NavigationBarSlot;true
+;;MiniCart-SpringerlinkPaymentAndBillingCheckoutPage;MiniCart;;MiniCartSlot;true
+;;PaymentButtons-SpringerlinkPaymentAndBillingCheckoutPage;PaymentButtons;;WorldpayPaymentButtonsSlot;true
+;;Footer-SpringerlinkPaymentAndBillingCheckoutPage;Footer;;FooterSlot;true
+;;HeaderLinks-SpringerlinkPaymentAndBillingCheckoutPage;HeaderLinks;;HeaderLinksSlot;true
+;;SearchBox-SpringerlinkPaymentAndBillingCheckoutPage;SearchBox;;SearchBoxSlot;true
+;;TopHeaderSlot-SpringerlinkPaymentAndBillingCheckoutPage;TopHeaderSlot;;TopHeaderSlot;true
+;;BottomHeaderSlot-SpringerlinkPaymentAndBillingCheckoutPage;BottomHeaderSlot;;BottomHeaderSlot;true
+;;PlaceholderContentSlot-SpringerlinkPaymentAndBillingCheckoutPage;PlaceholderContentSlot;;PlaceholderContentSlot;true
+
+# Preview for worldpayPaymentAndBillingCheckoutPage
+UPDATE WorldpayPaymentPage;$contentCV[unique=true];uid[unique=true];previewImage(code,$contentCV);masterTemplate(uid,$contentCV)
+;;worldpayPaymentAndBillingCheckoutPage;worldpayPaymentAndBillingCheckoutPagePreview;SpringerlinkIframePaymentAndBillingCheckoutPageTemplate

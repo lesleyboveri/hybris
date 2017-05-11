@@ -13,14 +13,16 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
+<!--
+    TYPECODE    |       TABLE
+    20000               Product2MEAAuthor
+    20001               MEAAuthor
+-->
+
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="items.xsd">
 
     <!-- MACMILLAN SECTION -->
-    <collectiontypes>
-        <collectiontype code="MEAAuthorsList" elementtype="java.lang.String" type="list"/>
-    </collectiontypes>
-
     <enumtypes>
         <enumtype code="MEABindings" autocreate="true" generate="true" dynamic="true">
             <value code="HardCover"/>
@@ -32,6 +34,23 @@
             <value code="PrintDigital"/>
         </enumtype>
     </enumtypes>
+
+    <maptypes>
+        <maptype code="ParameterMapType"
+        argumenttype="java.lang.String"
+        returntype="java.lang.String"
+        autocreate="true"
+        generate="true"/>
+    </maptypes>
+
+    <relations>
+        <relation code="Product2MEAAuthor" localized="false" generate="true" autocreate="true">
+            <deployment table="meaauthorrel" typecode="20000"/>
+            <sourceElement type="Product" qualifier="product" cardinality="many"/>
+            <targetElement type="MEAAuthor" qualifier="author" cardinality="many"/>
+        </relation>
+    </relations>
+
     <!-- END MACMILLAN SECTION -->
 
     <!-- SPRINGERLINK SECTION -->
@@ -45,9 +64,6 @@
                 <description>Extending the Hybris product for Macmillan</description>
                 <attributes>
                     <attribute qualifier="component" type="java.lang.String">
-                        <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="authors" type="MEAAuthorsList">
                         <persistence type="property"/>
                     </attribute>
                     <attribute qualifier="inspectionCopyAllowed" type="java.lang.Boolean">
@@ -69,16 +85,30 @@
                     </attribute>
                 </attributes>
             </itemtype>
+            <itemtype code="MEAAuthor" autocreate="true" generate="true">
+                <deployment table="meaauthor" typecode="20001"/>
+                <attributes>
+                    <attribute qualifier="code" type="java.lang.String">
+                        <persistence type="property"/>
+                        <modifiers unique="true"/>
+                    </attribute>
+                    <attribute qualifier="firstName" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="lastName" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
 
         <!-- HERE ONLY SPRINGERLINK ITEMS !!! -->
         <typegroup name="SpringerLinkItems">
-            <itemtype code="OrderEntry" autocreate="false" generate="false">
+            <itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
                 <attributes>
-                    <attribute qualifier="isxn" type="java.lang.String">
-                        <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="doi" type="java.lang.String">
+                    <attribute qualifier="parameters" type="ParameterMapType">
+                        <description>PayPerView Post Parameters</description>
+                        <modifiers read="true" write="true" search="false"/>
                         <persistence type="property"/>
                     </attribute>
                 </attributes>

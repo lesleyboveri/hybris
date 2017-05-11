@@ -16,15 +16,22 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="order" tagdir="/WEB-INF/tags/responsive/order" %>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common" %>
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 
 <c:set var="varShowStock" value="${(empty showStock) ? true : showStock}" />
-
-<c:url value="${orderEntry.product.url}" var="productUrl"/>
+<c:choose>
+    <c:when test="${not empty orderEntry.parameters.returnurl}">
+        <c:url value="${orderEntry.parameters.returnurl}" var="productUrl"/>
+    </c:when>
+    <c:otherwise>
+        <c:url value="${orderEntry.product.url}" var="productUrl"/>
+    </c:otherwise>
+</c:choose>
 <c:set var="entryStock" value="${orderEntry.product.stock.stockLevelStatus.code}"/>
 <li class="item__list--item">
 
     <%-- chevron for multi-d products --%>
-    <div class="hidden-xs hidden-sm item__toggle">
+    <div class="hidden-xs hidden-sm item__toggle">func
         <c:if test="${orderEntry.product.multidimensional}">
             <div class="js-show-multiD-grid-in-order" data-index="${itemIndex}">
                 <ycommerce:testId code="cart_product_updateQuantity">
@@ -38,7 +45,14 @@
     <div class="item__image">
         <ycommerce:testId code="orderDetail_productThumbnail_link">
             <a href="${productUrl}">
-                <product:productPrimaryImage product="${orderEntry.product}" format="thumbnail"/>
+            <c:choose>
+                <c:when test="${empty orderEntry.parameters.type}">
+                    <product:productPrimaryImage product="${orderEntry.product}" format="thumbnail"/>
+                </c:when>
+                <c:otherwise>
+                    <checkout:entryImage entry="${orderEntry}"/>
+                </c:otherwise>
+            </c:choose>
             </a>
         </ycommerce:testId>
     </div>
@@ -54,7 +68,9 @@
                 ${fn:escapeXml(orderEntry.product.code)}
             </ycommerce:testId>
         </div>
-
+        <c:forEach var="keyValue" items="${orderEntry.parameters}">
+            <div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+        </c:forEach>
         <%-- availability --%>
         <c:if test="${varShowStock}">
         	<div class="item__stock">

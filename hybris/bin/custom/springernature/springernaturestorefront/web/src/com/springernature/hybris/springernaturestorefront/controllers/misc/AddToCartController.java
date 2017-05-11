@@ -73,7 +73,7 @@ public class AddToCartController extends AbstractController
 
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, produces = "application/json")
 	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
-			@Valid final AddToCartForm form, final BindingResult bindingErrors)
+							@Valid final AddToCartForm form, final BindingResult bindingErrors)
 	{
 		if (bindingErrors.hasErrors())
 		{
@@ -248,7 +248,7 @@ public class AddToCartController extends AbstractController
 	}
 
 	protected String addEntryToCart(final List<CartModificationData> modificationDataList, final OrderEntryData cartEntry,
-			final boolean isReducedQtyError)
+									final boolean isReducedQtyError)
 	{
 		String errorMsg = StringUtils.EMPTY;
 		try
