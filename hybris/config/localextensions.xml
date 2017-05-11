@@ -84,6 +84,7 @@
 	<extension name="springernaturestorefront"/>
 	<extension name="springernaturesaporderfulfillment"/>
     <extension name="springernatureworldpayaddon"/>
+    <extension name="springernatureworldpayapi"/>
     <extension name="springernatureassistedservicestorefront"/>
     <extension name="springernaturebackoffice"/>
 
