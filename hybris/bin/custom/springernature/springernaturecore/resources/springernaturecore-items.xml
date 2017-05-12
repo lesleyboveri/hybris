@@ -83,6 +83,24 @@
                         <persistence type="property"/>
                         <defaultvalue>em().getEnumerationValue("Formats","Print")</defaultvalue>
                     </attribute>
+                    <attribute qualifier="division" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="subject" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="series" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="curriculum" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="yearLevel" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="subTitle" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
                 </attributes>
             </itemtype>
             <itemtype code="MEAAuthor" autocreate="true" generate="true">

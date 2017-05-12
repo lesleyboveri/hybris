@@ -19,10 +19,10 @@ $baseProduct=baseProduct(code,$catalogVersion)
 $approved=approvalstatus(code)[default='check']
 
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];$catalogVersion;$approved;component;inspectionCopyAllowed;publicationDate;binding(code);format(code)
-;9781420271652;;;eBook;true;;HardCover;ePub
-;9780732985875;;;eBook;true;;SoftCover;ePub
-;9780732985899;;;eBook;true;;HardCover;ePub
+INSERT_UPDATE Product;code[unique=true];$catalogVersion;$approved;component;inspectionCopyAllowed;publicationDate[dateformat=dd-MM-yyyy];binding(code);format(code);division;subject;series;curriculum;yearLevel;subTitle
+;9781420271652;;;eBook;true;10-01-2001;HardCover;ePub;Primary;English;Springboard;Literacy;4;
+;9780732985875;;;eBook;true;02-10-1995;SoftCover;ePub;Secondary;English;Springboard Level 9;Literacy;9;sub title
+;9780732985899;;;eBook;true;12-05-2010;HardCover;ePub;Primary;English;Springboard;Literacy;4;
 
 # Product authors data
 INSERT_UPDATE MEAAuthor;code[unique=true];authorName
