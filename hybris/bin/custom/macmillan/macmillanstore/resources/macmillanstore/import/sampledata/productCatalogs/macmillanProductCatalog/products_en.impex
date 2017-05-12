@@ -19,7 +19,7 @@ $lang=en
 
 
 # Update allProducts with localisations
-UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
-;9781420271652;;Animal Lives;The fascinating examples of how a range of animals behave when migrating will entertain middle-upper primary students;It presents contrasting examples of migration and the approach encourages young readers to develop an understanding about the similarities and differences in the behaviours and features of a range of animals
-;9780732985875;;The Sky Race;Two friends who are in a ski race together - who will win?;
-;9780732985899;;The Playhouse;This engaging story tells of a group of friends dressing up and making a playhouse in their backyard.;This engaging story tells of a group of friends dressing up and making a playhouse in their backyard.
+UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;9781420271652;;Animal Lives;It presents contrasting examples of migration and the approach encourages young readers to develop an understanding about the similarities and differences in the behaviours and features of a range of animals
+;9780732985875;;The Sky Race;Two friends who are in a ski race together - who will win?
+;9780732985899;;The Playhouse;This engaging story tells of a group of friends dressing up and making a playhouse in their backyard.

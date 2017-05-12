@@ -25,9 +25,9 @@ INSERT_UPDATE Product;code[unique=true];$catalogVersion;$approved;component;insp
 ;9780732985899;;;eBook;true;;HardCover;ePub
 
 # Product authors data
-INSERT_UPDATE MEAAuthor;code[unique=true];firstName;lastName
-;1;Tracey;Reeder
-;2;Ben;Smith
+INSERT_UPDATE MEAAuthor;code[unique=true];authorName
+;1;Tracey Reeder
+;2;Ben Smith
 
 # MEA Author Reation to Product
 INSERT_UPDATE Product2MEAAuthor;product(code);author(code)

@@ -92,10 +92,7 @@
                         <persistence type="property"/>
                         <modifiers unique="true"/>
                     </attribute>
-                    <attribute qualifier="firstName" type="java.lang.String">
-                        <persistence type="property"/>
-                    </attribute>
-                    <attribute qualifier="lastName" type="java.lang.String">
+                    <attribute qualifier="authorName" type="java.lang.String">
                         <persistence type="property"/>
                     </attribute>
                 </attributes>
