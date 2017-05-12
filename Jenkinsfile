@@ -38,24 +38,22 @@ pipeline {
         stage('2 Install Hybris Addons & License') {
             steps {
                 dir("$WORKSPACE") {
-                    sh '$WORKSPACE/install_addons.sh'
-                    sh '$WORKSPACE/install_license.sh'
+                    sh './install_addons.sh'
+                    sh './install_license.sh'
                 }
             }
         }
         stage('3 Build') {
             steps {
-                dir("$PLATFORM_HOME") {
-                    sh '$WORKSPACE/build.sh'
+                dir("$WORKSPACE") {
+                    sh './build.sh'
                 }
             }
         }
         stage('4 Test') {
             steps {
-                dir("$PLATFORM_HOME") {
-                    sh '$WORKSPACE/test.sh'
-                }
                 dir("$WORKSPACE") {
+                    sh './test.sh'
                     junit '**/junit/*.xml'
                 }
             }
@@ -63,8 +61,8 @@ pipeline {
         stage('5 Create Production Artifacts') {
             when { branch 'master' }
             steps {
-                dir("$PLATFORM_HOME") {
-                    sh '$WORKSPACE/production.sh'
+                dir("$WORKSPACE") {
+                    sh './production.sh'
                 }
             }
         }
@@ -107,7 +105,7 @@ pipeline {
             when { branch 'master' }
             steps {
                 dir("$WORKSPACE") {
-                    sh './docker_production.sh -w $WORKSPACE -b $BUILD_ID'
+                    sh './docker_production.sh $BUILD_ID'
                 }
             }
         }

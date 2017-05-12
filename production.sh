@@ -13,5 +13,7 @@
 # production.include.tomcat ###
 # true - production package contains tomcat application server
 # false - production package does not contain tomcat application server
- 
+(
+cd hybris/bin/platform
 ant production -Dtomcat.legacy.deployment=false -Dproduction.legacy.mode=false -Dproduction.include.tomcat=false
+)
