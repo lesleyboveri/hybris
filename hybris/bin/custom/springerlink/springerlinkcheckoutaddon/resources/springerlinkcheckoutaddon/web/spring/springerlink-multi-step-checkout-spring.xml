@@ -123,7 +123,6 @@
             <map merge="true">
                 <entry key="1" value-ref="springerlinkResponsiveDeliveryAndPaymentAddressCheckoutStep"/>
                 <entry key="2" value-ref="springerlinkResponsiveChoosePaymentCheckoutStep"/>
-                <entry key="3" value-ref="springerlinkResponsiveSummaryCheckoutStep"/>
             </map>
         </property>
     </bean>
