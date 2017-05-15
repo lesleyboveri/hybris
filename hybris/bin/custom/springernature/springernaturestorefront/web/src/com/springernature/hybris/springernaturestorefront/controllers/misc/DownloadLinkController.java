@@ -16,6 +16,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractPageController;
 import de.hybris.platform.commercefacades.order.OrderFacade;
 import de.hybris.platform.commercefacades.order.data.OrderData;
+import de.hybris.platform.commercefacades.order.data.OrderEntryData;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.util.Config;
 import org.apache.commons.httpclient.HttpStatus;
@@ -26,13 +27,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.log4j.Logger;
-import org.noggit.JSONUtil;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletResponse;
@@ -42,6 +41,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URLEncoder;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -80,7 +81,8 @@ public class DownloadLinkController extends AbstractPageController
             return;
         }
 
-        if (orderDetails.isGuestCustomer()
+        if (!(getUser().getUid().equals(orderDetails.getUser().getUid()))
+				|| orderDetails.isGuestCustomer()
                 && !StringUtils.substringBefore(orderDetails.getUser().getUid(), "|").equals(
                 getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT_GUID)))
         {
@@ -88,15 +90,20 @@ public class DownloadLinkController extends AbstractPageController
             return;
         }
 
-        if (orderDetails.getEntries() != null && !orderDetails.getEntries().isEmpty())
+		final List<OrderEntryData> entries;
+        final OrderEntryData entry;
+        final Map<String,String> parameters;
+        final String doi;
+
+        if ((entries = orderDetails.getEntries()) != null
+				&& !entries.isEmpty()
+				&& (entry = entries.iterator().next()) != null
+				&& (parameters = entry.getParameters()) != null
+				&& (doi = parameters.get("doi")) != null
+				&& doi.length() > 0)
         {
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-			write(XML.toJSONObject(
-			                requestContentApi(
-			                        orderDetails.getEntries().iterator().next()
-                                            .getParameters().get("doi")
-                            )
-            ).toString(),
+			write(XML.toJSONObject(requestContentApi(doi)).toString(),
                     response);
 		}
 

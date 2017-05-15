@@ -22,13 +22,14 @@
 <c:choose>
     <c:when test="${not empty orderEntry.parameters.returnurl}">
         <c:url value="${orderEntry.parameters.returnurl}" var="productUrl"/>
+        <c:url value="/downloadlink/" var="ppvDownloadUrl" />
     </c:when>
     <c:otherwise>
         <c:url value="${orderEntry.product.url}" var="productUrl"/>
     </c:otherwise>
 </c:choose>
 <c:set var="entryStock" value="${orderEntry.product.stock.stockLevelStatus.code}"/>
-<li class="item__list--item">
+<li class="item__list--item" data-download-url="${ppvDownloadUrl}">
 
     <%-- chevron for multi-d products --%>
     <div class="hidden-xs hidden-sm item__toggle">
