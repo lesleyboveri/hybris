@@ -81,8 +81,7 @@ public class DownloadLinkController extends AbstractPageController
             return;
         }
 
-        if (!(getUser().getUid().equals(orderDetails.getUser().getUid()))
-				|| orderDetails.isGuestCustomer()
+        if (orderDetails.isGuestCustomer()
                 && !StringUtils.substringBefore(orderDetails.getUser().getUid(), "|").equals(
                 getSessionService().getAttribute(WebConstants.ANONYMOUS_CHECKOUT_GUID)))
         {

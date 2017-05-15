@@ -1,11 +1,11 @@
 ACC.download = {
 
     _autoload: [
-        ["downloadlink", $(".item__list--item").length == 1]
+        ["downloadlink", $(".page-orderConfirmationPage .item__list--item").length == 1]
     ],
 
     downloadlink: function () {
-        var listItem = $(".item__list--item");
+        var listItem = $(".page-orderConfirmationPage .item__list--item");
         var ppvDownloadButton = "<button class='btn btn-primary btn-block' id='item__list--item--download'>Download</button>";
         listItem.append(ppvDownloadButton);
         listItem.on('click', '#item__list--item--download',
@@ -17,7 +17,7 @@ ACC.download = {
                     type: 'GET',
                     dataType: 'json',
                     success: function(response){
-                        window.open(response.access.pdf.url, '_tab');
+                        window.open(response.access.pdf.url, '_blank');
                     },
                     error: function(jqXHR, textStatus, errorThrown){
                     },
