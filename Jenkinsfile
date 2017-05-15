@@ -108,7 +108,9 @@ pipeline {
         }
         stage('10 Deploy to QA') {
             when { branch 'master' }
-            steps { echo 'not yet implemented' }
+            steps {
+                sh "knife ssh 'name:sprcom-dev-hybris-app-01' 'sudo docker rm -f app-01 && ./start.sh $BUILD_ID' -x sprcom-jenkins -C 1"
+            }
         }
         stage('11 Load Testing') {
             when { branch 'master' }
