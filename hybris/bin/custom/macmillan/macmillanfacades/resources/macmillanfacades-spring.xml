@@ -89,5 +89,51 @@
         <property name="mediaService" ref="mediaService"/>
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
+
+    <alias name="defaultMEAProductBasicPopulator" alias="meaProductBasicPopulator"/>
+    <bean id="defaultMEAProductBasicPopulator" parent="baseProductPopulator"
+          class="com.mea.hybris.facades.product.converters.populator.MEAProductBasicPopulator">
+        <property name="configuratorSettingsService" ref="configuratorSettingsService" />
+    </bean>
+
+    <alias name="defaultMEAProductBasicPopulatorList" alias="meaProductBasicPopulatorList"/>
+    <bean id="defaultMEAProductBasicPopulatorList" parent="abstractPopulatorList">
+        <property name="populators">
+            <list>
+                <ref bean="productBasicPopulator"/>
+                <ref bean="meaProductBasicPopulator"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- deprecated type - will be changed to de.hybris.platform.converters.impl.DefaultModifableConfigurablePopulator in 6.2 -->
+    <alias name="defaultMEAProductConfiguredPopulator" alias="meaProductConfiguredPopulator"/>
+    <bean id="defaultMEAProductConfiguredPopulator" class="de.hybris.platform.commercefacades.converter.impl.DefaultConfigurablePopulator" >
+        <property name="populators">
+            <map key-type="de.hybris.platform.commercefacades.product.ProductOption">
+                <entry key="BASIC" value-ref="meaProductBasicPopulatorList"/>
+                <entry key="PRICE" value-ref="productPricePopulatorList"/>
+                <entry key="PRICE_RANGE" value-ref="productPriceRangePopulator"/>
+                <entry key="GALLERY" value-ref="productGalleryPopulatorList"/>
+                <entry key="SUMMARY" value-ref="productSummaryPopulatorList"/>
+                <entry key="DESCRIPTION" value-ref="productDescriptionPopulatorList"/>
+                <entry key="CATEGORIES" value-ref="productCategoriesPopulatorList"/>
+                <entry key="PROMOTIONS" value-ref="productPromotionsPopulatorList"/>
+                <entry key="STOCK" value-ref="productStockPopulatorList"/>
+                <entry key="REVIEW" value-ref="productReviewPopulatorList"/>
+                <entry key="CLASSIFICATION" value-ref="productClassificationPopulatorList"/>
+                <entry key="VARIANT_FULL" value-ref="productVariantFullPopulatorList"/>
+                <entry key="REFERENCES" value-ref="productReferencesPopulator"/>
+                <entry key="DELIVERY_MODE_AVAILABILITY" value-ref="productDeliveryModeAvailabilityPopulator"/>
+            </map>
+        </property>
+    </bean>
+
+    <alias name="defaultMEAProductFacade" alias="meaProductFacade"/>
+    <bean id="defaultMEAProductFacade" class="com.mea.hybris.facades.product.impl.DefaultMEAProductFacade">
+        <property name="productConfiguredPopulator" ref="meaProductConfiguredPopulator"/>
+        <property name="productConverter" ref="productConverter"/>
+        <property name="productService" ref="productService"/>
+    </bean>
 			
 </beans>

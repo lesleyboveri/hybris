@@ -11,6 +11,7 @@
 package com.mea.hybris.storefront.controllers.pages;
 
 import com.google.common.collect.Maps;
+import com.mea.hybris.facades.product.MEAProductFacade;
 import com.mea.hybris.storefront.controllers.ControllerConstants;
 import de.hybris.platform.acceleratorfacades.futurestock.FutureStockFacade;
 import de.hybris.platform.acceleratorservices.controllers.page.PageType;
@@ -94,8 +95,8 @@ public class ProductPageController extends AbstractPageController
 	@Resource(name = "productDataUrlResolver")
 	private UrlResolver<ProductData> productDataUrlResolver;
 
-	@Resource(name = "accProductFacade")
-	private ProductFacade productFacade;
+	@Resource(name = "meaProductFacade")
+	private MEAProductFacade productFacade;
 
 	@Resource(name = "productService")
 	private ProductService productService;
