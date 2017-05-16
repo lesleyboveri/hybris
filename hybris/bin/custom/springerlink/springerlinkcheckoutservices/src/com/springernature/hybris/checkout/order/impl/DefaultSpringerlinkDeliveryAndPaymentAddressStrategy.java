@@ -49,6 +49,7 @@ public class DefaultSpringerlinkDeliveryAndPaymentAddressStrategy implements Spr
             {
                 // Flag the address as a delivery address
                 addressModel.setShippingAddress(Boolean.TRUE);
+                addressModel.setBillingAddress(Boolean.TRUE);
                 getModelService().save(addressModel);
             }
             getCommerceCartCalculationStrategy().calculateCart(cartModel);
