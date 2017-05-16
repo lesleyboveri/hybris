@@ -23,7 +23,7 @@ pipeline {
         }
         stage('1 Download Hybris Archive') {
             steps {
-                timeout(900) {
+                timeout(10) {
                     dir("$WORKSPACE") {
                         echo "Downloading hybris.zip"
                         sh './download.sh'
@@ -109,7 +109,8 @@ pipeline {
         stage('10 Deploy to QA') {
             when { branch 'master' }
             steps {
-                sh "knife ssh 'name:sprcom-dev-hybris-app-01' 'sudo docker rm -f app-01 && ./start.sh $BUILD_ID' -x sprcom-jenkins -C 1"
+                sh "knife ssh 'name:sprcom-dev-hybris-app-01' 'sudo docker rm -f app-01 || true' -x sprcom-jenkins -C 1"
+                sh "knife ssh 'name:sprcom-dev-hybris-app-01' 'sudo ./start.sh $BUILD_ID' -x sprcom-jenkins -C 1"
             }
         }
         stage('11 Load Testing') {
