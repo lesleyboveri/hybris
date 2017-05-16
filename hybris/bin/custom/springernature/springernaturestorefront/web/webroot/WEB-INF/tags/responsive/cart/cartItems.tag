@@ -10,7 +10,7 @@
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="order" tagdir="/WEB-INF/tags/responsive/order" %>
-
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 <%--
     ~ /*
     ~  * [y] hybris Platform
@@ -58,7 +58,14 @@
             </c:if>
         </c:if>
         <c:set var="showEditableGridClass" value=""/>
-        <c:url value="${entry.product.url}" var="productUrl"/>
+        <c:choose>
+            <c:when test="${not empty entry.parameters.returnurl}">
+                <c:url value="${entry.parameters.returnurl}" var="productUrl"/>
+            </c:when>
+            <c:otherwise>
+                <c:url value="${entry.product.url}" var="productUrl"/>
+            </c:otherwise>
+        </c:choose>
 
         <li class="item__list--item">
             <%-- chevron for multi-d products --%>
@@ -74,7 +81,16 @@
 
             <%-- product image --%>
             <div class="item__image">
-                <a href="${productUrl}"><product:productPrimaryImage product="${entry.product}" format="thumbnail"/></a>
+                    <a href="${productUrl}">
+                        <c:choose>
+                            <c:when test="${empty entry.parameters.type}">
+                                <product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
+                            </c:when>
+                            <c:otherwise>
+                                <checkout:entryImage entry="${entry}"/>
+                            </c:otherwise>
+                        </c:choose>
+                    </a>
             </div>
 
             <%-- product name, code, promotions --%>
@@ -84,6 +100,10 @@
                 </ycommerce:testId>
 
                 <div class="item__code">${fn:escapeXml(entry.product.code)}</div>
+
+                <c:forEach var="keyValue" items="${entry.parameters}">
+                    <div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+                </c:forEach>
 
                 <%-- availability --%>
                 <div class="item__stock">

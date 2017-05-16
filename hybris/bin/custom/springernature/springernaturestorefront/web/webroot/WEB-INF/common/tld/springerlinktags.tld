@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1"
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+
+<tlib-version>1.0</tlib-version>
+<short-name>springerlink</short-name>
+<uri>http://hybris.com/tld/springerlinktags</uri>
+
+
+<function>
+	<description>
+		Get an image for the OrderEntryData.
+	</description>
+	<name>entryImage</name>
+	<function-class>com.springernature.hybris.springernaturestorefront.tags.Functions</function-class>
+	<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getEntryImage(de.hybris.platform.commercefacades.order.data.OrderEntryData)</function-signature>
+</function>
+
+
+</taglib>

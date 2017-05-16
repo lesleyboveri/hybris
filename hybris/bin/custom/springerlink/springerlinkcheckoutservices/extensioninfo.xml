@@ -15,15 +15,12 @@
                
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
       <!-- <requires-extension name="cms"/> -->
-       <requires-extension name="worldpayapi"/>
+       <requires-extension name="springernatureworldpayapi"/>
       <requires-extension name="commerceservices"/>
       
 
       <coremodule generated="true" manager="com.springernature.hybris.checkout.jalo.SpringerlinkcheckoutservicesManager" packageroot="com.springernature.hybris.checkout"/>
 
-      <webmodule jspcompile="false" webroot="/springerlinkcheckoutservices"/>
-					
-	
 
    </extension>
       

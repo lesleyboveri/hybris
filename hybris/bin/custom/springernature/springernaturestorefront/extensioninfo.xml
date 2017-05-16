@@ -8,51 +8,29 @@
  ("Confidential Information"). You shall not disclose such Confidential
  Information and shall use it only in accordance with the terms of the
  license agreement you entered into with SAP.
---><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
+-->
+<extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-	<extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">		
-        
-
-<requires-extension name="springerlinkcheckoutaddon"/>
-<requires-extension name="sapcoreaddon"/>
-
-
-<requires-extension name="smarteditaddon"/>
-<requires-extension name="liveeditaddon"/>
-<requires-extension name="textfieldconfiguratortemplateaddon"/>
-<requires-extension name="promotionenginesamplesaddon"/>
-<requires-extension name="customerticketingaddon"/>
-<requires-extension name="springernatureassistedservicestorefront"/>
-<requires-extension name="assistedservicestorefront"/>
-<requires-extension name="orderselfserviceaddon"/>
-<requires-extension name="commerceorgsamplesaddon"/>
-<requires-extension name="worldpaynotificationaddon"/>
-<requires-extension name="springernatureworldpayaddon"/>
-<requires-extension name="worldpayaddon"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<requires-extension name="worldpaysampledataaddon"/>
-
-
-<requires-extension name="acceleratorstorefrontcommons"/>
-		<requires-extension name="yacceleratorfacades"/>
-
-		<webmodule jspcompile="false" webroot="/springernaturestorefront"/>
-
-		<meta key="modulegen-name" value="accelerator"/>
-		
-
-	</extension>
-
+    <extension abstractclassprefix="Generated" classprefix="Springernaturestorefront" name="springernaturestorefront" usemaven="false">
+        <requires-extension name="springernaturefacades"/>
+        <requires-extension name="springerlinkcheckoutaddon"/>
+        <requires-extension name="sapcoreaddon"/>
+        <requires-extension name="smarteditaddon"/>
+        <requires-extension name="liveeditaddon"/>
+        <requires-extension name="textfieldconfiguratortemplateaddon"/>
+        <requires-extension name="promotionenginesamplesaddon"/>
+        <requires-extension name="customerticketingaddon"/>
+        <requires-extension name="springernatureassistedservicestorefront"/>
+        <requires-extension name="assistedservicestorefront"/>
+        <requires-extension name="orderselfserviceaddon"/>
+        <requires-extension name="commerceorgsamplesaddon"/>
+        <requires-extension name="worldpaynotificationaddon"/>
+        <requires-extension name="springernatureworldpayaddon"/>
+        <requires-extension name="worldpayaddon"/>
+        <requires-extension name="worldpaysampledataaddon"/>
+        <requires-extension name="acceleratorstorefrontcommons"/>
+        <requires-extension name="yacceleratorfacades"/>
+        <webmodule jspcompile="false" webroot="/springernaturestorefront"/>
+        <meta key="modulegen-name" value="accelerator"/>
+    </extension>
 </extensioninfo>

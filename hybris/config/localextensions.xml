@@ -4,8 +4,8 @@
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
 
     <!-- worldpay -->
-    <path dir="${HYBRIS_BIN_DIR}/custom/worldpay/ext-worldpay" autoload="true"/>
-    <path dir="${HYBRIS_BIN_DIR}/custom/worldpay/ext-worldpayfulfilment" autoload="true"/>
+    <path dir="${HYBRIS_BIN_DIR}/ext-worldpay" autoload="true"/>
+    <path dir="${HYBRIS_BIN_DIR}/ext-worldpayfulfilment" autoload="true"/>
 
     <!-- templates -->
     <extension name='yacceleratorcockpits' />
@@ -84,7 +84,9 @@
 	<extension name="springernaturestorefront"/>
 	<extension name="springernaturesaporderfulfillment"/>
     <extension name="springernatureworldpayaddon"/>
+    <extension name="springernatureworldpayapi"/>
     <extension name="springernatureassistedservicestorefront"/>
+    <extension name="springernaturebackoffice"/>
 
 	<!-- springerlink -->
 	<extension name="springerlinkstore"/>

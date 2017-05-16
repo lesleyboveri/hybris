@@ -231,7 +231,7 @@
 		<jsp-property-group>
 			<url-pattern>*.jsp</url-pattern>
 			<!-- Disable JSP scriptlets and expressions -->
-			<scripting-invalid>true</scripting-invalid>
+			<scripting-invalid>false</scripting-invalid>
 			<!-- Remove additional whitespace due to JSP directives -->
 			<trim-directive-whitespaces>true</trim-directive-whitespaces>
 		</jsp-property-group>

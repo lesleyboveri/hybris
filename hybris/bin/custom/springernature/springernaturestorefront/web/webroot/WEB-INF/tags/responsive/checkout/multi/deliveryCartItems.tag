@@ -14,6 +14,7 @@
 <%@ taglib prefix="grid" tagdir="/WEB-INF/tags/responsive/grid" %>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common" %>
+<%@ taglib prefix="checkout" tagdir="/WEB-INF/tags/responsive/checkout" %>
 
 <c:set var="hasShippedItems" value="${cartData.deliveryItemsQuantity > 0}" />
 <c:set var="deliveryAddress" value="${cartData.deliveryAddress}"/>
@@ -65,16 +66,33 @@
 
 <c:forEach items="${cartData.entries}" var="entry" varStatus="loop">
 	<c:if test="${entry.deliveryPointOfService == null}">
-		<c:url value="${entry.product.url}" var="productUrl"/>
+		<c:choose>
+			<c:when test="${not empty entry.parameters.returnurl}">
+				<c:url value="${entry.parameters.returnurl}" var="productUrl"/>
+			</c:when>
+			<c:otherwise>
+				<c:url value="${entry.product.url}" var="productUrl"/>
+			</c:otherwise>
+		</c:choose>
 		<li class="checkout-order-summary-list-items">
 			<div class="thumb">
 				<a href="${productUrl}">
-					<product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
+					<c:choose>
+						<c:when test="${empty entry.parameters.type}">
+							<product:productPrimaryImage product="${entry.product}" format="thumbnail"/>
+						</c:when>
+						<c:otherwise>
+							<checkout:entryImage entry="${entry}"/>
+						</c:otherwise>
+					</c:choose>
 				</a>
 			</div>
 			<div class="price"><format:price priceData="${entry.totalPrice}" displayFreeForZero="true"/></div>
 			<div class="details">
 				<div class="name"><a href="${productUrl}">${fn:escapeXml(entry.product.name)}</a></div>
+				<c:forEach var="keyValue" items="${entry.parameters}">
+					<div class="qty">${fn:toUpperCase(keyValue.key)}: ${keyValue.value}</div>
+				</c:forEach>
 				<div>
                     <span class="label-spacing"><spring:theme code="order.itemPrice" />:</span>
 					<c:if test="${entry.product.multidimensional}">
